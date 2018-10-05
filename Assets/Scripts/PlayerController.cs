@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         transform = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
@@ -22,11 +23,6 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-
-        Vector3 movement = new Vector3(moveHorizontal, 0, 0);
-
-        transform.position += (movement * speed);
 	}
 
     // called once per physics step
@@ -37,10 +33,14 @@ public class PlayerController : MonoBehaviour {
             // Jump!
             rb.velocity += new Vector2(0, 10 * jumpForce);
         }
+
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        Vector3 movement = new Vector3(moveHorizontal, 0, 0);
+        transform.position += (movement * speed);
         
     }
 
     private bool isGrounded() {
-        return Physics2D.Raycast(transform.position - new Vector3(0, collider.bounds.extents.y + 0.05f, 0), -transform.up, 0.05f);
+        return Physics2D.Raycast(transform.position - new Vector3(0, collider.bounds.extents.y * 1.01f, 0), -transform.up, 0.1f);
     }
 }
