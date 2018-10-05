@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
     // called once per physics step
     private void FixedUpdate() {
 
+        rb.freezeRotation = true;
         if (isGrounded() && (Input.GetAxis("Vertical") > 0 || Input.GetAxis("Jump") > 0)) {
             // Jump!
             rb.velocity += new Vector2(0, 10 * jumpForce);
