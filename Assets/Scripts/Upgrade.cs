@@ -18,14 +18,11 @@ public class Upgrade : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (canMoveLeft == false && Input.GetKeyDown("l"))
-        {
+        if (canMoveLeft == false && Input.GetKeyDown("l")) {
             canMoveLeft = true;
             print("you can walk left");
 
-        }
-        else if (canMoveLeft == true && Input.GetKeyDown("l"))
-        {
+        } else if (canMoveLeft == true && Input.GetKeyDown("l")) {
             canMoveLeft = false;
             print("you can't walk left");
         }
@@ -38,35 +35,26 @@ public class Upgrade : MonoBehaviour {
             print("you can't jump");
         }
 
-        if (canCrouch == false && Input.GetKeyDown("c"))
-        {
+        if (canCrouch == false && Input.GetKeyDown("c")) {
             canCrouch = true;
             print("you can crouch");
-        }
-        else if (canCrouch == true && Input.GetKeyDown("c"))
-        {
+        } else if (canCrouch == true && Input.GetKeyDown("c")) {
             canCrouch = false;
             print("you can't crouch");
         }
 
-        if (canShoot == false && Input.GetKeyDown("x"))
-        {
+        if (canShoot == false && Input.GetKeyDown("x")) {
             canShoot = true;
             print("you can shoot your gun");
-        }
-        else if (canShoot == true && Input.GetKeyDown("x"))
-        {
+        } else if (canShoot == true && Input.GetKeyDown("x")) {
             canShoot = false;
             print("you can't shoot your gun");
         }
 
-        if (canSlash == false && Input.GetKeyDown("z"))
-        {
+        if (canSlash == false && Input.GetKeyDown("z")) {
             canSlash = true;
             print("you can swing your sword");
-        }
-        else if (canSlash == true && Input.GetKeyDown("z"))
-        {
+        } else if (canSlash == true && Input.GetKeyDown("z")) {
             canSlash = false;
             print("you can't swing your sword");
         }

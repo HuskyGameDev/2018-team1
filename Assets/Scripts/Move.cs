@@ -15,8 +15,7 @@ public class Move : MonoBehaviour {
         //check if the player wants to move horizontally
         float moveHorizontal = Input.GetAxis("Horizontal");
         //you can move right by default
-        if (moveHorizontal > 0)
-        {
+        if (moveHorizontal > 0) {
             print("you are moving right.");
           // but you can't move left until acquiring relevant upgrade
         } else if (moveHorizontal < 0 && Upgrade.canMoveLeft == false) {
