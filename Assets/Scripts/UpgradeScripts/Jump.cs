@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class Jump : MonoBehaviour {
 
     // Public properties
-    public float speed;
     public float jumpForce;
+    public int jumpFrameBuffer;
+    public LayerMask groundLayer;
 
     // Internal variables
-    private bool isJumping;
+    private int lastJumpFrameBuffer;
 
     // Player Components
     private Rigidbody2D rb;
@@ -23,7 +24,8 @@ public class PlayerController : MonoBehaviour {
         transform = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -32,24 +34,20 @@ public class PlayerController : MonoBehaviour {
     // called once per physics step
     private void FixedUpdate() {
 
-        // Prevent player from rotating under all circumstances
-        rb.freezeRotation = true;
-
         // Check if eligible for jumping (grounded and pressing button)
-        if (isGrounded() && (Input.GetAxis("Vertical") > 0 || Input.GetAxis("Jump") > 0)) {
+        if (isGrounded() && lastJumpFrameBuffer == 0 && (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0)) {
             // Jump!
-            rb.velocity += new Vector2(0, 10 * jumpForce);
+            rb.AddForce(new Vector2(0, 10) * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+            lastJumpFrameBuffer = jumpFrameBuffer;
         }
-
-        // Movement independent from jumping
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        Vector3 movement = new Vector3(moveHorizontal, 0, 0);
-        transform.position += (movement * speed);
+        if (lastJumpFrameBuffer > 0) {
+            lastJumpFrameBuffer--;
+        }
         
     }
 
     // Raycasting method to check if on the ground (or close enough that the difference is negligible)
     private bool isGrounded() {
-        return Physics2D.Raycast(transform.position - new Vector3(0, collider.bounds.extents.y * 1.01f, 0), -transform.up, 0.1f);
+        return Physics2D.Raycast(collider.bounds.center - new Vector3(0, collider.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
     }
 }
