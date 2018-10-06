@@ -35,9 +35,9 @@ public class Jump : MonoBehaviour {
     private void FixedUpdate() {
 
         // Check if eligible for jumping (grounded and pressing button)
-        if (isGrounded() && lastJumpFrameBuffer == 0 && (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0)) {
+        if ((Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0) && lastJumpFrameBuffer == 0 && isGrounded()) {
             // Jump!
-            rb.AddForce(new Vector2(0, 10) * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
             lastJumpFrameBuffer = jumpFrameBuffer;
         }
         if (lastJumpFrameBuffer > 0) {
@@ -48,6 +48,11 @@ public class Jump : MonoBehaviour {
 
     // Raycasting method to check if on the ground (or close enough that the difference is negligible)
     private bool isGrounded() {
-        return Physics2D.Raycast(collider.bounds.center - new Vector3(0, collider.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
+        RaycastHit2D hit = Physics2D.Raycast(collider.bounds.center - new Vector3(0, collider.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
+
+        if (Vector3.Normalize(hit.normal).Equals(Vector3.Normalize(transform.up))) {
+            return true;
+        }
+        return false;
     }
 }

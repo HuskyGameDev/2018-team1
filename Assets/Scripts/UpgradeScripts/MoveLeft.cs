@@ -31,8 +31,8 @@ public class MoveLeft : MonoBehaviour {
         // Movement independent from jumping
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         if (moveHorizontal < 0) {
-            Vector2 movement = new Vector3(moveHorizontal, 0, 0);
-            rb.position += (movement * speed * Time.deltaTime);
+            Vector3 movement = new Vector3(moveHorizontal, 0, 0);
+            transform.position += (movement * speed * Time.deltaTime);
         }
         
     }
