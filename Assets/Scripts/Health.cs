@@ -15,7 +15,7 @@ public class Health : MonoBehaviour {
     //Reduce character's health by a value, returns current health (negative allowed)
     public int ReduceHealth(int damage) {
         health -= damage;
-        if (health >= 0)
+        if (health <= 0)
             gameObject.GetComponent<Controller>().Die();
         return health;
     }
