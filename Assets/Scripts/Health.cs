@@ -3,7 +3,6 @@
 // Handles HP manipulation
 public class Health : MonoBehaviour {
     public int maxHealth; 
-
     //Should be modified through Reduce/IncreaseHealth()
     private int health;
 
