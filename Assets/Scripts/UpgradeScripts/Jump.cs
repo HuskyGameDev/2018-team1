@@ -11,7 +11,6 @@ public class Jump : MonoBehaviour {
 
     // Internal variables
     private int currentJumpFrameBuffer;
-    private bool playerCanJump;
 
     // Player Components
     private Rigidbody2D rb2d;
@@ -35,25 +34,11 @@ public class Jump : MonoBehaviour {
     // called once per physics step
     private void FixedUpdate() {
 
-        if (isGrounded()) {
-            if (currentJumpFrameBuffer != 0) {
-                playerCanJump = false;
-            } else {
-                playerCanJump = true;
-            }
-        } else {
-            currentJumpFrameBuffer = jumpFrameBuffer;
-            playerCanJump = false;
-        }
-
-        print("Jump Buffer: " + currentJumpFrameBuffer);
-
         // Check if eligible for jumping (grounded and pressing button)
-        if ((Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0) && playerCanJump) {
+        if ((Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0) && canJump()) {
             // Jump!
-            if (rb2d.velocity.y <= 0) {
+            if (rb2d.velocity.y <= 0.001f) {
                 rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
-                currentJumpFrameBuffer = jumpFrameBuffer;
             }
         }
 
@@ -63,10 +48,23 @@ public class Jump : MonoBehaviour {
         
     }
 
+    private bool canJump() {
+        
+        if (isGrounded()) {
+            if (currentJumpFrameBuffer == 0) {
+                return true;
+            }
+        } else {
+            currentJumpFrameBuffer = jumpFrameBuffer;
+        }
+        return false;
+
+    }
+
     // Raycasting method to check if on the ground (or close enough that the difference is negligible)
     private bool isGrounded() {
-        RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
-        RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
+        RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
+        RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
 
         Vector3 normalizedUp = Vector3.Normalize(transform.up);
 
