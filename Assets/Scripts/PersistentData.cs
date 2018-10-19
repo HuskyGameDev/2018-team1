@@ -4,4 +4,5 @@ using UnityEngine;
 
 public class PersistentData : MonoBehaviour {
 	public static string level;
+	public static string[] upgrades;
 }
