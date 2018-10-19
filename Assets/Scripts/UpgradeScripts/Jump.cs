@@ -10,11 +10,11 @@ public class Jump : MonoBehaviour {
     public LayerMask groundLayer;
 
     // Internal variables
-    private int lastJumpFrameBuffer;
+    private int currentJumpFrameBuffer;
 
     // Player Components
-    private Rigidbody2D rb;
-    private new Collider2D collider;
+    private Rigidbody2D rb2d;
+    private Collider2D collider2d;
     private new Transform transform;
 
 	// Use this for initialization
@@ -22,8 +22,8 @@ public class Jump : MonoBehaviour {
 
         // Gather components
         transform = GetComponent<Transform>();
-        rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
+        rb2d = GetComponent<Rigidbody2D>();
+        collider2d = GetComponent<Collider2D>();
 
     }
 	
@@ -35,19 +35,48 @@ public class Jump : MonoBehaviour {
     private void FixedUpdate() {
 
         // Check if eligible for jumping (grounded and pressing button)
-        if (isGrounded() && lastJumpFrameBuffer == 0 && (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0)) {
+        if ((Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0) && canJump()) {
             // Jump!
-            rb.AddForce(new Vector2(0, 10) * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
-            lastJumpFrameBuffer = jumpFrameBuffer;
+            if (rb2d.velocity.y <= 0.001f) {
+                rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+            }
         }
-        if (lastJumpFrameBuffer > 0) {
-            lastJumpFrameBuffer--;
+
+        if (currentJumpFrameBuffer > 0) {
+            currentJumpFrameBuffer--;
         }
         
     }
 
+    private bool canJump() {
+        
+        if (isGrounded()) {
+            if (currentJumpFrameBuffer == 0) {
+                return true;
+            }
+        } else {
+            currentJumpFrameBuffer = jumpFrameBuffer;
+        }
+        return false;
+
+    }
+
     // Raycasting method to check if on the ground (or close enough that the difference is negligible)
     private bool isGrounded() {
-        return Physics2D.Raycast(collider.bounds.center - new Vector3(0, collider.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
+        RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
+        RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
+
+        Vector3 normalizedUp = Vector3.Normalize(transform.up);
+
+        Vector3 leftNormal = Vector3.Normalize(hitLeft.normal);
+        Vector3 rightNormal = Vector3.Normalize(hitRight.normal);
+
+        bool leftGrounded = leftNormal.Equals(normalizedUp);
+        bool rightGrounded = rightNormal.Equals(normalizedUp);
+
+        if (leftGrounded || rightGrounded) {
+            return true;
+        }
+        return false;
     }
 }
