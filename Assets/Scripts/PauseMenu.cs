@@ -6,6 +6,9 @@ using UnityEditor.SceneManagement;
 public class PauseMenu : MonoBehaviour {
 
 	public static bool gameIsPaused = false;
+
+	public Transform player;
+	public Transform camera;
 	
 	public GameObject pauseMenuUI;
 
@@ -40,11 +43,17 @@ public class PauseMenu : MonoBehaviour {
 
 	public void saveGame()
 	{
+		SaveGame.Instance.playerPosition = player.position;
+		SaveGame.Instance.cameraPosition = camera.position;
+		SaveGame.Save();
 		Debug.Log("Saving Game...");
 	}
 
 	public void loadSave()
 	{
+		SaveGame.Load();
+		player.position = SaveGame.Instance.playerPosition;
+		camera.position = SaveGame.Instance.cameraPosition;
 		Debug.Log("Loading Save...");
 	}
 

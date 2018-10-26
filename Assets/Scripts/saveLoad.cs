@@ -4,8 +4,9 @@ public class SaveGame
 {
 
     //serialized
-    public string PlayerName = "Player";
-    public int XP = 0;
+    public string playerName = "Player";
+    public Vector3 playerPosition;
+    public Vector3 cameraPosition;
 
     private static string _gameDataFileName = "data.json";
 
