@@ -10,6 +10,9 @@ public class Health : MonoBehaviour {
         this.health = health;
         maxHealth = health;
     }
+    public int GetCurrentHealth() {
+        return health;
+    }
 
     //Reduce character's health by a value, returns current health (negative allowed)
     public int ReduceHealth(int damage) {
