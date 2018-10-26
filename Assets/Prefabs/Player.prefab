@@ -22,8 +22,7 @@ GameObject:
   - component: {fileID: 212258159074815306}
   - component: {fileID: 50164452154884078}
   - component: {fileID: 61852037814865250}
-  - component: {fileID: 114674207352512854}
-  - component: {fileID: 114875714380097372}
+  - component: {fileID: 114677485940321998}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -89,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.3333333}
   m_EdgeRadius: 0
---- !u!114 &114674207352512854
+--- !u!114 &114677485940321998
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,23 +96,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1725537600592244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0680dfa72a3c7e34faa08942307a46bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cac2ce02a245f84b9006614a04eff80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endText: {fileID: 0}
---- !u!114 &114875714380097372
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1725537600592244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 963b9e179c301d741a601cbcd52196e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startObj: {fileID: 0}
-  test: {fileID: 0}
+  maxHealth: 100
 --- !u!212 &212258159074815306
 SpriteRenderer:
   m_ObjectHideFlags: 1

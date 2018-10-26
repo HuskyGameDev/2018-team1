@@ -17,6 +17,11 @@ public class Jump : MonoBehaviour {
     private Collider2D collider2d;
     private new Transform transform;
 
+    public void SetValues(float jumpForce, int jumpFrameBuffer, LayerMask groundLayer) {
+        this.jumpForce = jumpForce;
+        this.jumpFrameBuffer = jumpFrameBuffer;
+        this.groundLayer = groundLayer;
+    }
 	// Use this for initialization
 	void Start () {
 
