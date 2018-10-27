@@ -9,9 +9,10 @@ public class Bullet : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
              PlayerInfo player = other.GetComponent<PlayerInfo>();
-			 player.ReduceHealth(damage);
+			       player.ReduceHealth(damage);
+             print("hit");
              GameObject.Destroy(this);
-		}
+		    }
     }
 	
 }
