@@ -12,6 +12,9 @@ public class MoveLeft : MonoBehaviour {
     private Collider2D collider2d;
     private new Transform transform;
 
+    public void SetSpeed(float speed) {
+        this.speed = speed;
+    }
 	// Use this for initialization
 	void Start () {
 
