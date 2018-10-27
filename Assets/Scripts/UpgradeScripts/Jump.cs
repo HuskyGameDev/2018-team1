@@ -76,12 +76,20 @@ public class Jump : MonoBehaviour {
         Vector3 leftNormal = Vector3.Normalize(hitLeft.normal);
         Vector3 rightNormal = Vector3.Normalize(hitRight.normal);
 
+        if (hitLeft && hitLeft.collider.OverlapPoint(hitLeft.point + new Vector2(0.0f, 0.01f))) {
+            leftNormal *= -1;
+        }
+        if (hitRight && hitRight.collider.OverlapPoint(hitRight.point + new Vector2(0.0f, 0.01f))) {
+            rightNormal *= -1;
+        }
+
         bool leftGrounded = leftNormal.Equals(normalizedUp);
         bool rightGrounded = rightNormal.Equals(normalizedUp);
 
         if (leftGrounded || rightGrounded) {
             return true;
         }
+        
         return false;
     }
 }
