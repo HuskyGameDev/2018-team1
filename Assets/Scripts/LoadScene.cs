@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour {
     public void LoadFlatland() {
-        SceneManager.LoadScene("FlatlandLevel");
+        SceneManager.LoadScene("Level");
     }
     public void LoadPlatform() {
-        SceneManager.LoadScene("PlatformLevel");
+        SceneManager.LoadScene("Level");
     }
     public void LoadOverworld() {
         SceneManager.LoadScene("Overworld");

@@ -8,17 +8,20 @@ public class MoveRight : MonoBehaviour {
     public float speed;
 
     // Player Components
-    private Rigidbody2D rb;
-    private new Collider2D collider;
+    private Rigidbody2D rb2d;
+    private Collider2D collider2d;
     private new Transform transform;
 
+    public void SetSpeed(float speed) {
+        this.speed = speed;
+    }
 	// Use this for initialization
 	void Start () {
 
         // Gather components
         transform = GetComponent<Transform>();
-        rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
+        rb2d = GetComponent<Rigidbody2D>();
+        collider2d = GetComponent<Collider2D>();
 	}
 	
 	// Update is called once per frame
@@ -32,7 +35,7 @@ public class MoveRight : MonoBehaviour {
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         if (moveHorizontal >= 0) {
             Vector3 movement = new Vector3(moveHorizontal, 0, 0);
-            transform.position += (movement * speed * Time.deltaTime);
+            transform.position += (10 * movement * speed * Time.deltaTime);
         }
         
     }
