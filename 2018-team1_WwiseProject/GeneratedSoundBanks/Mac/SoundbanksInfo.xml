@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="128">
+	<RootPaths>
+		<ProjectRoot>C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2880737896" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MainBank</ObjectPath>
+			<ShortName>MainBank</ShortName>
+			<Path>MainBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
+				<Event Id="476098351" Name="Sword_Swing" ObjectPath="\Events\Default Work Unit\Sword_Swing"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="68733773" Language="SFX">
+					<ShortName>Grass Footsteps#01.wav</ShortName>
+					<Path>SFX\Grass Footsteps#01_D3ED5509.wem</Path>
+				</File>
+				<File Id="354552467" Language="SFX">
+					<ShortName>Grass Footsteps#01.wav</ShortName>
+					<Path>SFX\Grass Footsteps#01_6A023469.wem</Path>
+				</File>
+				<File Id="541555683" Language="SFX">
+					<ShortName>StickSwooshTake01.wav</ShortName>
+					<Path>SFX\StickSwooshTake01_E119E811.wem</Path>
+				</File>
+				<File Id="572718178" Language="SFX">
+					<ShortName>Grass Footsteps#01.wav</ShortName>
+					<Path>SFX\Grass Footsteps#01_F8ADFF4A.wem</Path>
+				</File>
+				<File Id="807304314" Language="SFX">
+					<ShortName>Grass Footsteps#01.wav</ShortName>
+					<Path>SFX\Grass Footsteps#01_26400EB6.wem</Path>
+				</File>
+				<File Id="909150698" Language="SFX">
+					<ShortName>StickSwooshTake02.wav</ShortName>
+					<Path>SFX\StickSwooshTake02_C229FCB8.wem</Path>
+				</File>
+				<File Id="937844091" Language="SFX">
+					<ShortName>Grass Footsteps#01.wav</ShortName>
+					<Path>SFX\Grass Footsteps#01_0637D380.wem</Path>
+				</File>
+				<File Id="1013950220" Language="SFX">
+					<ShortName>Grass Footsteps#01.wav</ShortName>
+					<Path>SFX\Grass Footsteps#01_6A18519F.wem</Path>
+				</File>
+				<File Id="1032810323" Language="SFX">
+					<ShortName>Grass Footsteps#01.wav</ShortName>
+					<Path>SFX\Grass Footsteps#01_FEB6E3A1.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

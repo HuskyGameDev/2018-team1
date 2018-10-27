@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" SchemaVersion="85">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="FootStep" ID="{419B705A-8104-4D2A-AE88-5519A0826227}">
+					<ChildrenList>
+						<Action Name="" ID="{AAF935E6-3A0B-450D-BB16-0651799841B4}" ShortID="509903605">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{DFA7D957-6796-411D-89DB-4D0A0CB9DC95}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Sword_Swing" ID="{32524949-976E-439F-B1F6-D02D1FD9D540}">
+					<ChildrenList>
+						<Action Name="" ID="{10DEF8F7-3BC9-4244-9F2C-7CD353373BA9}" ShortID="686525823">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sword_Swing" ID="{ACFAA892-DCE9-4FC6-88FC-BB94A02FEACD}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
