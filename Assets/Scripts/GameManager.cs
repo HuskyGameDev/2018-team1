@@ -9,18 +9,18 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//Remove this and add these individually elsewhere
-		PersistentData.upgrades = new string[] {"MoveLeft", "MoveRight", "Jump"};
+		PersistentData.upgrades = {"MoveLeft", "MoveRight", "Jump"};
 
 		foreach (string s in PersistentData.upgrades) {
 			if (s == "MoveLeft")  {
 				MoveLeft comp = player.AddComponent<MoveLeft>() as MoveLeft;
 				comp.SetSpeed(1);
 			}
-			if (s == "MoveRight") {
+			else if (s == "MoveRight") {
 				MoveRight comp = player.AddComponent<MoveRight>() as MoveRight;
 				comp.SetSpeed(1);
 			}
-			if (s == "Jump") {
+			else if (s == "Jump") {
 				Jump comp = player.AddComponent<Jump>() as Jump;
 				comp.SetValues(2, 6, 1 << LayerMask.NameToLayer("Ground"));
 			}
