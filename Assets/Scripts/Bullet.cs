@@ -13,13 +13,15 @@ public class Bullet : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
     }
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (!collision.gameObject.CompareTag("Player"))
+            Destroy(this.gameObject); 
+    }
 	void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
              PlayerInfo player = other.GetComponent<PlayerInfo>();
 			 player.ReduceHealth(damage);
-             print("hit");
-             GameObject.Destroy(this);
-		    }
+             Destroy(this.gameObject);
+		}
     }
-	
 }
