@@ -8,15 +8,8 @@ public class RangedPirateController : Controller {
     private int timeUntilJump;
     public int minJumpTime;
 	public int maxJumpTime;
-    public float minJumpForce;
-    public float maxJumpForce;
     public float sightRange;
     public Health health;
-
-    // Character Components
-    private Rigidbody2D rb;
-    private new Collider2D collider;
-    private new Transform transform;
 
     // For deciding what to do
     private bool seenPlayer = false;
@@ -28,9 +21,9 @@ public class RangedPirateController : Controller {
         health = GetComponent<Health>();
         health.Set(startingHealth);
         transform = GetComponent<Transform>();
-        rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
-        rb.freezeRotation = true;
+        rb2d = GetComponent<Rigidbody2D>();
+        collider2d = GetComponent<Collider2D>();
+        rb2d.freezeRotation = true;
 	}
 
     // called once per physics step
@@ -50,7 +43,7 @@ public class RangedPirateController : Controller {
         else
             MoveLeft(speed);
         // Check if eligible for jumping (grounded and pressing button)
-        if (IsGrounded(transform, collider) && timeUntilJump-- == 0) {
+        if (isGrounded() && timeUntilJump-- == 0) {
             // Jump!
             Jump();
         }
@@ -70,9 +63,4 @@ public class RangedPirateController : Controller {
 	// Update is called once per frame
 	void Update () {
 	}
-
-    //The character jumps
-    private void Jump() {
-        rb.velocity += new Vector2(0, Random.Range(minJumpForce, maxJumpForce));
-    }
 }

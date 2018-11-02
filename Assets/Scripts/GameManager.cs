@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
 			}
 			else if (s == "Jump") {
 				Jump comp = player.AddComponent<Jump>() as Jump;
-				comp.SetValues(2, 6, 1 << LayerMask.NameToLayer("Ground"));
+				comp.SetValues(4.5f, 6, 1 << LayerMask.NameToLayer("Ground"));
 			}
 		}
 	}

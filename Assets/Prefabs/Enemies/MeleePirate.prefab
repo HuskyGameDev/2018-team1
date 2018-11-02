@@ -55,7 +55,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -126,13 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60fff11fec072442a3cc6411363e722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  minJumpForce: 2
+  maxJumpForce: 3
   startingHealth: 150
   damage: 20
-  speed: 0.02
+  speed: 0.25
   minJumpTime: 20
   maxJumpTime: 50
-  minJumpForce: 5
-  maxJumpForce: 7
   sightRange: 5
   health: {fileID: 114666702119964464}
 --- !u!114 &114666702119964464
@@ -146,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41052bb3d501b3f4fa1c85ab3a95899c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 100
 --- !u!212 &212503030539660232
 SpriteRenderer:
   m_ObjectHideFlags: 1
