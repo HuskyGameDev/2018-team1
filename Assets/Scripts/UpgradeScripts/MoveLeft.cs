@@ -18,7 +18,6 @@ public class MoveLeft : MonoBehaviour {
     }
 	// Use this for initialization
 	void Start () {
-
         // Gather components
         transform = GetComponent<Transform>();
         rb2d = GetComponent<Rigidbody2D>();

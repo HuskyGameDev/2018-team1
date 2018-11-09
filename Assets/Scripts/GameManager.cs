@@ -16,13 +16,13 @@ public class GameManager : MonoBehaviour {
 				MoveLeft comp = player.AddComponent<MoveLeft>() as MoveLeft;
 				comp.SetSpeed(1);
 			}
-			if (s == "MoveRight") {
+			else if (s == "MoveRight") {
 				MoveRight comp = player.AddComponent<MoveRight>() as MoveRight;
 				comp.SetSpeed(1);
 			}
-			if (s == "Jump") {
+			else if (s == "Jump") {
 				Jump comp = player.AddComponent<Jump>() as Jump;
-				comp.SetValues(2, 6, 1 << LayerMask.NameToLayer("Ground"));
+				comp.SetValues(4.5f, 6, 1 << LayerMask.NameToLayer("Ground"));
 			}
 		}
 	}
