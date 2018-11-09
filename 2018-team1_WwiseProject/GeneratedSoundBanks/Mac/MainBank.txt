@@ -1,0 +1,15 @@
+Event	ID	Name			Wwise Object Path	Notes
+	476098351	Sword_Swing			\Default Work Unit\Sword_Swing	
+	1866025847	FootStep			\Default Work Unit\FootStep	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	68733773	Grass Footsteps#01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_D3ED5509.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Grass Footsteps#01		17938
+	354552467	Grass Footsteps#01_06	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_6A023469.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Grass Footsteps#01_06		21202
+	541555683	StickSwooshTake01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\StickSwooshTake01_E119E811.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake01		26370
+	572718178	Grass Footsteps#01_01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_F8ADFF4A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Grass Footsteps#01_01		15618
+	807304314	Grass Footsteps#01_03	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_26400EB6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Grass Footsteps#01_03		22526
+	909150698	StickSwooshTake02	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\StickSwooshTake02_C229FCB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake02		17712
+	937844091	Grass Footsteps#01_02	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_0637D380.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Grass Footsteps#01_02		19862
+	1013950220	Grass Footsteps#01_04	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_6A18519F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Grass Footsteps#01_04		27474
+	1032810323	Grass Footsteps#01_05	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_FEB6E3A1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Grass Footsteps#01_05		27474
+
