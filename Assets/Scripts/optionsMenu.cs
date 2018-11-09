@@ -33,4 +33,40 @@ public class optionsMenu : MonoBehaviour {
 		this.gameObject.SetActive(false);
 		backTarget.SetActive(true);
 	}
+
+	public void toVideo()
+	{
+		this.transform.Find("MainOptions").gameObject.SetActive(false);
+		this.transform.Find("VideoOptions").gameObject.SetActive(true);
+	}
+
+	public void fromVideo()
+	{
+		this.transform.Find("VideoOptions").gameObject.SetActive(false);
+		this.transform.Find("MainOptions").gameObject.SetActive(true);
+	}
+
+	public void toVolume()
+	{
+		this.transform.Find("MainOptions").gameObject.SetActive(false);
+		this.transform.Find("VolumeOptions").gameObject.SetActive(true);
+	}
+
+	public void fromVolume()
+	{
+		this.transform.Find("VolumeOptions").gameObject.SetActive(false);
+		this.transform.Find("MainOptions").gameObject.SetActive(true);
+	}
+
+	public void toControls()
+	{
+		this.transform.Find("MainOptions").gameObject.SetActive(false);
+		this.transform.Find("Controls").gameObject.SetActive(true);
+	}
+
+	public void fromControls()
+	{
+		this.transform.Find("Controls").gameObject.SetActive(false);
+		this.transform.Find("MainOptions").gameObject.SetActive(true);
+	}
 }
