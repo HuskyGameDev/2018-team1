@@ -9,7 +9,7 @@ public class LoadScene : MonoBehaviour {
         SceneManager.LoadScene("Level");
     }
     public void LoadPlatform() {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("SampleScene");
     }
     public void LoadOverworld() {
         SceneManager.LoadScene("Overworld");
