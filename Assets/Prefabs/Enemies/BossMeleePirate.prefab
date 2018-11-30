@@ -88,7 +88,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 1}
+  m_Size: {x: 15, y: 4}
   m_EdgeRadius: 0
 --- !u!61 &61942042065834936
 BoxCollider2D:
@@ -148,7 +148,8 @@ MonoBehaviour:
   speed: 0.25
   minJumpTime: 20
   maxJumpTime: 50
-  sightRange: 5
+  sightRange: 10
+  attackReach: 2
   health: {fileID: 114618704298599336}
 --- !u!212 &212641703100713088
 SpriteRenderer:

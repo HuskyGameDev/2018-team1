@@ -148,7 +148,7 @@ MonoBehaviour:
   speed: 0.2
   minJumpTime: 30
   maxJumpTime: 60
-  sightRange: 5
+  sightRange: 10
   health: {fileID: 114233943445891920}
 --- !u!212 &212923078036764302
 SpriteRenderer:
