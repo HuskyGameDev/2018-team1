@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 612124e8eab32a64490802204fd24c26
+guid: 915bd03125d1a9f4bb3c649671657416
 TextureImporter:
   fileIDToRecycleName:
-    21300000: water-tile-1_0
-    21300002: water-tile-1_1
-    21300004: water-tile-1_2
-    21300006: water-tile-1_3
+    21300000: water-tile-1-1_0
+    21300002: water-tile-1-1_1
+    21300004: water-tile-1-1_2
+    21300006: water-tile-1-1_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -121,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water-tile-1_0
+      name: water-tile-1-1_0
       rect:
         serializedVersion: 2
         x: 5
@@ -129,19 +129,19 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60ed7a3a4f73b0f4fa071ac940804384
+      spriteID: be80709126aa5d04d9d41435f9f1365c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-tile-1_1
+      name: water-tile-1-1_1
       rect:
         serializedVersion: 2
         x: 37
@@ -149,19 +149,19 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d6f6d3bc724c344b8ff9f2f63f2de6a
+      spriteID: db54eb933a0039648bbf69df8e375714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-tile-1_2
+      name: water-tile-1-1_2
       rect:
         serializedVersion: 2
         x: 5
@@ -169,19 +169,19 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2891f929f49ebe4c8f22b5409693487
+      spriteID: e39a6b70f1a24584bba8e41c5a9d207b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-tile-1_3
+      name: water-tile-1-1_3
       rect:
         serializedVersion: 2
         x: 37
@@ -189,13 +189,13 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f154735549cf53344870f34bd869b31a
+      spriteID: 4d23ef8aaff75864da9d5b2794abb74d
       vertices: []
       indices: 
       edges: []
@@ -203,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 373bf8f361efda144a87d92a0bf55420
+    spriteID: 340454b01e067fe40a22b78e4a50c61e
     vertices: []
     indices: 
     edges: []
