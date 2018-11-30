@@ -21,45 +21,51 @@
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1228514695" Name="Booster" ObjectPath="\Events\Default Work Unit\Booster"/>
 				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
+				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\Jump"/>
 				<Event Id="476098351" Name="Sword_Swing" ObjectPath="\Events\Default Work Unit\Sword_Swing"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="68733773" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_D3ED5509.wem</Path>
+					<Path>SFX\Grass Footsteps#01_009485A6.wem</Path>
 				</File>
 				<File Id="354552467" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_6A023469.wem</Path>
+					<Path>SFX\Grass Footsteps#01_F72BE7EE.wem</Path>
 				</File>
 				<File Id="541555683" Language="SFX">
 					<ShortName>StickSwooshTake01.wav</ShortName>
-					<Path>SFX\StickSwooshTake01_E119E811.wem</Path>
+					<Path>SFX\StickSwooshTake01_0376FD74.wem</Path>
 				</File>
 				<File Id="572718178" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_F8ADFF4A.wem</Path>
+					<Path>SFX\Grass Footsteps#01_4E1E06C4.wem</Path>
+				</File>
+				<File Id="799564673" Language="SFX">
+					<ShortName>Booster.wav</ShortName>
+					<Path>SFX\Booster_1C9C67B2.wem</Path>
 				</File>
 				<File Id="807304314" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_26400EB6.wem</Path>
+					<Path>SFX\Grass Footsteps#01_1844861C.wem</Path>
 				</File>
 				<File Id="909150698" Language="SFX">
 					<ShortName>StickSwooshTake02.wav</ShortName>
-					<Path>SFX\StickSwooshTake02_C229FCB8.wem</Path>
+					<Path>SFX\StickSwooshTake02_7AED70D5.wem</Path>
 				</File>
 				<File Id="937844091" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_0637D380.wem</Path>
+					<Path>SFX\Grass Footsteps#01_083F33FF.wem</Path>
 				</File>
 				<File Id="1013950220" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_6A18519F.wem</Path>
+					<Path>SFX\Grass Footsteps#01_26D98D6A.wem</Path>
 				</File>
 				<File Id="1032810323" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_FEB6E3A1.wem</Path>
+					<Path>SFX\Grass Footsteps#01_4670D95B.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
