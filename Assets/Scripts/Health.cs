@@ -14,11 +14,14 @@ public class Health : MonoBehaviour {
         return health;
     }
 
-    //Reduce character's health by a value, returns current health (negative allowed)
+    //Reduce character's health by a value, returns current health, negative or 0 if dead
     public int ReduceHealth(int damage) {
         health -= damage;
         if (health <= 0)
-            gameObject.GetComponent<Controller>().Die();
+            if (gameObject.CompareTag("Player"))
+                PlayerDied();
+            else 
+                gameObject.GetComponent<Controller>().Die();
         return health;
     }
 
@@ -28,5 +31,8 @@ public class Health : MonoBehaviour {
         if (health > maxHealth)
             health = maxHealth;
         return health;
+    }
+    private void PlayerDied() {
+        // Handle what happens when the player dies
     }
 }
