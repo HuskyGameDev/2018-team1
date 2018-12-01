@@ -88,7 +88,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7, y: 4}
+  m_Size: {x: 15, y: 4}
   m_EdgeRadius: 0
 --- !u!61 &61353070834865674
 BoxCollider2D:
@@ -141,8 +141,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  minJumpForce: 1.5
-  maxJumpForce: 2.5
+  minJumpForce: 3.5
+  maxJumpForce: 5
   startingHealth: 100
   damage: 10
   speed: 0.2

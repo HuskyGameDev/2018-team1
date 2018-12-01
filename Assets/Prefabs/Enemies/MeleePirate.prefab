@@ -129,8 +129,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  minJumpForce: 2
-  maxJumpForce: 3
+  minJumpForce: 4
+  maxJumpForce: 6
   startingHealth: 150
   damage: 20
   speed: 0.25
