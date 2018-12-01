@@ -54,6 +54,7 @@ public class Jump : MonoBehaviour {
     }
 
     private bool canJump() {
+        
         if (isGrounded()) {
             if (currentJumpFrameBuffer == 0) {
                 return true;
