@@ -9,21 +9,25 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//Remove this and add these individually elsewhere
-		PersistentData.upgrades = new string[] {"MoveLeft", "MoveRight", "Jump"};
+		PersistentData.upgrades.Add("MoveLeft");
+		PersistentData.upgrades.Add("MoveRight");
+		PersistentData.upgrades.Add("Jump");
 
 		foreach (string s in PersistentData.upgrades) {
-			if (s == "MoveLeft")  {
-				MoveLeft comp = player.AddComponent<MoveLeft>() as MoveLeft;
-				comp.SetSpeed(1);
-			}
-			else if (s == "MoveRight") {
-				MoveRight comp = player.AddComponent<MoveRight>() as MoveRight;
-				comp.SetSpeed(1);
-			}
-			else if (s == "Jump") {
-				Jump comp = player.AddComponent<Jump>() as Jump;
-				comp.SetValues(4.5f, 6, 1 << LayerMask.NameToLayer("Ground"));
-			}
+			AddUpgrade(s);
+		}
+	}
+
+	public void AddUpgrade(string s) {
+		if (s == "MoveLeft")  {
+			MoveLeft comp = player.AddComponent<MoveLeft>() as MoveLeft;
+			comp.SetSpeed(1);
+		} else if (s == "MoveRight") {
+			MoveRight comp = player.AddComponent<MoveRight>() as MoveRight;
+			comp.SetSpeed(1);
+		} else if (s == "Jump") {
+			Jump comp = player.AddComponent<Jump>() as Jump;
+			comp.SetValues(4.5f, 6, 1 << LayerMask.NameToLayer("Ground"));
 		}
 	}
 	
