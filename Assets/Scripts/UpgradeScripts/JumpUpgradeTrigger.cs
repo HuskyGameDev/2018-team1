@@ -18,12 +18,10 @@ public class JumpUpgradeTrigger : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D otherCollider) {
-		print("entered collision!");
 		if (otherCollider.CompareTag("Player")) {
 			PersistentData.upgrades.Add("Jump");
 
-			Jump comp = otherCollider.gameObject.AddComponent<Jump>() as Jump;
-			comp.SetValues(4.5f, 6, 1 << LayerMask.NameToLayer("Ground"));
+			otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade("Jump");
 
 			Destroy(gameObject);
 		}
