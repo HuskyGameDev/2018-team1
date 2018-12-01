@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//Remove this and add these individually elsewhere
-		PersistentData.upgrades = new string[] {"MoveLeft", "MoveRight", "Jump"};
+		// PersistentData.upgrades.Add("MoveLeft");
+		PersistentData.upgrades.Add("MoveRight");
+		// PersistentData.upgrades.Add("Jump");
 
 		foreach (string s in PersistentData.upgrades) {
 			if (s == "MoveLeft")  {
