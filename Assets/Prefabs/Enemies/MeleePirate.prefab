@@ -137,7 +137,7 @@ MonoBehaviour:
   minJumpTime: 20
   maxJumpTime: 50
   sightRange: 10
-  attackReach: 2
+  attackReach: 3
   health: {fileID: 114666702119964464}
 --- !u!114 &114666702119964464
 MonoBehaviour:
