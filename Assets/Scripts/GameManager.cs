@@ -8,11 +8,6 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//Remove this and add these individually elsewhere
-		PersistentData.upgrades.Add("MoveLeft");
-		PersistentData.upgrades.Add("MoveRight");
-		PersistentData.upgrades.Add("Jump");
-
 		foreach (string s in PersistentData.upgrades) {
 			AddUpgrade(s);
 		}
@@ -33,6 +28,20 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown("v") && Input.GetKeyDown("b") && Input.GetKeyDown("n"))
+				PersistentData.devMode = true;
+		if (PersistentData.devMode) {
+			if (Input.GetKeyDown(KeyCode.F8)) {
+				PersistentData.upgrades.Add("MoveLeft");
+				PersistentData.upgrades.Add("MoveRight");
+				PersistentData.upgrades.Add("Jump");
+				foreach (string s in PersistentData.upgrades) 
+					AddUpgrade(s);
+			}
+			if (Input.GetKeyDown(KeyCode.F9)) {
+				player.GetComponent<MoveRight>().speed = player.GetComponent<MoveRight>().speed * 2;
+				player.GetComponent<MoveLeft>().speed = player.GetComponent<MoveLeft>().speed * 2;
+			}
+		}
 	}
 }
