@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     public Pin CurrentPin { get; private set; }
     private Pin _targetPin;
     private MapManager _mapManager;
+    Vector3 offset = new Vector3(0f, 1.0f, 0f); //offset the character to have their feet on the level dot
 
 
     public void Initialise(MapManager mapManager, Pin startPin)
@@ -25,8 +26,9 @@ public class Character : MonoBehaviour
         if (_targetPin == null) return;
 
         // Get the characters current position and the targets position
-        var currentPosition = transform.position;
-        var targetPosition = _targetPin.transform.position;
+        
+        Vector3 currentPosition = transform.position;
+        Vector3 targetPosition = _targetPin.transform.position + offset;
 
         // If the character isn't that close to the target move closer
         if (Vector3.Distance(currentPosition, targetPosition) > .02f)
@@ -88,7 +90,7 @@ public class Character : MonoBehaviour
     {
         CurrentPin = pin;
         _targetPin = null;
-        transform.position = pin.transform.position;
+        transform.position = pin.transform.position + offset;
         IsMoving = false;
         
         // Tell the map manager that
