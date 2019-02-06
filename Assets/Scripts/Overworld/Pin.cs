@@ -17,6 +17,7 @@ public class Pin : MonoBehaviour
 	public bool IsAutomatic;
 	public bool HideIcon;
 	public string SceneToLoad;
+	public string LevelName;
 	
 	[Header("Pins")] //
 	public Pin UpPin;

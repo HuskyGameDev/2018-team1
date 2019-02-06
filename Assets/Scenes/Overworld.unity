@@ -203,6 +203,7 @@ MonoBehaviour:
   IsAutomatic: 0
   HideIcon: 0
   SceneToLoad: 1-4
+  LevelName: 
   UpPin: {fileID: 0}
   DownPin: {fileID: 653726303}
   LeftPin: {fileID: 0}
@@ -424,7 +425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 1-F
+  SceneToLoad: W1-4(F)
+  LevelName: 1-F
   UpPin: {fileID: 207965896}
   DownPin: {fileID: 0}
   LeftPin: {fileID: 0}
@@ -518,7 +520,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 1-3
+  SceneToLoad: W1-3
+  LevelName: 1-3
   UpPin: {fileID: 1841860031}
   DownPin: {fileID: 0}
   LeftPin: {fileID: 207965896}
@@ -1081,7 +1084,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 1-2
+  SceneToLoad: W1-2
+  LevelName: 1-2
   UpPin: {fileID: 0}
   DownPin: {fileID: 677396805}
   LeftPin: {fileID: 2028267000}
@@ -1175,7 +1179,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 1-1
+  SceneToLoad: W1-1
+  LevelName: 1-1
   UpPin: {fileID: 0}
   DownPin: {fileID: 0}
   LeftPin: {fileID: 0}

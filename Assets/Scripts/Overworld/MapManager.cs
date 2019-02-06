@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
@@ -51,6 +52,10 @@ public class MapManager : MonoBehaviour
 		{
 			Character.TrySetDirection(Direction.Right);
 		}
+		else if(Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Return))
+		{
+			SceneManager.LoadScene(Character.CurrentPin.SceneToLoad);
+		}
 	}
 
 	
@@ -59,6 +64,6 @@ public class MapManager : MonoBehaviour
 	/// </summary>
 	public void UpdateGui()
 	{
-		SelectedLevelText.text = string.Format("Current Level: {0}", Character.CurrentPin.SceneToLoad);
+		SelectedLevelText.text = string.Format("Current Level: {0}", Character.CurrentPin.LevelName);
 	}
 }
