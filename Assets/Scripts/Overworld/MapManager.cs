@@ -35,19 +35,19 @@ public class MapManager : MonoBehaviour
 	/// </summary>
 	private void CheckForInput()
 	{
-		if (Input.GetKeyUp(KeyCode.UpArrow))
+		if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
 		{
 			Character.TrySetDirection(Direction.Up);
 		}
-		else if(Input.GetKeyUp(KeyCode.DownArrow))
+		else if(Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
 		{
 			Character.TrySetDirection(Direction.Down);
 		}
-		else if(Input.GetKeyUp(KeyCode.LeftArrow))
+		else if(Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
 		{
 			Character.TrySetDirection(Direction.Left);
 		}
-		else if(Input.GetKeyUp(KeyCode.RightArrow))
+		else if(Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
 		{
 			Character.TrySetDirection(Direction.Right);
 		}
