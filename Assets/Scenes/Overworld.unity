@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 207965893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -466.254, y: -189.636, z: 0}
+  m_LocalPosition: {x: -465.71, y: -189.02, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1077960462}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 
+  SceneToLoad: 1-4
   UpPin: {fileID: 0}
   DownPin: {fileID: 653726303}
   LeftPin: {fileID: 0}
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 
+  SceneToLoad: 1-F
   UpPin: {fileID: 207965896}
   DownPin: {fileID: 0}
   LeftPin: {fileID: 0}
@@ -453,7 +453,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677396802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -463.2, y: -188.64, z: 0}
+  m_LocalPosition: {x: -461.97, y: -189.03, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1077960462}
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 
+  SceneToLoad: 1-3
   UpPin: {fileID: 1841860031}
   DownPin: {fileID: 0}
   LeftPin: {fileID: 207965896}
@@ -886,10 +886,10 @@ RectTransform:
   m_Father: {fileID: 1513262868}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.6364, y: 1.8182}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.20452881, y: 26.329987}
+  m_SizeDelta: {x: -0.40901, y: -53.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781824071
 MonoBehaviour:
@@ -912,7 +912,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
+    m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 
+  SceneToLoad: 1-2
   UpPin: {fileID: 0}
   DownPin: {fileID: 677396805}
   LeftPin: {fileID: 2028267000}
@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 
+  SceneToLoad: 1-1
   UpPin: {fileID: 0}
   DownPin: {fileID: 0}
   LeftPin: {fileID: 0}
