@@ -12,13 +12,16 @@ public class Health : MonoBehaviour {
         this.health = health;
         maxHealth = health;
     }
+    
     public int GetCurrentHealth() {
         return health;
     }
+
     void Start() {
         health = maxHealth;
         iFrameCounter = 0;
     }
+
     //Reduce character's health by a value, returns current health, 0 if dead, negative if immune or dead
     public int ReduceHealth(int damage) {
         if (iFrameCounter > 0) 
@@ -44,9 +47,8 @@ public class Health : MonoBehaviour {
     private void PlayerDied() {
         // Handle what happens when the player dies
     }
+
     void Update() {
-        if (CompareTag("Player"))
-            print(health);
         if (iFrameCounter > 0) {
             Color c = GetComponent<SpriteRenderer>().color;
             if (iFrameCounter % 2 == 0)
@@ -56,6 +58,5 @@ public class Health : MonoBehaviour {
             GetComponent<SpriteRenderer>().color = c;
             iFrameCounter--;
         }
-           
     }
 }
