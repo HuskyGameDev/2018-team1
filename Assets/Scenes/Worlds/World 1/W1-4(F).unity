@@ -210,6 +210,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114721627805219276, guid: c7949879b2e43724586de47d9ff868b9,
+        type: 2}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1834463906}
+    - target: {fileID: 114721627805219276, guid: c7949879b2e43724586de47d9ff868b9,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1400558579}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7949879b2e43724586de47d9ff868b9, type: 2}
   m_IsPrefabAsset: 0
@@ -541,7 +551,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -259320909
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -7828,7 +7838,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -150591949
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
