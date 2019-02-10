@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class MapManager : MonoBehaviour
 {
 	public Character Character;
-	public Pin StartPin;
+	public Pin pin;
 	public Text SelectedLevelText;
 	
 	/// <summary>
@@ -14,7 +14,14 @@ public class MapManager : MonoBehaviour
 	private void Start ()
 	{
 		// Pass a ref and default the player Starting Pin
-		Character.Initialise(this, StartPin);
+		Character.Initialise(this, pin.toPin(Global.lvlToLoad));
+	}
+
+	private void OnSceneLoaded(Scene scene, LoadSceneMode mode) 
+	{
+		Debug.Log("OnSceneLoad test");
+		Pin loadPin = pin.toPin(Global.lvlToLoad);
+		Character.Initialise(this, loadPin == null ? pin : loadPin );
 	}
 
 
@@ -54,6 +61,7 @@ public class MapManager : MonoBehaviour
 		}
 		else if(Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Return))
 		{
+			Global.lvlToLoad = Character.CurrentPin.LevelName;
 			SceneManager.LoadScene(Character.CurrentPin.SceneToLoad);
 		}
 	}

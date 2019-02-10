@@ -6,6 +6,8 @@ TagManager:
   tags:
   - endLevel
   - Enemy
+  - pin
+  - pin collection
   layers:
   - Default
   - TransparentFX

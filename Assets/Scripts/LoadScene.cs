@@ -13,10 +13,22 @@ public class LoadScene : MonoBehaviour {
         SceneManager.LoadScene("W1-1");
     }
     public void LoadOverworld() {
+        string lev = SceneManager.GetActiveScene().name;
+        lev = lev.Substring(1);
+        Debug.Log("Level name: " + lev);
+        Global.lvlToLoad = lev;
         SceneManager.LoadScene("Overworld");
     }
     public void LoadLevel() {
-        SceneManager.LoadScene(level);
+        if (level == "Overworld")
+        {
+            LoadOverworld();
+        }
+        else
+        {
+            SceneManager.LoadScene(level);
+        }
+        
     }
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player"))

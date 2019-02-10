@@ -106,4 +106,25 @@ public class Pin : MonoBehaviour
 		Gizmos.color = Color.blue;
 		Gizmos.DrawLine(transform.position, pin.transform.position);
 	}
+
+	public Pin toPin(String lvlName)
+	{
+		GameObject[] objs = GameObject.FindGameObjectsWithTag("pin collection");
+		foreach(GameObject p in objs)
+		{
+			Debug.Log("Pins: " + p);
+			foreach (Transform child in p.transform)
+			{
+				Debug.Log("Child (individual pin): " + child);
+				Pin ret = child.gameObject.GetComponent("Pin") as Pin;
+				Debug.Log("pin? " + ret);
+				if (ret.LevelName == lvlName)
+				{
+					return ret;
+				}
+			}
+		}
+		return null;
+	}
+
 }
