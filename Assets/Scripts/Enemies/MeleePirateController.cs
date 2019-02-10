@@ -11,7 +11,7 @@ public class MeleePirateController :  Controller {
     public float sightRange;
     public float attackReach;
     public Health health;
-    public Animator animator;
+    private Animator animator;
 
     // Character Components
 
@@ -28,6 +28,7 @@ public class MeleePirateController :  Controller {
         transform = GetComponent<Transform>();
         rb2d = GetComponent<Rigidbody2D>();
         collider2d = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
         rb2d.freezeRotation = true;
 	}
 

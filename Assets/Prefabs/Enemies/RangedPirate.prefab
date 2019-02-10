@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50070703612900166}
   - component: {fileID: 61353070834865674}
   - component: {fileID: 61022919928711326}
+  - component: {fileID: 95210848927159068}
   m_Layer: 0
   m_Name: RangedPirate
   m_TagString: Enemy
@@ -115,6 +116,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.3333333}
   m_EdgeRadius: 0
+--- !u!95 &95210848927159068
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034448487972432}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da139d244a49ad94aa86e1a7235fc865, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114233943445891920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,6 +162,7 @@ MonoBehaviour:
     m_Bits: 256
   minJumpForce: 3.5
   maxJumpForce: 5
+  animator: {fileID: 95210848927159068}
   startingHealth: 100
   damage: 10
   speed: 0.2
