@@ -202,8 +202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: 1-4
-  LevelName: 
+  SceneToLoad: W1-4
+  LevelName: 1-4
   UpPin: {fileID: 0}
   DownPin: {fileID: 653726303}
   LeftPin: {fileID: 0}
