@@ -8,9 +8,14 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (!PersistentData.ordinary) {
+			PersistentData.upgrades.Add("MoveLeft");
+			PersistentData.upgrades.Add("MoveRight");
+			PersistentData.upgrades.Add("Jump");
+		}
 		foreach (string s in PersistentData.upgrades) {
 			AddUpgrade(s);
-		}
+		}	
 	}
 
 	public void AddUpgrade(string s) {

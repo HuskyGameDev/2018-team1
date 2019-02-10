@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 61942042065834936}
   - component: {fileID: 212641703100713088}
   - component: {fileID: 61887332174957180}
+  - component: {fileID: 95858954736441484}
   m_Layer: 0
   m_Name: BossMeleePirate
   m_TagString: Enemy
@@ -88,7 +89,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 1}
+  m_Size: {x: 15, y: 4}
   m_EdgeRadius: 0
 --- !u!61 &61942042065834936
 BoxCollider2D:
@@ -115,6 +116,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.3333333}
   m_EdgeRadius: 0
+--- !u!95 &95858954736441484
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1827660555149138}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da139d244a49ad94aa86e1a7235fc865, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114618704298599336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41052bb3d501b3f4fa1c85ab3a95899c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iFrames: 20
   maxHealth: 100
 --- !u!114 &114975938935308262
 MonoBehaviour:
@@ -143,13 +163,16 @@ MonoBehaviour:
     m_Bits: 256
   minJumpForce: 6
   maxJumpForce: 8
+  animator: {fileID: 95858954736441484}
   startingHealth: 150
   damage: 20
   speed: 0.25
   minJumpTime: 20
   maxJumpTime: 50
-  sightRange: 5
+  sightRange: 10
+  attackReach: 2
   health: {fileID: 114618704298599336}
+  meleeAttack: {fileID: 0}
 --- !u!212 &212641703100713088
 SpriteRenderer:
   m_ObjectHideFlags: 1

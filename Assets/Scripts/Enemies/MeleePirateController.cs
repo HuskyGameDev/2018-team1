@@ -9,15 +9,17 @@ public class MeleePirateController :  Controller {
     public int minJumpTime;
 	public int maxJumpTime;
     public float sightRange;
+    public float attackReach;
     public Health health;
+    private Animator animator;
 
     // Character Components
- 
 
     // For deciding what to do
     private bool seenPlayer = false;
     private Transform player;
 
+    public Collider2D meleeAttack;
 	// Use this for initialization
 	void Start () {
         timeUntilJump = Random.Range(minJumpTime, maxJumpTime);
@@ -26,6 +28,7 @@ public class MeleePirateController :  Controller {
         transform = GetComponent<Transform>();
         rb2d = GetComponent<Rigidbody2D>();
         collider2d = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
         rb2d.freezeRotation = true;
 	}
 
@@ -39,19 +42,28 @@ public class MeleePirateController :  Controller {
                     MoveRight(speed);
                 else
                     MoveLeft(speed);
+                if (angle < 150 && angle >= 30) // If player is above the enemy
+                    AttemptJump();
             }
             else 
                 MoveLeft(speed);
         }
         else
             MoveLeft(speed);
-        // Check if eligible for jumping (grounded and pressing button)
-        if (isGrounded() && timeUntilJump-- == 0) {
+        // Check if time to jump
+        if (timeUntilJump-- == 0) {
             // Jump!
-            Jump();
+            AttemptJump();
         }
         if (timeUntilJump == -1)
             timeUntilJump = Random.Range(minJumpTime, maxJumpTime);
+    }
+    private void AttemptJump() {
+         // Check if eligible for jumping (grounded)
+        if (isGrounded()) {
+            // Jump!
+            Jump();
+        }
     }
     public override void Die() {
         GameObject.Destroy(gameObject);
@@ -65,5 +77,14 @@ public class MeleePirateController :  Controller {
     
 	// Update is called once per frame
 	void Update () {
+        if (seenPlayer) {
+            if ((player.position - transform.position).magnitude < attackReach) 
+                Attack();
+                
+        }
 	}
+    private void Attack() {
+        animator.SetTrigger("Attack");
+        meleeAttack.enabled = true;
+    }
 }

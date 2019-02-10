@@ -9,11 +9,17 @@ public abstract class Controller : MonoBehaviour {
     protected new Transform transform;
     public float minJumpForce;
     public float maxJumpForce;
+    public Animator animator;
+
     protected void MoveLeft(float speed) {
+        animator.SetBool("WalkingRight", false);
+        animator.SetBool("WalkingLeft", true);
         Vector3 movement = new Vector3(-1, 0, 0);
         transform.position += (10 * movement * speed * Time.deltaTime);
     }
     protected void MoveRight(float speed) {
+        animator.SetBool("WalkingLeft", false);
+        animator.SetBool("WalkingRight", true);
         Vector3 movement = new Vector3(1, 0, 0);
         transform.position += (10 * movement * speed * Time.deltaTime);
     }
