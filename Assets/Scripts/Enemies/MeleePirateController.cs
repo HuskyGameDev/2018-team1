@@ -85,5 +85,6 @@ public class MeleePirateController :  Controller {
 	}
     private void Attack() {
         animator.SetTrigger("Attack");
+        meleeAttack.enabled = true;
     }
 }
