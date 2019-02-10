@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour {
 	public static bool gameIsPaused = false;
 
 	public Transform player;
-	public Transform camera;
+	public Transform cam;
 	
 	public GameObject pauseMenuUI;
 
@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour {
 	public void saveGame()
 	{
 		SaveGame.Instance.playerPosition = player.position;
-		SaveGame.Instance.cameraPosition = camera.position;
+		SaveGame.Instance.cameraPosition = cam.position;
 		SaveGame.Save();
 		Debug.Log("Saving Game...");
 	}
@@ -53,7 +53,7 @@ public class PauseMenu : MonoBehaviour {
 	{
 		SaveGame.Load();
 		player.position = SaveGame.Instance.playerPosition;
-		camera.position = SaveGame.Instance.cameraPosition;
+		cam.position = SaveGame.Instance.cameraPosition;
 		Debug.Log("Loading Save...");
 	}
 
