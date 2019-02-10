@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41052bb3d501b3f4fa1c85ab3a95899c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iFrames: 20
   maxHealth: 100
 --- !u!114 &114849401136134396
 MonoBehaviour:

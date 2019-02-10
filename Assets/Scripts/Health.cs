@@ -2,6 +2,8 @@
 
 // Handles HP manipulation
 public class Health : MonoBehaviour {
+    public int iFrames;
+    private int iFrameCounter;
     public int maxHealth; 
     //Should be modified through Reduce/IncreaseHealth()
     private int health;
@@ -13,9 +15,15 @@ public class Health : MonoBehaviour {
     public int GetCurrentHealth() {
         return health;
     }
-
-    //Reduce character's health by a value, returns current health, negative or 0 if dead
+    void Start() {
+        health = maxHealth;
+        iFrameCounter = 0;
+    }
+    //Reduce character's health by a value, returns current health, 0 if dead, negative if immune or dead
     public int ReduceHealth(int damage) {
+        if (iFrameCounter > 0) 
+            return -1;
+        iFrameCounter = iFrames;
         health -= damage;
         if (health <= 0)
             if (gameObject.CompareTag("Player"))
@@ -32,7 +40,22 @@ public class Health : MonoBehaviour {
             health = maxHealth;
         return health;
     }
+
     private void PlayerDied() {
         // Handle what happens when the player dies
+    }
+    void Update() {
+        if (CompareTag("Player"))
+            print(health);
+        if (iFrameCounter > 0) {
+            Color c = GetComponent<SpriteRenderer>().color;
+            if (iFrameCounter % 2 == 0)
+                c.a = 0;
+            else
+                c.a = 1;
+            GetComponent<SpriteRenderer>().color = c;
+            iFrameCounter--;
+        }
+           
     }
 }
