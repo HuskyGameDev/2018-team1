@@ -31,6 +31,44 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Booster" ID="{80C7F192-9F8A-48F7-BBD0-847D90C1EA58}">
+					<ChildrenList>
+						<Action Name="" ID="{62FA1D51-78DA-41B4-A6EF-3FECDC4F3F65}" ShortID="719625801">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Booster" ID="{ED63FC94-4627-4089-98E3-FA82CF133732}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Jump" ID="{A2ED043A-F70A-45D9-9528-ECC62E023E64}">
+					<ChildrenList>
+						<Action Name="" ID="{BD3BCEE8-7645-4D1A-A8F9-810FDE1CBD4D}" ShortID="134487182">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump" ID="{29C0987D-906A-4D7D-8212-476218312360}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7401ABFB-8864-4088-8008-92DE7967CBE4}" ShortID="310562341">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sword_Swing" ID="{EE9678D3-C551-4CC8-83B9-96A99DB1DDB5}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

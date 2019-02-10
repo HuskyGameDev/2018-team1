@@ -13,7 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BOOSTER = 1228514695U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
+        static const AkUniqueID JUMP = 3833651337U;
         static const AkUniqueID SWORD_SWING = 476098351U;
     } // namespace EVENTS
 

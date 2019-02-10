@@ -7,9 +7,14 @@ public class mainMenu : MonoBehaviour {
 
 	public GameObject optionsMenu;
 
+	private void Start() {
+		Global.lvlToLoad = "1-1";
+	}
+
 	public void PlayGame()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		SceneManager.LoadScene("Overworld");
+		
 	}
 
 	public void OptionsMenu()

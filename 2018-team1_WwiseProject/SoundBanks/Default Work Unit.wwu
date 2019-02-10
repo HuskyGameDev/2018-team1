@@ -6,6 +6,8 @@
 				<SoundBank Name="MainBank" ID="{98656663-88D3-4C32-8939-F8F617B5454F}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Sword_Swing" ID="{32524949-976E-439F-B1F6-D02D1FD9D540}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Jump" ID="{A2ED043A-F70A-45D9-9528-ECC62E023E64}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Booster" ID="{80C7F192-9F8A-48F7-BBD0-847D90C1EA58}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="FootStep" ID="{419B705A-8104-4D2A-AE88-5519A0826227}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
