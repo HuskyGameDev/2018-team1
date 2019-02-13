@@ -43,23 +43,23 @@ public class MapManager : MonoBehaviour
 	/// </summary>
 	private void CheckForInput()
 	{
-		if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
+		if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
 		{
 			Character.TrySetDirection(Direction.Up);
 		}
-		else if(Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
+		else if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
 		{
 			Character.TrySetDirection(Direction.Down);
 		}
-		else if(Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
+		else if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
 		{
 			Character.TrySetDirection(Direction.Left);
 		}
-		else if(Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
+		else if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
 		{
 			Character.TrySetDirection(Direction.Right);
 		}
-		else if(Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Return))
+		else if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
 		{
 			Global.lvlToLoad = Character.CurrentPin.LevelName;
 			SceneManager.LoadScene(Character.CurrentPin.SceneToLoad);

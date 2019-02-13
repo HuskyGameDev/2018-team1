@@ -124,7 +124,7 @@ public class Pin : MonoBehaviour
 				}
 			}
 		}
-		return null;
+		return this;
 	}
 
 }
