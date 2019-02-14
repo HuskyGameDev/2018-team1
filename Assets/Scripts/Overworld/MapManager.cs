@@ -17,13 +17,6 @@ public class MapManager : MonoBehaviour
 		Character.Initialise(this, pin.toPin(Global.lvlToLoad));
 	}
 
-	private void OnSceneLoaded(Scene scene, LoadSceneMode mode) 
-	{
-		Debug.Log("OnSceneLoad test");
-		Pin loadPin = pin.toPin(Global.lvlToLoad);
-		Character.Initialise(this, loadPin == null ? pin : loadPin );
-	}
-
 
 	/// <summary>
 	/// This runs once a frame

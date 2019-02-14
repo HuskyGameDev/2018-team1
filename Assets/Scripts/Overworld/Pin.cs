@@ -26,6 +26,11 @@ public class Pin : MonoBehaviour
 	public Pin RightPin;
 
 	private Dictionary<Direction, Pin> _pinDirections; 
+
+	private LineRenderer lineUp;
+	private LineRenderer lineRight;
+	private LineRenderer lineDown;
+	private LineRenderer lineLeft;
 	
 	
 	/// <summary>
@@ -33,6 +38,7 @@ public class Pin : MonoBehaviour
 	/// </summary>
 	private void Start()
 	{
+
 		// Load the directions into a dictionary for easy access
 		_pinDirections = new Dictionary<Direction, Pin>
 		{
@@ -48,7 +54,6 @@ public class Pin : MonoBehaviour
 			GetComponent<SpriteRenderer>().enabled = false;
 		}
 	}
-	
 	
 	/// <summary>
 	/// Get the pin in a selected direction
