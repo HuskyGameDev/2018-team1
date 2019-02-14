@@ -83,8 +83,10 @@ public class Jump : MonoBehaviour {
             rightNormal *= -1;
         }
 
-        bool leftGrounded = leftNormal.Equals(normalizedUp);
-        bool rightGrounded = rightNormal.Equals(normalizedUp);
+        bool leftGrounded = Vector3.Dot(leftNormal, normalizedUp) > 0;
+        bool rightGrounded = Vector3.Dot(rightNormal, normalizedUp) > 0;
+        // bool leftGrounded = leftNormal.Equals(normalizedUp);
+        // bool rightGrounded = rightNormal.Equals(normalizedUp);
 
         if (leftGrounded || rightGrounded) {
             return true;
