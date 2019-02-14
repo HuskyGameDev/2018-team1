@@ -29,6 +29,30 @@ public class GameManager : MonoBehaviour {
 			Jump comp = player.AddComponent<Jump>() as Jump;
 			comp.SetValues(4.5f, 6, 1 << LayerMask.NameToLayer("Ground"));
 		}
+		else if (s == "Dagger") {
+			GameObject attack = new GameObject();
+
+			BoxCollider2D hitbox = attack.AddComponent<BoxCollider2D>() as BoxCollider2D;
+
+			hitbox.isTrigger = true;
+			hitbox.enabled = false;
+			hitbox.size = new Vector2(.9f, .5f);
+			hitbox.offset = new Vector2(.7f, 0);
+
+			Hit hit = attack.AddComponent<Hit>() as Hit;
+			hit.damage = 20;
+			hit.knockback = 1000;
+
+			attack.transform.SetParent(player.transform, false);
+			attack.transform.position = Vector3.zero;
+			attack.transform.position = Vector3.zero;
+			attack.transform.position = Vector3.zero;
+			attack.transform.position = Vector3.zero;
+			attack.transform.position = Vector3.zero;
+			attack.transform.position = Vector3.zero;
+			attack.transform.position = Vector3.zero;
+			attack.transform.position = Vector3.zero;
+		}
 	}
 	
 	// Update is called once per frame

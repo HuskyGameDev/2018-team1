@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpUpgradeTrigger : MonoBehaviour {
+public class DaggerUpgradeTrigger : MonoBehaviour {
 
 	Collider2D collider;
 
@@ -13,9 +13,9 @@ public class JumpUpgradeTrigger : MonoBehaviour {
 	
 	private void OnTriggerEnter2D(Collider2D otherCollider) {
 		if (otherCollider.CompareTag("Player")) {
-			PersistentData.upgrades.Add("Jump");
+			PersistentData.upgrades.Add("Dagger");
 
-			otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade("Jump");
+			otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade("Dagger");
 
 			Destroy(gameObject);
 		}
