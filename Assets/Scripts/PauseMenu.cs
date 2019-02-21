@@ -65,6 +65,15 @@ public class PauseMenu : MonoBehaviour {
 		Debug.Log("Loading Menu...");
 	}
 
+	public void loadOverworld()
+	{
+		LoadScene sceneLoader = new LoadScene();
+		pauseMenuUI.SetActive(false);
+		Time.timeScale = 1f;
+		gameIsPaused = false;
+		sceneLoader.LoadOverworld();
+	}
+
 	public void quitGame()
 	{
 		Debug.Log("Quitting Game...");

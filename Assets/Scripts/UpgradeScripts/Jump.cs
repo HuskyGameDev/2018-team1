@@ -68,8 +68,10 @@ public class Jump : MonoBehaviour {
 
     // Raycasting method to check if on the ground (or close enough that the difference is negligible)
     private bool isGrounded() {
-        RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
-        RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
+        // RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x * 0.5f, collider2d.bounds.extents.y, 0), -transform.up, 0.3f, groundLayer.value);
+        // RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x * 0.5f, collider2d.bounds.extents.y, 0), -transform.up, 0.3f, groundLayer.value);
+		RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x * 0.9f, collider2d.bounds.extents.y * 0.9f, 0), -transform.up, 0.15f, groundLayer.value);
+        RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x * 0.9f, collider2d.bounds.extents.y * 0.9f, 0), -transform.up, 0.15f, groundLayer.value);
 
         Vector3 normalizedUp = Vector3.Normalize(transform.up);
 
@@ -83,8 +85,10 @@ public class Jump : MonoBehaviour {
             rightNormal *= -1;
         }
 
-        bool leftGrounded = leftNormal.Equals(normalizedUp);
-        bool rightGrounded = rightNormal.Equals(normalizedUp);
+        bool leftGrounded = Vector3.Dot(leftNormal, normalizedUp) > 0;
+        bool rightGrounded = Vector3.Dot(rightNormal, normalizedUp) > 0;
+        // bool leftGrounded = leftNormal.Equals(normalizedUp);
+        // bool rightGrounded = rightNormal.Equals(normalizedUp);
 
         if (leftGrounded || rightGrounded) {
             return true;
