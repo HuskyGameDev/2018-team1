@@ -54,7 +54,11 @@ public class GameManager : MonoBehaviour {
 		hit.damage = 20;
 		hit.knockback = 1000;
 
-		attack.transform.SetParent(player.transform, true);
+		attack.transform.SetParent(player.transform);
+		attack.transform.localPosition = Vector3.zero;
+		
+		PlayerMelee pm = player.AddComponent<PlayerMelee>() as PlayerMelee;
+		pm.meleeAttack = hitbox;
 	}
 	// Update is called once per frame
 	void Update () {

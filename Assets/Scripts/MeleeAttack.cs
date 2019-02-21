@@ -14,7 +14,6 @@ public class MeleeAttack : MonoBehaviour {
         }
 
 		if (attacker.CompareTag("Enemy") && !col.isTrigger && col.gameObject.CompareTag("Player")) {
-			print("hit!");
 			col.SendMessageUpwards("ReduceHealth", dmg);
 		}
 	}
