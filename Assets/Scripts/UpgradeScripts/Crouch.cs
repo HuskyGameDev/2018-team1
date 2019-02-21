@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveLeft : MonoBehaviour {
+public class Crouch : MonoBehaviour {
 
     // Public properties
     public float speed;
@@ -14,8 +14,7 @@ public class MoveLeft : MonoBehaviour {
     private Animator animator;
 
     public void SetSpeed(float speed) {
-        animator = GetComponent<Animator>();
-        this.speed = speed * (animator.GetBool("Crouch") ? .5f : 1f);
+        this.speed = speed;
     }
 	// Use this for initialization
 	void Start () {
@@ -34,13 +33,11 @@ public class MoveLeft : MonoBehaviour {
     private void FixedUpdate() {
 
         // Movement independent from jumping
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        if (moveHorizontal < 0) {
-            animator.SetBool("WalkingLeft", true);
-            Vector3 movement = new Vector3(moveHorizontal, 0, 0);
-            transform.position += (10 * movement * speed * Time.deltaTime);
+        float moveVertical = Input.GetAxisRaw("Vertical");
+        if (moveVertical < 0) {
+            animator.SetBool("Crouch", true);
         } else {
-            animator.SetBool("WalkingLeft", false);
+            animator.SetBool("Crouch", false);
         }
         
     }
