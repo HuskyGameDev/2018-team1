@@ -13,7 +13,7 @@ public class mainMenu : MonoBehaviour {
 
 	public void PlayGame()
 	{
-		SceneManager.LoadScene("Overworld");
+		SceneManager.LoadScene("W1-1");
 		
 	}
 
