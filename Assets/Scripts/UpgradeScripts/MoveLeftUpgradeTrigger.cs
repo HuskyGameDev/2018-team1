@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpUpgradeTrigger : MonoBehaviour {
+public class MoveLeftUpgradeTrigger : MonoBehaviour {
 
 	Collider2D collider;
 
@@ -18,8 +18,8 @@ public class JumpUpgradeTrigger : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D otherCollider) {
 		if (otherCollider.CompareTag("Player")) {
-			PersistentData.upgrades.Add("Jump");
-			otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade("Jump");
+			PersistentData.upgrades.Add("MoveLeft");
+			otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade("MoveLeft");
 			Destroy(gameObject);
 		}
 	}

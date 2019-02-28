@@ -6,8 +6,7 @@ public class StartGame : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PersistentData.upgrades.Add("MoveRight");
-		PersistentData.ordinary = true;
+		
 	}
 	
 	// Update is called once per frame
