@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour {
 		hitbox.offset = new Vector2(.7f, 0);
 
 		Hit hit = attack.AddComponent<Hit>() as Hit;
-		hit.damage = 20;
+		hit.damage = 35;
 		hit.knockback = 1000;
 
 		attack.transform.SetParent(player.transform);
