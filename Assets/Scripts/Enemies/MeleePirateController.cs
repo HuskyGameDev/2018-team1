@@ -19,6 +19,7 @@ public class MeleePirateController :  Controller {
     private bool seenPlayer = false;
     private Transform player;
 
+    private int attacking;
     public Collider2D meleeAttack;
 	// Use this for initialization
 	void Start () {
@@ -80,10 +81,15 @@ public class MeleePirateController :  Controller {
         if (seenPlayer) {
             if ((player.position - transform.position).magnitude < attackReach) 
                 Attack();
-                
+        }
+        if (attacking > 0) {
+            attacking--;
+            if (attacking == 0)
+                meleeAttack.enabled = false;
         }
 	}
     private void Attack() {
+        attacking = 4;
         animator.SetTrigger("Attack");
         meleeAttack.enabled = true;
     }

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 // Handles HP manipulation
 public class Health : MonoBehaviour {
     public int iFrames;
@@ -45,7 +45,7 @@ public class Health : MonoBehaviour {
     }
 
     private void PlayerDied() {
-        // Handle what happens when the player dies
+        SceneManager.LoadScene("MainMenu");
     }
 
     void Update() {
