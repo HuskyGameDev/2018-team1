@@ -11,6 +11,9 @@ public class UpgradeAdder : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		collider =  GetComponent<Collider2D>();
+		if (PersistentData.upgrades.Contains(upgradeToAdd)) {
+			enabled = false;
+		}
 	}
 	
 	private void OnTriggerEnter2D(Collider2D otherCollider) {
