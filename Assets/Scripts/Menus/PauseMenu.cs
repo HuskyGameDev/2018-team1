@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -12,6 +14,8 @@ public class PauseMenu : MonoBehaviour {
 	private Vector3 playerStart;
 	
 	public GameObject pauseMenuUI;
+
+	public Selectable PauseMenuStart;
 
 	void Start() {
 		Cursor.visible = false;
@@ -31,6 +35,10 @@ public class PauseMenu : MonoBehaviour {
 				pause();
 			}
 		}
+		if (gameIsPaused && Input.GetButtonDown("Cancel"))
+		{
+			resume();
+		}
 	}
 
 	public void resume()
@@ -47,6 +55,7 @@ public class PauseMenu : MonoBehaviour {
 		Time.timeScale = 0f;
 		Cursor.visible = true;
 		gameIsPaused = true;
+		PauseMenuStart.Select();
 	}
 
 	public void saveGame()

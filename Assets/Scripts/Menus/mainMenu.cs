@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class mainMenu : MonoBehaviour {
 
+	public Selectable OptionsStartButton;
 	public GameObject optionsMenu;
 
 	private void Start() {
@@ -21,7 +24,7 @@ public class mainMenu : MonoBehaviour {
 	{
 		this.gameObject.SetActive(false);
 		optionsMenu.SetActive(true);
-
+		OptionsStartButton.Select();
 	}
 
 	public void QuitGame()
