@@ -16,9 +16,11 @@ public class DisableAttack : StateMachineBehaviour {
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		Collider2D meleeAttack = animator.gameObject.transform.GetChild(0).gameObject.GetComponent<Collider2D>();
-		if (meleeAttack != null) 
-			meleeAttack.enabled = false;
+		if (animator.gameObject.transform.childCount > 0) {
+			Collider2D meleeAttack = animator.gameObject.transform.GetChild(0).gameObject.GetComponent<Collider2D>();
+			if (meleeAttack != null) 
+				meleeAttack.enabled = false;
+		}
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

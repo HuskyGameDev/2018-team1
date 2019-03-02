@@ -23,8 +23,8 @@ public class NormalChecker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x * 0.9f, collider2d.bounds.extents.y * 0.9f, 0), -transform.up, 0.15f, groundLayer.value);
-        RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x * 0.9f, collider2d.bounds.extents.y * 0.9f, 0), -transform.up, 0.15f, groundLayer.value);
+		RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x, 0, 0), -transform.up, 5f, groundLayer.value);
+        RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x, 0, 0), -transform.up, 5f, groundLayer.value);
 
         Vector3 normalizedUp = Vector3.Normalize(transform.up);
 
@@ -38,14 +38,8 @@ public class NormalChecker : MonoBehaviour {
             rightNormal *= -1;
         }
 
-        print(leftNormal);
-        print(rightNormal);
-
         bool leftSloped = Vector3.Dot(leftNormal, normalizedUp) > 0 && !leftNormal.Equals(normalizedUp);
         bool rightSloped = Vector3.Dot(rightNormal, normalizedUp) > 0 && !rightNormal.Equals(normalizedUp);
-
-        print(leftSloped);
-        print(rightSloped);
 
 		if (leftSloped || rightSloped) {
 			rb2d.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;

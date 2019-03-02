@@ -9,8 +9,14 @@ public class PauseMenu : MonoBehaviour {
 
 	public Transform player;
 	public Transform cam;
+	private Vector3 playerStart;
 	
 	public GameObject pauseMenuUI;
+
+	void Start() {
+		Cursor.visible = false;
+		playerStart = player.position;
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -31,6 +37,7 @@ public class PauseMenu : MonoBehaviour {
 	{
 		pauseMenuUI.SetActive(false);
 		Time.timeScale = 1f;
+		Cursor.visible = false;
 		gameIsPaused = false;
 	}
 
@@ -38,6 +45,7 @@ public class PauseMenu : MonoBehaviour {
 	{
 		pauseMenuUI.SetActive(true);
 		Time.timeScale = 0f;
+		Cursor.visible = true;
 		gameIsPaused = true;
 	}
 
@@ -47,6 +55,12 @@ public class PauseMenu : MonoBehaviour {
 		SaveGame.Instance.cameraPosition = cam.position;
 		SaveGame.Save();
 		Debug.Log("Saving Game...");
+	}
+
+	public void reloadLevel()
+	{
+		resume();
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
 	public void loadSave()
