@@ -12,7 +12,7 @@ public class UpgradeAdder : MonoBehaviour {
 	void Start () {
 		collider =  GetComponent<Collider2D>();
 		if (PersistentData.upgrades.Contains(upgradeToAdd)) {
-			enabled = false;
+			gameObject.SetActive(false);
 		}
 	}
 	
