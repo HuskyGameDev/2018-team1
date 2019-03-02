@@ -39,6 +39,7 @@ public class MoveRight : MonoBehaviour {
             animator.SetBool("WalkingRight", true);
             Vector3 movement = new Vector3(moveHorizontal, 0, 0);
             transform.position += (10 * movement * speed * Time.deltaTime);
+            AkSoundEngine.PostEvent("FootStep", gameObject);
         } else {
             animator.SetBool("WalkingRight", false);
         }

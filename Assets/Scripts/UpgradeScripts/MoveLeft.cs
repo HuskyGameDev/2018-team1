@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour {
 
+    // Private Fields
+    private int counter = 30;
+
     // Public properties
     public float speed;
 
@@ -38,6 +41,8 @@ public class MoveLeft : MonoBehaviour {
             animator.SetBool("WalkingLeft", true);
             Vector3 movement = new Vector3(moveHorizontal, 0, 0);
             transform.position += (10 * movement * speed * Time.deltaTime);
+            AkSoundEngine.PostEvent("FootStep", gameObject);
+            
         } else {
             animator.SetBool("WalkingLeft", false);
         }

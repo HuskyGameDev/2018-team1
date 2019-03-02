@@ -5,14 +5,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	3833651337	Jump			\Default Work Unit\Jump	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	68733773	Grass Footsteps#01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_009485A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01		17938
-	354552467	Grass Footsteps#01_06	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_F72BE7EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_06		21202
-	541555683	StickSwooshTake01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\StickSwooshTake01_0376FD74.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake01		26370
-	572718178	Grass Footsteps#01_01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_4E1E06C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_01		15618
-	799564673	Booster	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Booster_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Booster		128768
-	807304314	Grass Footsteps#01_03	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_1844861C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_03		22526
-	909150698	StickSwooshTake02	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\StickSwooshTake02_7AED70D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake02		17712
-	937844091	Grass Footsteps#01_02	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_083F33FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_02		19862
-	1013950220	Grass Footsteps#01_04	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_26D98D6A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_04		27474
-	1032810323	Grass Footsteps#01_05	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_4670D95B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_05		27474
+	68733773	Grass Footsteps#01	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_009485A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01		17938
+	354552467	Grass Footsteps#01_06	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_F72BE7EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_06		21202
+	541555683	StickSwooshTake01	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\StickSwooshTake01_0376FD74.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake01		26370
+	572718178	Grass Footsteps#01_01	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_4E1E06C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_01		15618
+	799564673	Booster	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Booster_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Booster		128768
+	807304314	Grass Footsteps#01_03	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_1844861C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_03		22526
+	909150698	StickSwooshTake02	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\StickSwooshTake02_7AED70D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake02		17712
+	937844091	Grass Footsteps#01_02	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_083F33FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_02		19862
+	1013950220	Grass Footsteps#01_04	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_26D98D6A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_04		27474
+	1032810323	Grass Footsteps#01_05	C:\Users\astanley\Documents\HGD_new\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_4670D95B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_05		27474
 
