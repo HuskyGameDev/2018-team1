@@ -13,11 +13,6 @@ public class UpgradeAdder : MonoBehaviour {
 		collider =  GetComponent<Collider2D>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	private void OnTriggerEnter2D(Collider2D otherCollider) {
 		if (otherCollider.CompareTag("Player") && !PersistentData.upgrades.Contains(upgradeToAdd)) {
 			PersistentData.upgrades.Add(upgradeToAdd);
