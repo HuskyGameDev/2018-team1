@@ -60,7 +60,7 @@ public class PauseMenu : MonoBehaviour {
 	public void reloadLevel()
 	{
 		resume();
-		player.position = playerStart;
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
 	public void loadSave()
