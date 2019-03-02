@@ -6,6 +6,13 @@ public class UpgradeAdder : MonoBehaviour {
 
 	public string upgradeToAdd;
 
+	// Use this for initialization
+	void Start () {
+		if (PersistentData.upgrades.Contains(upgradeToAdd)) {
+			enabled = false;
+		}
+	}
+	
 	private void OnTriggerEnter2D(Collider2D otherCollider) {
 		if (otherCollider.CompareTag("Player") && !PersistentData.upgrades.Contains(upgradeToAdd)) {
 			PersistentData.upgrades.Add(upgradeToAdd);
