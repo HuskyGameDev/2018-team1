@@ -6,12 +6,10 @@ public class Bullet : MonoBehaviour {
 
 	public int damage;
     private Rigidbody2D rb;
-    private new Collider2D collider;
     private new Transform transform;
     void Start() {
         transform = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
     }
     private void OnCollisionEnter2D(Collision2D collision) {
         if (!collision.gameObject.CompareTag("Player"))
