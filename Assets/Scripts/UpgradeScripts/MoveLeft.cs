@@ -8,8 +8,6 @@ public class MoveLeft : MonoBehaviour {
     public float speed;
 
     // Player Components
-    private Collider2D collider2d;
-    private new Transform transform;
     private Animator animator;
 
     public void SetSpeed(float speed) {
@@ -18,8 +16,6 @@ public class MoveLeft : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         // Gather components
-        transform = GetComponent<Transform>();
-        collider2d = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
 	}
 	
