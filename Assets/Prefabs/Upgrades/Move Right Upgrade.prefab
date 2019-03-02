@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4065085734433294}
   - component: {fileID: 212797137272663982}
   - component: {fileID: 58718667273369148}
-  - component: {fileID: 114892175841149170}
   - component: {fileID: 114596456961887196}
+  - component: {fileID: 114567337954889202}
   m_Layer: 10
   m_Name: Move Right Upgrade
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1586122536938776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.929, y: 1.261, z: 0.10051533}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,6 +58,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5.61
+--- !u!114 &114567337954889202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586122536938776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa92ce7c60f981439beeeee54c1e34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeToAdd: MoveRight
 --- !u!114 &114596456961887196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,17 +79,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0aaa7da1e1e43b14cb35fb14c8757b42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114892175841149170
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1586122536938776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28133beac88a74041b927eb20b72e32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212797137272663982
