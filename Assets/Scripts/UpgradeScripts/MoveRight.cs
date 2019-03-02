@@ -8,9 +8,7 @@ public class MoveRight : MonoBehaviour {
     public float speed;
 
     // Player Components
-    private Rigidbody2D rb2d;
-    private Collider2D collider2d;
-    private new Transform transform;
+
     private Animator animator;
 
     public void SetSpeed(float speed) {
@@ -20,16 +18,9 @@ public class MoveRight : MonoBehaviour {
 	void Start () {
 
         // Gather components
-        transform = GetComponent<Transform>();
-        rb2d = GetComponent<Rigidbody2D>();
-        collider2d = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	}
-
     // called once per physics step
     private void FixedUpdate() {
 

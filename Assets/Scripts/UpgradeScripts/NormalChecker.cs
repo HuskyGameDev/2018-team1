@@ -38,14 +38,8 @@ public class NormalChecker : MonoBehaviour {
             rightNormal *= -1;
         }
 
-        print(leftNormal);
-        print(rightNormal);
-
         bool leftSloped = Vector3.Dot(leftNormal, normalizedUp) > 0 && !leftNormal.Equals(normalizedUp);
         bool rightSloped = Vector3.Dot(rightNormal, normalizedUp) > 0 && !rightNormal.Equals(normalizedUp);
-
-        print(leftSloped);
-        print(rightSloped);
 
 		if (leftSloped || rightSloped) {
 			rb2d.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;

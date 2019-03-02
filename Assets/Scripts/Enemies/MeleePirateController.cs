@@ -11,7 +11,6 @@ public class MeleePirateController :  Controller {
     public float sightRange;
     public float attackReach;
     public Health health;
-    private Animator animator;
 
     // Character Components
 

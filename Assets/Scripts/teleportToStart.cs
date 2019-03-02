@@ -10,10 +10,7 @@ public class teleportToStart : MonoBehaviour {
 
 	public Text test;
 
-	private Transform transform;
-
 	void Start() {
-		transform = GetComponent<Transform>();
 		startPos = new Vector3(startObj.position.x, transform.position.y, transform.position.z);
 		test.text = "";
 	}
