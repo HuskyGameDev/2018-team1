@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class UpgradeAdder : MonoBehaviour {
 
-	Collider2D collider;
-
 	public string upgradeToAdd;
 
 	// Use this for initialization
 	void Start () {
-		collider =  GetComponent<Collider2D>();
 		if (PersistentData.upgrades.Contains(upgradeToAdd)) {
-			enabled = false;
+			gameObject.SetActive(false);
 		}
 	}
 	
