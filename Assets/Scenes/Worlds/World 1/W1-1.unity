@@ -840,6 +840,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114658014473459460, guid: b161d4496877a064789ccb92d56afb87,
+        type: 2}
+      propertyPath: unloadTriggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4917480838805810, guid: b161d4496877a064789ccb92d56afb87, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -877,6 +882,11 @@ Prefab:
       propertyPath: m_callbackData
       value: 
       objectReference: {fileID: 1245017271}
+    - target: {fileID: 114658014473459460, guid: b161d4496877a064789ccb92d56afb87,
+        type: 2}
+      propertyPath: unloadTriggerList.Array.data[0]
+      value: -358577003
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b161d4496877a064789ccb92d56afb87, type: 2}
   m_IsPrefabAsset: 0

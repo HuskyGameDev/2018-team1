@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour {
 
-    // Private Fields
-    private int counter = 30;
-
+    // Private Properties
+    private int counter = 0;
+    private int interval = 13;
+    
     // Public properties
     public float speed;
-
     // Player Components
     private Rigidbody2D rb2d;
     private Collider2D collider2d;
@@ -30,6 +30,10 @@ public class MoveLeft : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // If we are moving right, call the function to play the sound
+        if (Input.GetAxisRaw("Horizontal") < 0) {
+            Footstep();
+        }
 	}
 
     // called once per physics step
@@ -41,11 +45,15 @@ public class MoveLeft : MonoBehaviour {
             animator.SetBool("WalkingLeft", true);
             Vector3 movement = new Vector3(moveHorizontal, 0, 0);
             transform.position += (10 * movement * speed * Time.deltaTime);
-            AkSoundEngine.PostEvent("FootStep", gameObject);
-            
         } else {
             animator.SetBool("WalkingLeft", false);
         }
-        
+    }
+
+    void Footstep() {
+        counter++;
+        if ((counter % interval) == 0) {
+            AkSoundEngine.PostEvent("FootStep", gameObject);
+        }
     }
 }

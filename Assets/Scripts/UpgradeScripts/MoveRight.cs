@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MoveRight : MonoBehaviour {
 
+    //Private Properties
+    private int counter = 0;
+    private int interval = 13;
+
     // Public properties
     public float speed;
 
@@ -28,21 +32,30 @@ public class MoveRight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // If we are moving right, call the function to play the sound
+        if (Input.GetAxisRaw("Horizontal") > 0) {
+            Footstep();
+        }
 	}
 
     // called once per physics step
     private void FixedUpdate() {
-
+        
         // Movement independent from jumping
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         if (moveHorizontal > 0) {
             animator.SetBool("WalkingRight", true);
             Vector3 movement = new Vector3(moveHorizontal, 0, 0);
-            transform.position += (10 * movement * speed * Time.deltaTime);
-            AkSoundEngine.PostEvent("FootStep", gameObject);
+            transform.position += (10 * movement * speed * Time.deltaTime);   
         } else {
             animator.SetBool("WalkingRight", false);
+        }        
+    }
+
+    void Footstep() {
+        counter++;
+        if ((counter % interval) == 0) {
+            AkSoundEngine.PostEvent("FootStep", gameObject);
         }
-        
     }
 }
