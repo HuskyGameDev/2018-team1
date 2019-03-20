@@ -6,6 +6,8 @@ using UnityEngine;
 public static class Global {
 
 	public static string lvlToLoad;
+	public static bool firstRun = true;
+
 }
 
 public class PersistentData : MonoBehaviour {
