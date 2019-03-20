@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour {
 		
 		PlayerMelee pm = player.AddComponent<PlayerMelee>() as PlayerMelee;
 		pm.meleeAttack = hitbox;
+		pm.animator = player.GetComponent<Animator>();
 	}
 	// Update is called once per frame
 	void Update () {
