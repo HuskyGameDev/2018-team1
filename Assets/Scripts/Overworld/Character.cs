@@ -21,7 +21,7 @@ public class Character : MonoBehaviour
     /// <summary>
     /// This runs once a frame
     /// </summary>
-    private void Update()
+    private void FixedUpdate()
     {
         if (_targetPin == null) return;
 
