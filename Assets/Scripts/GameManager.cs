@@ -8,23 +8,32 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		string animator = "Animations/female-protag/Player-PegPatch";
 		if (!PersistentData.ordinary) {
-			PersistentData.upgrades.Add("MoveLeft");
 			PersistentData.upgrades.Add("MoveRight");
 			PersistentData.upgrades.Add("Jump");
+			PersistentData.upgrades.Add("MoveLeft");
+			animator = "Animations/female-protag/Player";
 		}
 		foreach (string s in PersistentData.upgrades) {
+			//animator = AddUpgrade(s);
 			AddUpgrade(s);
 		}	
+
+		player.GetComponent<Animator>().runtimeAnimatorController = 
+			Resources.Load(animator) as RuntimeAnimatorController;
 	}
 
 	public void AddUpgrade(string s) {
+		
 		if (s == "MoveLeft")  
 			AddLeftMovement();
 	 	else if (s == "MoveRight") 
 			AddRightMovement();
-		else if (s == "Jump") 
+		else if (s == "Jump") //{
 			AddJump();
+		// 	animator = "Animations/female-protag/Player-Patch";
+		// }
 		else if (s == "Dagger") 
 			AddDagger();
 	}
