@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour {
 
+    // Private Properties
+    private int counter = 0;
+    private int interval = 13;
+    
     // Public properties
     public float speed;
-
     // Player Components
     private Animator animator;
 
@@ -20,8 +23,16 @@ public class MoveLeft : MonoBehaviour {
         animator = GetComponent<Animator>();
 	}
 	
-    // called once per physics step
-    private void FixedUpdate() {
+	// Update is called once per frame
+	void Update () {
+        // If we are moving right, call the function to play the sound
+        if (Input.GetAxisRaw("Horizontal") < 0) {
+            Footstep();
+        }
+	}
+  
+  // called once per physics step
+  private void FixedUpdate() {
 
         // Movement independent from jumping
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
@@ -32,6 +43,12 @@ public class MoveLeft : MonoBehaviour {
         } else {
             animator.SetBool("WalkingLeft", false);
         }
-        
+    }
+
+    void Footstep() {
+        counter++;
+        if ((counter % interval) == 0) {
+            AkSoundEngine.PostEvent("FootStep", gameObject);
+        }
     }
 }

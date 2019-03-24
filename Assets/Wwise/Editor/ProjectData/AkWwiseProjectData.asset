@@ -13,23 +13,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - Guid: '{FCD89ED6-2205-49A2-B489-5B21593B72AE}'
-    m_lastTimePart2: -1999228810
-    m_lastTimePsrt1: -823742464
+    m_lastTimePart2: -1999202416
+    m_lastTimePsrt1: -958560348
     ParentPhysicalPath: 
     PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     List: []
   autoPopulateEnabled: 1
   AuxBusWwu:
   - Guid: '{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}'
-    m_lastTimePart2: -1999228810
-    m_lastTimePsrt1: -822893061
+    m_lastTimePart2: -1999202416
+    m_lastTimePsrt1: -959253991
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List: []
   BankWwu:
   - Guid: '{1511F883-671D-4380-871E-95B5BCDE684A}'
-    m_lastTimePart2: -1999228806
-    m_lastTimePsrt1: 1934964620
+    m_lastTimePart2: -1999202416
+    m_lastTimePsrt1: -958609614
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -48,11 +48,23 @@ MonoBehaviour:
   defaultPoolSize: 4096
   EventWwu:
   - Guid: '{5FFD568A-A197-4434-9C49-39A64B2A1EB7}'
-    m_lastTimePart2: -1999228806
-    m_lastTimePsrt1: 1183194032
+    m_lastTimePart2: -1999202416
+    m_lastTimePsrt1: -959426714
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
+    - Guid: 92f1c7808a9ff748bbd0847d90c1ea58
+      ID: 1228514695
+      Name: Booster
+      Path: Default Work Unit\Booster
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Booster
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 5a709b4104812a4dae885519a0826227
       ID: 1866025847
       Name: FootStep
@@ -65,12 +77,32 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 3a04eda20af7d9459528ecc62e023e64
+      ID: -461315959
+      Name: Jump
+      Path: Default Work Unit\Jump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Jump
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 494952326e979f43b1f6d02d1fd9d540
+      ID: 476098351
+      Name: Sword_Swing
+      Path: Default Work Unit\Sword_Swing
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Sword_Swing
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   ExpandedItems:
   - /2018-team1_WwiseProject
-  - /2018-team1_WwiseProject/Events
-  - /2018-team1_WwiseProject/Events/Default Work Unit
-  - /2018-team1_WwiseProject/SoundBanks
-  - /2018-team1_WwiseProject/SoundBanks/Default Work Unit
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
@@ -79,30 +111,30 @@ MonoBehaviour:
   preparePoolSize: 0
   RtpcWwu:
   - Guid: '{3029D1AA-EE7D-4E1F-819C-04F1BD4BAE33}'
-    m_lastTimePart2: -1999228810
-    m_lastTimePsrt1: -823032960
+    m_lastTimePart2: -1999202416
+    m_lastTimePsrt1: -959416723
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Default Work Unit.wwu
     List: []
   StateWwu:
   - Guid: '{8019C068-71CE-450E-B4D0-EEBC15BBC5D3}'
-    m_lastTimePart2: -1999228810
-    m_lastTimePsrt1: -822353444
+    m_lastTimePart2: -1999202416
+    m_lastTimePsrt1: -958589588
     ParentPhysicalPath: 
     PhysicalPath: States\Default Work Unit.wwu
     List: []
   streamingPoolSize: 1024
   SwitchWwu:
   - Guid: '{D09DFF6E-82F1-4A19-ACB4-AAE85F6C0229}'
-    m_lastTimePart2: -1999228810
-    m_lastTimePsrt1: -822463354
+    m_lastTimePart2: -1999202416
+    m_lastTimePsrt1: -958579582
     ParentPhysicalPath: 
     PhysicalPath: Switches\Default Work Unit.wwu
     List: []
   TriggerWwu:
   - Guid: '{5738C060-1EA2-4C6F-AC61-388D8446B4F2}'
-    m_lastTimePart2: -1999228810
-    m_lastTimePsrt1: -823692495
+    m_lastTimePart2: -1999202416
+    m_lastTimePsrt1: -958570363
     ParentPhysicalPath: 
     PhysicalPath: Triggers\Default Work Unit.wwu
     List: []

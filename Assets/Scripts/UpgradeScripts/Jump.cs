@@ -44,6 +44,7 @@ public class Jump : MonoBehaviour {
             // Jump!
             if (rb2d.velocity.y <= 0.001f) {
                 rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+                AkSoundEngine.PostEvent("Jump", gameObject);
             }
         }
 
