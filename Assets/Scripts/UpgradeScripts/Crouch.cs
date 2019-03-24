@@ -9,19 +9,22 @@ public class Crouch : MonoBehaviour {
 
     // Player Components
     private Rigidbody2D rb2d;
-    private Collider2D collider2d;
+    private Collider2D standing2D;
+    private Collider2D crouching2D;
     private new Transform transform;
     private Animator animator;
 
     public void SetSpeed(float speed) {
-        this.speed = speed;
+        this.speed = 0.5f * speed;
     }
 	// Use this for initialization
 	void Start () {
         // Gather components
         transform = GetComponent<Transform>();
         rb2d = GetComponent<Rigidbody2D>();
-        collider2d = GetComponent<Collider2D>();
+        Collider2D[] coll = GetComponents<Collider2D>();
+        standing2D = coll[0];
+        crouching2D = coll[1];
         animator = GetComponent<Animator>();
 	}
 	
@@ -34,10 +37,14 @@ public class Crouch : MonoBehaviour {
 
         // Movement independent from jumping
         float moveVertical = Input.GetAxisRaw("Vertical");
-        if (moveVertical < 0) {
-            animator.SetBool("Crouch", true);
+        if (moveVertical < 0 || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
+            standing2D.enabled = false;
+            crouching2D.enabled = true;
+            //animator.SetBool("Crouch", true);
         } else {
-            animator.SetBool("Crouch", false);
+            crouching2D.enabled = false;
+            standing2D.enabled = true;
+            //animator.SetBool("Crouch", false);
         }
         
     }
