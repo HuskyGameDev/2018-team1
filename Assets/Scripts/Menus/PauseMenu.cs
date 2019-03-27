@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour {
 
-	public static bool gameIsPaused = false;
+	public bool gameIsPaused = false;
 
 	public Transform player;
 	public Transform cam;

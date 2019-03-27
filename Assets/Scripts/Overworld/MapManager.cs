@@ -7,6 +7,7 @@ public class MapManager : MonoBehaviour
 	public Character Character;
 	public Pin pin;
 	public Text SelectedLevelText;
+	public GameObject PauseMenu;
 	
 	/// <summary>
 	/// Use this for initialization
@@ -36,6 +37,8 @@ public class MapManager : MonoBehaviour
 	/// </summary>
 	private void CheckForInput()
 	{
+		bool isPaused = PauseMenu.GetComponent<PauseMenu>().gameIsPaused;
+
 		if (Input.GetAxis("Vertical") > 0)
 		{
 			Character.TrySetDirection(Direction.Up);
@@ -52,7 +55,8 @@ public class MapManager : MonoBehaviour
 		{
 			Character.TrySetDirection(Direction.Right);
 		}
-		else if(Input.GetButtonDown("Submit"))
+		//Check for both the submit button and the fact that we are NOT paused
+		else if(Input.GetButtonDown("Submit") && (isPaused == false))
 		{
 			Global.lvlToLoad = Character.CurrentPin.LevelName;
 			SceneManager.LoadScene(Character.CurrentPin.SceneToLoad);

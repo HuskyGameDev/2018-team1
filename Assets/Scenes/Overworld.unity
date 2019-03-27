@@ -1081,6 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bcce9e71f530b84986920fafbe78b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameIsPaused: 0
   player: {fileID: 679568751}
   cam: {fileID: 1788984697}
   pauseMenuUI: {fileID: 916368956}
@@ -1284,6 +1285,7 @@ MonoBehaviour:
   Character: {fileID: 679568749}
   pin: {fileID: 2028267000}
   SelectedLevelText: {fileID: 1781824071}
+  PauseMenu: {fileID: 785996159}
 --- !u!4 &1040162415
 Transform:
   m_ObjectHideFlags: 0
