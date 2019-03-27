@@ -11,20 +11,6 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="77978275" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Ambient</ObjectPath>
-			<ShortName>Ambient</ShortName>
-			<Path>Ambient.bnk</Path>
-			<IncludedEvents>
-				<Event Id="573402725" Name="Beach_Ambience" ObjectPath="\Events\Default Work Unit\Beach_Ambience"/>
-			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="143921804" Language="SFX">
-					<ShortName>Beach Ambience Compressed.wav</ShortName>
-					<Path>SFX\Beach Ambience Compressed_F17FB28C.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
-		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -116,6 +102,20 @@
 				<File Id="1032810323" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
 					<Path>SFX\Grass Footsteps#01_4670D95B.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4123907443" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Beach_amb</ObjectPath>
+			<ShortName>Beach_amb</ShortName>
+			<Path>Beach_amb.bnk</Path>
+			<IncludedEvents>
+				<Event Id="573402725" Name="Beach_Ambience" ObjectPath="\Events\Default Work Unit\Beach_Ambience"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="681607637" Language="SFX">
+					<ShortName>Beach Ambience Compressed.wav</ShortName>
+					<Path>SFX\Beach Ambience Compressed_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

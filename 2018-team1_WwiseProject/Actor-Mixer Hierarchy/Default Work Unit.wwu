@@ -1040,13 +1040,13 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Beach amience" ID="{1DABA7BA-761C-491C-AB43-E788DC2BA889}" ShortID="751118085">
+								<AudioFileSource Name="Beach Ambience Compressed" ID="{127F1FEC-0F49-4A65-A5AC-45609C39315D}" ShortID="681607637">
 									<Language>SFX</Language>
-									<AudioFile>Beach amience.wav</AudioFile>
+									<AudioFile>Beach Ambience Compressed.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Beach amience" ID="{1DABA7BA-761C-491C-AB43-E788DC2BA889}" Platform="Linked"/>
+								<ActiveSource Name="Beach Ambience Compressed" ID="{127F1FEC-0F49-4A65-A5AC-45609C39315D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
