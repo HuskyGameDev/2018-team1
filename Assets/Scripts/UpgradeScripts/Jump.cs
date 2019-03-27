@@ -44,6 +44,7 @@ public class Jump : MonoBehaviour {
             // Jump!
             if (rb2d.velocity.y <= 0.001f) {
                 rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+                AkSoundEngine.PostEvent("Jump", gameObject);
             }
         }
 
@@ -68,20 +69,32 @@ public class Jump : MonoBehaviour {
 
     // Raycasting method to check if on the ground (or close enough that the difference is negligible)
     private bool isGrounded() {
-        RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
-        RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x, collider2d.bounds.extents.y, 0), -transform.up, 0.1f, groundLayer.value);
+        // RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x * 0.5f, collider2d.bounds.extents.y, 0), -transform.up, 0.3f, groundLayer.value);
+        // RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x * 0.5f, collider2d.bounds.extents.y, 0), -transform.up, 0.3f, groundLayer.value);
+		RaycastHit2D hitLeft = Physics2D.Raycast(collider2d.bounds.center - new Vector3(collider2d.bounds.extents.x * 0.9f, collider2d.bounds.extents.y * 0.9f, 0), -transform.up, 0.15f, groundLayer.value);
+        RaycastHit2D hitRight = Physics2D.Raycast(collider2d.bounds.center - new Vector3(-collider2d.bounds.extents.x * 0.9f, collider2d.bounds.extents.y * 0.9f, 0), -transform.up, 0.15f, groundLayer.value);
 
         Vector3 normalizedUp = Vector3.Normalize(transform.up);
 
         Vector3 leftNormal = Vector3.Normalize(hitLeft.normal);
         Vector3 rightNormal = Vector3.Normalize(hitRight.normal);
 
-        bool leftGrounded = leftNormal.Equals(normalizedUp);
-        bool rightGrounded = rightNormal.Equals(normalizedUp);
+        if (hitLeft && hitLeft.collider.OverlapPoint(hitLeft.point + new Vector2(0.0f, 0.01f))) {
+            leftNormal *= -1;
+        }
+        if (hitRight && hitRight.collider.OverlapPoint(hitRight.point + new Vector2(0.0f, 0.01f))) {
+            rightNormal *= -1;
+        }
+
+        bool leftGrounded = Vector3.Dot(leftNormal, normalizedUp) > 0;
+        bool rightGrounded = Vector3.Dot(rightNormal, normalizedUp) > 0;
+        // bool leftGrounded = leftNormal.Equals(normalizedUp);
+        // bool rightGrounded = rightNormal.Equals(normalizedUp);
 
         if (leftGrounded || rightGrounded) {
             return true;
         }
+        
         return false;
     }
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - endLevel
   - Enemy
+  - pin
+  - pin collection
   layers:
   - Default
   - TransparentFX
@@ -18,9 +20,9 @@ TagManager:
   - Ground
   - Enemies
   - Player
-  - 
-  - 
-  - 
+  - Water
+  - Background
+  - Spikes
   - 
   - 
   - 
@@ -42,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2695424991
+    locked: 0
+  - name: Ground
+    uniqueID: 4035646387
+    locked: 0
+  - name: Entities
+    uniqueID: 2091861575
+    locked: 0
+  - name: Water
+    uniqueID: 4144375347
+    locked: 0
+  - name: Spikes
+    uniqueID: 720613737
     locked: 0
