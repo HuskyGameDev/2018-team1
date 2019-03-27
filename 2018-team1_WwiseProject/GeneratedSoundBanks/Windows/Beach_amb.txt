@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	573402725	Beach_Ambience			\Default Work Unit\Beach_Ambience	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	681607637	Beach_Ambience	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Windows\SFX\Beach Ambience Compressed_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Beach_Ambience		83260944
+

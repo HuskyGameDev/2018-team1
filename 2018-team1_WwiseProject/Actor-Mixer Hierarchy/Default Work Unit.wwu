@@ -683,6 +683,374 @@
 						<Panner Name="" ID="{B0CCCD4E-CC1A-4EF5-A763-C1CFC7C45D3A}"/>
 					</PositioningInfo>
 				</ActorMixer>
+				<ActorMixer Name="Enemy" ID="{F583259B-07E3-41C6-9CFB-5728EF271286}" ShortID="30017229">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Crab" ID="{E5DDF0B5-6049-4F93-AC82-5C3CB6A0D561}" ShortID="224781032">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Movement" ID="{F9B1AA30-A77F-4134-A2FD-A517C5FD6EC2}" ShortID="743679191">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Scurry_1" ID="{87344641-CD5E-40BF-9EAB-2D67564C5D7A}" ShortID="355033536">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-780</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{01369D2A-275B-45EF-8EE0-B9C465435E4A}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="278"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-25</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Crab movement" ID="{D7F2A877-E68B-4589-8450-DA49EF552AAC}" ShortID="528344221">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.109452137998055"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.21890427599611"/>
+														<Property Name="TrimBegin" Type="Real64" Value="39.7858521622935"/>
+														<Property Name="TrimEnd" Type="Real64" Value="40.9350996112731"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Crab movement.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Crab movement" ID="{D7F2A877-E68B-4589-8450-DA49EF552AAC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Scurry_01" ID="{F31EC9A6-C9B2-4FA1-9E5E-6AA70C894A4C}" ShortID="397975812">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-780</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{1C8E8834-C816-4C65-B342-1E1824924026}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="278"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-25</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Crab movement" ID="{FBAF2121-EFB1-4F4F-878F-956C44B13042}" ShortID="260992621">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.109452137998055"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.21890427599611"/>
+														<Property Name="TrimBegin" Type="Real64" Value="36.6117401603499"/>
+														<Property Name="TrimEnd" Type="Real64" Value="37.5420833333333"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Crab movement.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Crab movement" ID="{FBAF2121-EFB1-4F4F-878F-956C44B13042}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Scurry_02" ID="{2D540680-3CA0-43AF-9209-B757AEC564DA}" ShortID="1032926361">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-780</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4BD83799-7FFA-42C5-AF25-F87B559EBCC9}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="278"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-25</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Crab movement" ID="{532B2CCA-53F2-4B25-9611-070DD743ECE5}" ShortID="394612318">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.109452137998055"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.21890427599611"/>
+														<Property Name="TrimBegin" Type="Real64" Value="27.7461169825073"/>
+														<Property Name="TrimEnd" Type="Real64" Value="28.9500905004859"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Crab movement.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Crab movement" ID="{532B2CCA-53F2-4B25-9611-070DD743ECE5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Pirate" ID="{19A81577-2E60-4366-96C6-8CF85E9D6132}" ShortID="751463615">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Ouch" ID="{90628D57-EC2E-4051-B66F-F184513EE44F}" ShortID="621337799">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BBDEC6CF-7EA1-427C-A4B9-0380656730F4}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="177"/>
+															<Property Name="Min" Type="Real64" Value="-227"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Ouch_1" ID="{33C84675-F84C-4F51-94D1-B4E32481D706}" ShortID="1037554549">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Hurt_1" ID="{2BA3B35B-B5C4-4B73-88AC-DBEBC88701B3}" ShortID="823793172">
+													<Language>SFX</Language>
+													<AudioFile>Hurt_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Hurt_1" ID="{2BA3B35B-B5C4-4B73-88AC-DBEBC88701B3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ouch_2" ID="{C576AD00-75FE-455B-93BD-5A20887709CF}" ShortID="130535028">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Hurt_2" ID="{EAADDE76-AC06-4F05-84B3-A6885516E1AD}" ShortID="697895135">
+													<Language>SFX</Language>
+													<AudioFile>Hurt_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Hurt_2" ID="{EAADDE76-AC06-4F05-84B3-A6885516E1AD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ouch_3" ID="{8CB532F2-1D0E-4BAD-B96D-EB53588679EE}" ShortID="921971827">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Hurt_3" ID="{219A78E9-5AB5-4489-A865-8C5BDAD2B178}" ShortID="656437654">
+													<Language>SFX</Language>
+													<AudioFile>Hurt_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Hurt_3" ID="{219A78E9-5AB5-4489-A865-8C5BDAD2B178}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<Sound Name="Hit_Gore" ID="{ECE7F7D7-F2A0-48DF-B7E0-F25440E98229}" ShortID="928629705">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-18</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Hit_Gore" ID="{CFA07CE7-8374-4AAD-A44A-215A133B30DB}" ShortID="1019705529">
+									<Language>SFX</Language>
+									<AudioFile>Hit_Gore.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Hit_Gore" ID="{CFA07CE7-8374-4AAD-A44A-215A133B30DB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="World" ID="{02166FA2-2D3B-450F-868B-EB53E023D05D}" ShortID="906912593">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="UpgradeCoin" ID="{26F8287F-2A2B-444C-B78C-817B301F052C}" ShortID="981982439">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-22</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Upgrade Coin" ID="{E173E0D9-B557-402C-AAC7-3CE97EC16724}" ShortID="740179424">
+									<Language>SFX</Language>
+									<AudioFile>Upgrade Coin.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Upgrade Coin" ID="{E173E0D9-B557-402C-AAC7-3CE97EC16724}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Beach_Ambience" ID="{1B37AC63-C6CC-4C91-BF06-DE856299408D}" ShortID="1021991319">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-35</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{591E244E-F8E7-45FB-AEC9-B40C2A753930}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Beach Ambience Compressed" ID="{127F1FEC-0F49-4A65-A5AC-45609C39315D}" ShortID="681607637">
+									<Language>SFX</Language>
+									<AudioFile>Beach Ambience Compressed.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Beach Ambience Compressed" ID="{127F1FEC-0F49-4A65-A5AC-45609C39315D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

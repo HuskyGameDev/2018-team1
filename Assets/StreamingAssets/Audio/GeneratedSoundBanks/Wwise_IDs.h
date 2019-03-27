@@ -13,15 +13,21 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BEACH_AMBIENCE = 573402725U;
         static const AkUniqueID BOOSTER = 1228514695U;
+        static const AkUniqueID CRAB_MOVEMENT = 1147494761U;
+        static const AkUniqueID DAMAGE_GORE = 1119461076U;
+        static const AkUniqueID ENEMY_HITVOX = 695964012U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID JUMP = 3833651337U;
         static const AkUniqueID SWORD_SWING = 476098351U;
+        static const AkUniqueID UPGRADE_COIN = 2265996293U;
     } // namespace EVENTS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID BEACH_AMB = 4123907443U;
         static const AkUniqueID MAINBANK = 2880737896U;
     } // namespace BANKS
 
