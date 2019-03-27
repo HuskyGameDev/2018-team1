@@ -31,6 +31,114 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Booster" ID="{80C7F192-9F8A-48F7-BBD0-847D90C1EA58}">
+					<ChildrenList>
+						<Action Name="" ID="{62FA1D51-78DA-41B4-A6EF-3FECDC4F3F65}" ShortID="719625801">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Booster" ID="{ED63FC94-4627-4089-98E3-FA82CF133732}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Jump" ID="{A2ED043A-F70A-45D9-9528-ECC62E023E64}">
+					<ChildrenList>
+						<Action Name="" ID="{BD3BCEE8-7645-4D1A-A8F9-810FDE1CBD4D}" ShortID="134487182">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump" ID="{29C0987D-906A-4D7D-8212-476218312360}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7401ABFB-8864-4088-8008-92DE7967CBE4}" ShortID="310562341">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sword_Swing" ID="{EE9678D3-C551-4CC8-83B9-96A99DB1DDB5}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Upgrade_Coin" ID="{C8B3648D-B6A8-4DEC-88A0-CAE79AEB0AF9}">
+					<ChildrenList>
+						<Action Name="" ID="{5F7F8497-E3DF-42A7-938A-E0ECBB49CA31}" ShortID="25841621">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UpgradeCoin" ID="{26F8287F-2A2B-444C-B78C-817B301F052C}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Enemy_HitVox" ID="{4ACB195D-84B4-4FBC-82C3-687F5E8164E0}">
+					<ChildrenList>
+						<Action Name="" ID="{BAB93743-C012-4F5B-B834-31E8D1020B3A}" ShortID="931084143">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ouch" ID="{90628D57-EC2E-4051-B66F-F184513EE44F}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Damage_Gore" ID="{30A31577-5990-4ED1-BFE2-E647BC09A43D}">
+					<ChildrenList>
+						<Action Name="" ID="{01107E78-EB56-4660-974D-DFCB8F1F8434}" ShortID="549879319">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hit_Gore" ID="{ECE7F7D7-F2A0-48DF-B7E0-F25440E98229}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Beach_Ambience" ID="{86ECD227-AD71-44B6-8125-D23683FDC07E}">
+					<ChildrenList>
+						<Action Name="" ID="{D01E5651-4F80-4FBD-82B4-10FC61584D4F}" ShortID="687653597">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Beach_Ambience" ID="{1B37AC63-C6CC-4C91-BF06-DE856299408D}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crab_Movement" ID="{95E5A860-52AC-435B-93A0-FF76262EEA8D}">
+					<ChildrenList>
+						<Action Name="" ID="{9588B7D2-8CFF-4170-A2E1-52CAE0FB9D67}" ShortID="129471118">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Movement" ID="{F9B1AA30-A77F-4134-A2FD-A517C5FD6EC2}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

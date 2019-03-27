@@ -11,6 +11,20 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="77978275" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Ambient</ObjectPath>
+			<ShortName>Ambient</ShortName>
+			<Path>Ambient.bnk</Path>
+			<IncludedEvents>
+				<Event Id="573402725" Name="Beach_Ambience" ObjectPath="\Events\Default Work Unit\Beach_Ambience"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="143921804" Language="SFX">
+					<ShortName>Beach Ambience Compressed.wav</ShortName>
+					<Path>SFX\Beach Ambience Compressed_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -21,45 +35,87 @@
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1228514695" Name="Booster" ObjectPath="\Events\Default Work Unit\Booster"/>
+				<Event Id="1147494761" Name="Crab_Movement" ObjectPath="\Events\Default Work Unit\Crab_Movement"/>
+				<Event Id="1119461076" Name="Damage_Gore" ObjectPath="\Events\Default Work Unit\Damage_Gore"/>
+				<Event Id="695964012" Name="Enemy_HitVox" ObjectPath="\Events\Default Work Unit\Enemy_HitVox"/>
 				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
+				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\Jump"/>
 				<Event Id="476098351" Name="Sword_Swing" ObjectPath="\Events\Default Work Unit\Sword_Swing"/>
+				<Event Id="2265996293" Name="Upgrade_Coin" ObjectPath="\Events\Default Work Unit\Upgrade_Coin"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="68733773" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_D3ED5509.wem</Path>
+					<Path>SFX\Grass Footsteps#01_009485A6.wem</Path>
+				</File>
+				<File Id="260992621" Language="SFX">
+					<ShortName>Crab movement.wav</ShortName>
+					<Path>SFX\Crab movement_E65ED33F.wem</Path>
 				</File>
 				<File Id="354552467" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_6A023469.wem</Path>
+					<Path>SFX\Grass Footsteps#01_F72BE7EE.wem</Path>
+				</File>
+				<File Id="394612318" Language="SFX">
+					<ShortName>Crab movement.wav</ShortName>
+					<Path>SFX\Crab movement_DB1BD259.wem</Path>
+				</File>
+				<File Id="528344221" Language="SFX">
+					<ShortName>Crab movement.wav</ShortName>
+					<Path>SFX\Crab movement_67C5E199.wem</Path>
 				</File>
 				<File Id="541555683" Language="SFX">
 					<ShortName>StickSwooshTake01.wav</ShortName>
-					<Path>SFX\StickSwooshTake01_E119E811.wem</Path>
+					<Path>SFX\StickSwooshTake01_0376FD74.wem</Path>
 				</File>
 				<File Id="572718178" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_F8ADFF4A.wem</Path>
+					<Path>SFX\Grass Footsteps#01_4E1E06C4.wem</Path>
+				</File>
+				<File Id="656437654" Language="SFX">
+					<ShortName>Hurt_3.wav</ShortName>
+					<Path>SFX\Hurt_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="697895135" Language="SFX">
+					<ShortName>Hurt_2.wav</ShortName>
+					<Path>SFX\Hurt_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="740179424" Language="SFX">
+					<ShortName>Upgrade Coin.wav</ShortName>
+					<Path>SFX\Upgrade Coin_1C9C67B2.wem</Path>
+				</File>
+				<File Id="799564673" Language="SFX">
+					<ShortName>Booster.wav</ShortName>
+					<Path>SFX\Booster_1C9C67B2.wem</Path>
 				</File>
 				<File Id="807304314" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_26400EB6.wem</Path>
+					<Path>SFX\Grass Footsteps#01_1844861C.wem</Path>
+				</File>
+				<File Id="823793172" Language="SFX">
+					<ShortName>Hurt_1.wav</ShortName>
+					<Path>SFX\Hurt_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="909150698" Language="SFX">
 					<ShortName>StickSwooshTake02.wav</ShortName>
-					<Path>SFX\StickSwooshTake02_C229FCB8.wem</Path>
+					<Path>SFX\StickSwooshTake02_7AED70D5.wem</Path>
 				</File>
 				<File Id="937844091" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_0637D380.wem</Path>
+					<Path>SFX\Grass Footsteps#01_083F33FF.wem</Path>
 				</File>
 				<File Id="1013950220" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_6A18519F.wem</Path>
+					<Path>SFX\Grass Footsteps#01_26D98D6A.wem</Path>
+				</File>
+				<File Id="1019705529" Language="SFX">
+					<ShortName>Hit_Gore.wav</ShortName>
+					<Path>SFX\Hit_Gore_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1032810323" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
-					<Path>SFX\Grass Footsteps#01_FEB6E3A1.wem</Path>
+					<Path>SFX\Grass Footsteps#01_4670D95B.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
