@@ -23,7 +23,7 @@ TagManager:
   - Water
   - Background
   - Spikes
-  - 
+  - ExtraTiles
   - 
   - 
   - 
@@ -51,12 +51,15 @@ TagManager:
   - name: Ground
     uniqueID: 4035646387
     locked: 0
+  - name: Spikes
+    uniqueID: 720613737
+    locked: 0
   - name: Entities
     uniqueID: 2091861575
     locked: 0
+  - name: ExtraTiles
+    uniqueID: 788610537
+    locked: 0
   - name: Water
     uniqueID: 4144375347
-    locked: 0
-  - name: Spikes
-    uniqueID: 720613737
     locked: 0
