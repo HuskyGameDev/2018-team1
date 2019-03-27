@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour {
 
-	public static bool gameIsPaused = false;
+	public bool gameIsPaused = false;
 
 	public Transform player;
 	public Transform cam;
 	private Vector3 playerStart;
 	
 	public GameObject pauseMenuUI;
+
+	public Selectable PauseMenuStart;
 
 	void Start() {
 		Cursor.visible = false;
@@ -20,7 +24,7 @@ public class PauseMenu : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetButtonDown("Start"))
 		{
 			if (gameIsPaused)
 			{
@@ -30,6 +34,10 @@ public class PauseMenu : MonoBehaviour {
 			{
 				pause();
 			}
+		}
+		if (gameIsPaused && Input.GetButtonDown("Cancel"))
+		{
+			resume();
 		}
 	}
 
@@ -47,6 +55,7 @@ public class PauseMenu : MonoBehaviour {
 		Time.timeScale = 0f;
 		Cursor.visible = true;
 		gameIsPaused = true;
+		PauseMenuStart.Select();
 	}
 
 	public void saveGame()
