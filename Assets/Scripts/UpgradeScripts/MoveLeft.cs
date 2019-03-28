@@ -14,8 +14,7 @@ public class MoveLeft : MonoBehaviour {
     private Animator animator;
 
     public void SetSpeed(float speed) {
-        animator = GetComponent<Animator>();
-        this.speed = speed * (animator.GetBool("Crouch") ? .5f : 1f);
+        this.speed = speed;
     }
 	// Use this for initialization
 	void Start () {
