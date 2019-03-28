@@ -8,32 +8,26 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		string animator = "Animations/female-protag/Player-PegPatch";
 		if (!PersistentData.ordinary) {
 			PersistentData.upgrades.Add("MoveRight");
 			PersistentData.upgrades.Add("Jump");
 			PersistentData.upgrades.Add("MoveLeft");
-			animator = "Animations/female-protag/Player";
+			PersistentData.animator = "Animations/female-protag/Player";
 		}
 		foreach (string s in PersistentData.upgrades) {
-			//animator = AddUpgrade(s);
 			AddUpgrade(s);
 		}	
-
 		player.GetComponent<Animator>().runtimeAnimatorController = 
-			Resources.Load(animator) as RuntimeAnimatorController;
+			Resources.Load(PersistentData.animator) as RuntimeAnimatorController;
 	}
 
 	public void AddUpgrade(string s) {
-		
-		if (s == "MoveLeft")  
+		if (s == "MoveLeft") 
 			AddLeftMovement();
 	 	else if (s == "MoveRight") 
 			AddRightMovement();
-		else if (s == "Jump") //{
+		else if (s == "Jump") 
 			AddJump();
-		// 	animator = "Animations/female-protag/Player-Patch";
-		// }
 		else if (s == "Dagger") 
 			AddDagger();
 	}
@@ -76,11 +70,8 @@ public class GameManager : MonoBehaviour {
 				PersistentData.devMode = true;
 		if (PersistentData.devMode) {
 			if (Input.GetKeyDown(KeyCode.F8)) {
-				PersistentData.upgrades.Add("MoveLeft");
-				PersistentData.upgrades.Add("MoveRight");
-				PersistentData.upgrades.Add("Jump");
-				foreach (string s in PersistentData.upgrades) 
-					AddUpgrade(s);
+				PersistentData.ordinary = false;
+				Start();
 			}
 			if (Input.GetKeyDown(KeyCode.F9)) {
 				player.GetComponent<MoveRight>().speed = player.GetComponent<MoveRight>().speed * 2;

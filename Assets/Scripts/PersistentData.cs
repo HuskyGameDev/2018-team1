@@ -13,5 +13,6 @@ public static class Global {
 public class PersistentData : MonoBehaviour {
 	public static HashSet<string> upgrades = new HashSet<string>();
 	public static bool devMode;
-	public static bool ordinary = false;
+	public static bool ordinary = true;
+	public static string animator = "Animations/female-protag/Player-PegPatch";
 }

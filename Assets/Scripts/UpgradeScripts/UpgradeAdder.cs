@@ -5,6 +5,7 @@ using UnityEngine;
 public class UpgradeAdder : MonoBehaviour {
 
 	public string upgradeToAdd;
+	public string animator;
 
 	// Use this for initialization
 	void Start () {
@@ -17,9 +18,10 @@ public class UpgradeAdder : MonoBehaviour {
 		if (otherCollider.CompareTag("Player") && !PersistentData.upgrades.Contains(upgradeToAdd)) {
 			PersistentData.upgrades.Add(upgradeToAdd);
 			otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade(upgradeToAdd);
+			otherCollider.gameObject.GetComponent<Animator>().runtimeAnimatorController = 
+				Resources.Load(animator) as RuntimeAnimatorController;
+			PersistentData.animator = animator;
 			Destroy(gameObject);
 		}
 	}
-
-	
 }
