@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
 			AddUpgrade(s);
 		}	
 		player.GetComponent<Animator>().runtimeAnimatorController = 
-			Resources.Load(PersistentData.animator) as RuntimeAnimatorController;
+			Resources.Load(PersistentData.animator) as RuntimeAnimatorController; 
 	}
 
 	public void AddUpgrade(string s) {

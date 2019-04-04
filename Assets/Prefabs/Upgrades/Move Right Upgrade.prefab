@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeToAdd: MoveRight
-  animator: Animations/female-protag/Player-PegPatch
+  animator: Animations/female-protag/Peg-Patch/Player-PegPatch
 --- !u!114 &114596456961887196
 MonoBehaviour:
   m_ObjectHideFlags: 1
