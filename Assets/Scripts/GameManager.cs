@@ -11,18 +11,21 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (!PersistentData.ordinary) {
-			PersistentData.upgrades.Add("MoveLeft");
 			PersistentData.upgrades.Add("MoveRight");
 			PersistentData.upgrades.Add("Jump");
+			PersistentData.upgrades.Add("MoveLeft");
+			PersistentData.animator = "Animations/female-protag/Player";
 			PersistentData.upgrades.Add("Crouch");
 		}
 		foreach (string s in PersistentData.upgrades) {
 			AddUpgrade(s);
 		}	
+		player.GetComponent<Animator>().runtimeAnimatorController = 
+			Resources.Load(PersistentData.animator) as RuntimeAnimatorController; 
 	}
 
 	public void AddUpgrade(string s) {
-		if (s == "MoveLeft")  
+		if (s == "MoveLeft") 
 			AddLeftMovement();
 	 	else if (s == "MoveRight") 
 			AddRightMovement();
@@ -64,6 +67,7 @@ public class GameManager : MonoBehaviour {
 		
 		PlayerMelee pm = player.AddComponent<PlayerMelee>() as PlayerMelee;
 		pm.meleeAttack = hitbox;
+		pm.animator = player.GetComponent<Animator>();
 	}
 	private void AddCrouch() {
 		Crouch comp = player.AddComponent<Crouch>() as Crouch;
@@ -74,12 +78,8 @@ public class GameManager : MonoBehaviour {
 				PersistentData.devMode = true;
 		if (PersistentData.devMode) {
 			if (Input.GetKeyDown(KeyCode.F8)) {
-				PersistentData.upgrades.Add("MoveLeft");
-				PersistentData.upgrades.Add("MoveRight");
-				PersistentData.upgrades.Add("Jump");
-				PersistentData.upgrades.Add("Crouch");
-				foreach (string s in PersistentData.upgrades) 
-					AddUpgrade(s);
+				PersistentData.ordinary = false;
+				Start();
 			}
 			if (Input.GetKeyDown(KeyCode.F9)) {
 				player.GetComponent<MoveRight>().speed = player.GetComponent<MoveRight>().speed * 2;
