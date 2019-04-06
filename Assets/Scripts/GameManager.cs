@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject player;
 
+	private float defaultSpeed = 1f;
+
 	// Use this for initialization
 	void Start () {
 		if (!PersistentData.ordinary) {
@@ -13,6 +15,7 @@ public class GameManager : MonoBehaviour {
 			PersistentData.upgrades.Add("Jump");
 			PersistentData.upgrades.Add("MoveLeft");
 			PersistentData.animator = "Animations/female-protag/Player";
+			PersistentData.upgrades.Add("Crouch");
 		}
 		foreach (string s in PersistentData.upgrades) {
 			AddUpgrade(s);
@@ -30,14 +33,16 @@ public class GameManager : MonoBehaviour {
 			AddJump();
 		else if (s == "Dagger") 
 			AddDagger();
+		else if (s == "Crouch")
+			AddCrouch();
 	}
 	private void AddLeftMovement() {
 		MoveLeft comp = player.AddComponent<MoveLeft>() as MoveLeft;
-		comp.SetSpeed(1);
+		comp.SetSpeed(defaultSpeed);
 	}
 	private void AddRightMovement() {
 		MoveRight comp = player.AddComponent<MoveRight>() as MoveRight;
-		comp.SetSpeed(1);
+		comp.SetSpeed(defaultSpeed);
 	}
 	private void AddJump() {
 		Jump comp = player.AddComponent<Jump>() as Jump;
@@ -63,6 +68,9 @@ public class GameManager : MonoBehaviour {
 		PlayerMelee pm = player.AddComponent<PlayerMelee>() as PlayerMelee;
 		pm.meleeAttack = hitbox;
 		pm.animator = player.GetComponent<Animator>();
+	}
+	private void AddCrouch() {
+		Crouch comp = player.AddComponent<Crouch>() as Crouch;
 	}
 	// Update is called once per frame
 	void Update () {

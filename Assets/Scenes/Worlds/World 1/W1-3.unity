@@ -113,6 +113,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &92974286
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2118429080}
+    m_Modifications:
+    - target: {fileID: 4503975020117780, guid: 6ee25822b5f81ec449318da3dbb6a615, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503975020117780, guid: 6ee25822b5f81ec449318da3dbb6a615, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503975020117780, guid: 6ee25822b5f81ec449318da3dbb6a615, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503975020117780, guid: 6ee25822b5f81ec449318da3dbb6a615, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503975020117780, guid: 6ee25822b5f81ec449318da3dbb6a615, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503975020117780, guid: 6ee25822b5f81ec449318da3dbb6a615, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503975020117780, guid: 6ee25822b5f81ec449318da3dbb6a615, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503975020117780, guid: 6ee25822b5f81ec449318da3dbb6a615, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ee25822b5f81ec449318da3dbb6a615, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &92974287 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4503975020117780, guid: 6ee25822b5f81ec449318da3dbb6a615,
+    type: 2}
+  m_PrefabInternal: {fileID: 92974286}
 --- !u!1 &294605801
 GameObject:
   m_ObjectHideFlags: 0
@@ -63507,7 +63554,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -150591949
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -64060,6 +64107,7 @@ Transform:
   m_Children:
   - {fileID: 449463295}
   - {fileID: 635505186}
+  - {fileID: 92974287}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

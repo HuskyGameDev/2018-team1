@@ -7,6 +7,7 @@ public class MapManager : MonoBehaviour
 	public Character Character;
 	public Pin pin;
 	public Text SelectedLevelText;
+	public GameObject PauseMenu;
 	
 	/// <summary>
 	/// Use this for initialization
@@ -36,23 +37,26 @@ public class MapManager : MonoBehaviour
 	/// </summary>
 	private void CheckForInput()
 	{
-		if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+		bool isPaused = PauseMenu.GetComponent<PauseMenu>().gameIsPaused;
+
+		if (Input.GetAxis("Vertical") > 0)
 		{
 			Character.TrySetDirection(Direction.Up);
 		}
-		else if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+		else if(Input.GetAxis("Vertical") < 0)
 		{
 			Character.TrySetDirection(Direction.Down);
 		}
-		else if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+		else if(Input.GetAxis("Horizontal") < 0)
 		{
 			Character.TrySetDirection(Direction.Left);
 		}
-		else if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+		else if(Input.GetAxis("Horizontal") > 0)
 		{
 			Character.TrySetDirection(Direction.Right);
 		}
-		else if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+		//Check for both the submit button and the fact that we are NOT paused
+		else if(Input.GetButtonDown("Submit") && (isPaused == false))
 		{
 			Global.lvlToLoad = Character.CurrentPin.LevelName;
 			SceneManager.LoadScene(Character.CurrentPin.SceneToLoad);
