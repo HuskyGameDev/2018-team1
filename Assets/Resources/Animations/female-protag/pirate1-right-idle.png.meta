@@ -1,7 +1,11 @@
 fileFormatVersion: 2
-guid: db3cf607c22ba614b9e61c1fa8b157d2
+guid: c0873857f4303884f907b8469681a81b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: pirate1-right-idle_0
+    21300002: pirate1-right-idle_1
+    21300004: pirate1-right-idle_2
+    21300006: pirate1-right-idle_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +44,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,11 +119,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pirate1-right-idle_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 57
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f06fafd59c4e484f827bb5ac8d219f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-right-idle_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 57
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2f662acfd6893449c44fceddd29911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-right-idle_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 57
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182dea97f2805b74e88155e2672d7cff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-right-idle_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 9
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a929e7a6cf9233a43a965796e2e2008e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fc62c098cb68a1746b7377def834f95a
+    spriteID: aa85623c924002d4693cae6d48bd0203
     vertices: []
     indices: 
     edges: []

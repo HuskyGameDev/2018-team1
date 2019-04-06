@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeToAdd: MoveLeft
+  animator: Animations/female-protag/Player
 --- !u!212 &212681566131379420
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -114,7 +115,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2091861575
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8f1f54050e8447f42b1ad654638b6577, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

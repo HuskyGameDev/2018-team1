@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: db3cf607c22ba614b9e61c1fa8b157d2
+guid: 8302dcc534cb08e4982bbbd448bba494
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: pirate1-left-attack-dagger_0
+    21300002: pirate1-left-attack-dagger_1
+    21300004: pirate1-left-attack-dagger_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,11 +118,71 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pirate1-left-attack-dagger_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 57
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67442fa94b4d2be45af765d00c98965b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-left-attack-dagger_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 57
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551c7f07ee7fa57449f4b373b64686f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-left-attack-dagger_2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 9
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c8d41e962d4b340802dc33953f91dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fc62c098cb68a1746b7377def834f95a
+    spriteID: c4608bc5e8c7a3446b58d8f7127e3962
     vertices: []
     indices: 
     edges: []
