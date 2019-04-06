@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 157df506b2c8afe40b32c88e69d251e1
+guid: 9e399acd33ab44045925d527acb0bd7c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pirate1-right-jump_0
-    21300002: pirate1-right-jump_1
-    21300004: pirate1-right-jump_2
+    21300000: pirate1-right-walk-dagger_0
+    21300002: pirate1-right-walk-dagger_1
+    21300004: pirate1-right-walk-dagger_2
+    21300006: pirate1-right-walk-dagger_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -120,11 +121,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pirate1-right-jump_0
+      name: pirate1-right-walk-dagger_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 56
+        x: 6
+        y: 57
         width: 15
         height: 35
       alignment: 0
@@ -134,19 +135,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cb775b5549c576419ce96e4d221890f
+      spriteID: 73d96df45db55bc48834527acc87c8bb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-right-jump_1
+      name: pirate1-right-walk-dagger_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 56
+        x: 33
+        y: 57
         width: 15
-        height: 32
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,17 +155,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ffc684e1ce24804f8f23ea3c891721d
+      spriteID: 195658307a722f543b9519847304bb3f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-right-jump_2
+      name: pirate1-right-walk-dagger_2
       rect:
         serializedVersion: 2
-        x: 5
-        y: 8
+        x: 60
+        y: 57
         width: 15
         height: 35
       alignment: 0
@@ -174,7 +175,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 465ba18623542e7408838f51e396d2ca
+      spriteID: 9dcc2ae6272bec04b9e3b6dff479e7f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-right-walk-dagger_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 9
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e091a962d38deb4ea992957ac23a81b
       vertices: []
       indices: 
       edges: []
@@ -182,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0e53f939a1f8ac644bf15afb33daf4ba
+    spriteID: 028bee5f91d41aa45b96d82024f94269
     vertices: []
     indices: 
     edges: []

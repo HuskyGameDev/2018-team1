@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 157df506b2c8afe40b32c88e69d251e1
+guid: 2ab5fe202799a98478b78c0f45dd279d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pirate1-right-jump_0
-    21300002: pirate1-right-jump_1
-    21300004: pirate1-right-jump_2
+    21300000: pirate1-right-attack-dagger_0
+    21300002: pirate1-right-attack-dagger_1
+    21300004: pirate1-right-attack-dagger_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -120,13 +120,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pirate1-right-jump_0
+      name: pirate1-right-attack-dagger_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 56
+        x: 7
+        y: 57
         width: 15
-        height: 35
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cb775b5549c576419ce96e4d221890f
+      spriteID: 31b19987d6c7f224289dc6e86c43f31f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-right-jump_1
+      name: pirate1-right-attack-dagger_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 56
+        x: 34
+        y: 57
         width: 15
-        height: 32
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,19 +154,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ffc684e1ce24804f8f23ea3c891721d
+      spriteID: 559e7eb1a6a27ac438839932b1263da3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-right-jump_2
+      name: pirate1-right-attack-dagger_2
       rect:
         serializedVersion: 2
-        x: 5
-        y: 8
+        x: 7
+        y: 9
         width: 15
-        height: 35
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,7 +174,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 465ba18623542e7408838f51e396d2ca
+      spriteID: bc1209362723fc049a2e3c3aeab698c6
       vertices: []
       indices: 
       edges: []
@@ -182,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0e53f939a1f8ac644bf15afb33daf4ba
+    spriteID: 3ac1efe7c9d936d459ff1b8289899897
     vertices: []
     indices: 
     edges: []

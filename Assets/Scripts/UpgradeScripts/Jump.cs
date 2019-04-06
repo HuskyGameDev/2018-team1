@@ -36,8 +36,13 @@ public class Jump : MonoBehaviour {
 	void Update () {
 	}
 
+    private bool jumping;
     // called once per physics step
     private void FixedUpdate() {
+        if (jumping && isGrounded()) {
+            GetComponent<Animator>().SetTrigger("Land");
+            jumping = false;
+        }
 
         // Check if eligible for jumping (grounded and pressing button)
         if ((Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0) && canJump()) {
@@ -45,6 +50,8 @@ public class Jump : MonoBehaviour {
             if (rb2d.velocity.y <= 0.001f) {
                 rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
                 AkSoundEngine.PostEvent("Jump", gameObject);
+                GetComponent<Animator>().SetTrigger("Jump");
+                jumping = true;
             }
         }
 
