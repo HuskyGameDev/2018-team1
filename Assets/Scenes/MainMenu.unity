@@ -254,6 +254,10 @@ Prefab:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 289913773}
+    - target: {fileID: 1941495724149476, guid: 111f5ebc012696648a1ede5d6b71e477, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 111f5ebc012696648a1ede5d6b71e477, type: 2}
   m_IsPrefabAsset: 0
@@ -317,7 +321,7 @@ Prefab:
     - target: {fileID: 224886876996729246, guid: 111f5ebc012696648a1ede5d6b71e477,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224886876996729246, guid: 111f5ebc012696648a1ede5d6b71e477,
         type: 2}
@@ -387,7 +391,7 @@ Prefab:
         type: 2}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
-      objectReference: {fileID: 1843367625}
+      objectReference: {fileID: 289913773}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 111f5ebc012696648a1ede5d6b71e477, type: 2}
   m_IsPrefabAsset: 0
@@ -514,7 +518,7 @@ Prefab:
     - target: {fileID: 224886876996729246, guid: 111f5ebc012696648a1ede5d6b71e477,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -45
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 224886876996729246, guid: 111f5ebc012696648a1ede5d6b71e477,
         type: 2}
@@ -596,7 +600,7 @@ Prefab:
         type: 2}
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
-      objectReference: {fileID: 1843367625}
+      objectReference: {fileID: 1009541884}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 111f5ebc012696648a1ede5d6b71e477, type: 2}
   m_IsPrefabAsset: 0
@@ -1383,7 +1387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1946954121
 RectTransform:
   m_ObjectHideFlags: 0
