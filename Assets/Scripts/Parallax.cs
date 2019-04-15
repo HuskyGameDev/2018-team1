@@ -18,12 +18,8 @@ public class Parallax : MonoBehaviour {
 	void LateUpdate () {
 		float parentXPos = transform.parent.position.x;
 
-		print("parent pos: " + parentXPos);
-
 		float width = rightBound - leftBound;
 		float percentageAcross = (rightBound - parentXPos) / width;
-
-		print("percentage across: " + percentageAcross);
 
 		percentageAcross -= 0.5f;
 
