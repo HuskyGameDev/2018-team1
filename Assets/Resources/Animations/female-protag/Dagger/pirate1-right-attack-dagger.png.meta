@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: a139afc60565fbd4b8ac7ba521f5800c
+guid: 2ab5fe202799a98478b78c0f45dd279d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pirate1-left-idle_0
-    21300002: pirate1-left-idle_1
-    21300004: pirate1-left-idle_2
-    21300006: pirate1-left-idle_3
+    21300000: pirate1-right-attack-dagger_0
+    21300002: pirate1-right-attack-dagger_1
+    21300004: pirate1-right-attack-dagger_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -121,13 +120,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pirate1-left-idle_0
+      name: pirate1-right-attack-dagger_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 7
         y: 57
         width: 15
-        height: 35
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 452094bd84d61b942b7961820b66ed0b
+      spriteID: 31b19987d6c7f224289dc6e86c43f31f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-left-idle_1
+      name: pirate1-right-attack-dagger_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 34
         y: 57
         width: 15
-        height: 34
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,39 +154,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b97c2c3f657804c4eb675f463dfdda6d
+      spriteID: 559e7eb1a6a27ac438839932b1263da3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-left-idle_2
+      name: pirate1-right-attack-dagger_2
       rect:
         serializedVersion: 2
-        x: 60
-        y: 57
-        width: 15
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdcdf884b0383e74e951dbe31d4b473e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pirate1-left-idle_3
-      rect:
-        serializedVersion: 2
-        x: 6
+        x: 7
         y: 9
         width: 15
-        height: 34
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,7 +174,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 779a0e80e1cc5dc46882a1d5cf17c896
+      spriteID: bc1209362723fc049a2e3c3aeab698c6
       vertices: []
       indices: 
       edges: []
@@ -203,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ba04bab951f84b14aa846c93af80bf98
+    spriteID: 3ac1efe7c9d936d459ff1b8289899897
     vertices: []
     indices: 
     edges: []

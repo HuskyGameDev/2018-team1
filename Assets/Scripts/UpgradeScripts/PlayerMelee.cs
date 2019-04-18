@@ -12,15 +12,13 @@ public class PlayerMelee : MonoBehaviour
     {
         if (attacking > 0) {
             attacking--;
-            if (attacking == 0) {
+            if (attacking == 0)
                 meleeAttack.enabled = false;
-                animator.SetBool("Attacking", false);
-            }
         }
         if (Input.GetButtonDown("MeleeAttack")) {
             meleeAttack.enabled = true;
             attacking = 4;
-            animator.SetBool("Attacking", true);
+            animator.SetTrigger("Attack");
         }
     }
 }

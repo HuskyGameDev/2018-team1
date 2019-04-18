@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: a139afc60565fbd4b8ac7ba521f5800c
+guid: 9e399acd33ab44045925d527acb0bd7c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pirate1-left-idle_0
-    21300002: pirate1-left-idle_1
-    21300004: pirate1-left-idle_2
-    21300006: pirate1-left-idle_3
+    21300000: pirate1-right-walk-dagger_0
+    21300002: pirate1-right-walk-dagger_1
+    21300004: pirate1-right-walk-dagger_2
+    21300006: pirate1-right-walk-dagger_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -121,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pirate1-left-idle_0
+      name: pirate1-right-walk-dagger_0
       rect:
         serializedVersion: 2
         x: 6
@@ -135,13 +135,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 452094bd84d61b942b7961820b66ed0b
+      spriteID: 73d96df45db55bc48834527acc87c8bb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-left-idle_1
+      name: pirate1-right-walk-dagger_1
       rect:
         serializedVersion: 2
         x: 33
@@ -155,13 +155,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b97c2c3f657804c4eb675f463dfdda6d
+      spriteID: 195658307a722f543b9519847304bb3f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-left-idle_2
+      name: pirate1-right-walk-dagger_2
       rect:
         serializedVersion: 2
         x: 60
@@ -175,13 +175,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdcdf884b0383e74e951dbe31d4b473e
+      spriteID: 9dcc2ae6272bec04b9e3b6dff479e7f5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-left-idle_3
+      name: pirate1-right-walk-dagger_3
       rect:
         serializedVersion: 2
         x: 6
@@ -195,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 779a0e80e1cc5dc46882a1d5cf17c896
+      spriteID: 3e091a962d38deb4ea992957ac23a81b
       vertices: []
       indices: 
       edges: []
@@ -203,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ba04bab951f84b14aa846c93af80bf98
+    spriteID: 028bee5f91d41aa45b96d82024f94269
     vertices: []
     indices: 
     edges: []

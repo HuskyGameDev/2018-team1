@@ -83,13 +83,16 @@ public class MeleePirateController :  Controller {
         }
         if (attacking > 0) {
             attacking--;
-            if (attacking == 0)
+            if (attacking == 0) {
                 meleeAttack.enabled = false;
+
+            }
         }
 	}
     private void Attack() {
         attacking = 4;
         animator.SetTrigger("Attack");
+        GetComponent<SpriteRenderer>().flipX = true;
         meleeAttack.enabled = true;
     }
 }

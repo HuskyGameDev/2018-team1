@@ -1,11 +1,15 @@
 fileFormatVersion: 2
-guid: a139afc60565fbd4b8ac7ba521f5800c
+guid: 77c6d36925e7fc545b3698b0f4790cba
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pirate1-left-idle_0
-    21300002: pirate1-left-idle_1
-    21300004: pirate1-left-idle_2
-    21300006: pirate1-left-idle_3
+    21300000: pirate1-stab-walk_0
+    21300002: pirate1-stab-walk_1
+    21300004: pirate1-stab-walk_2
+    21300006: pirate1-stab-walk_3
+    21300008: pirate1-stab-walk_4
+    21300010: pirate1-stab-walk_5
+    21300012: pirate1-stab-walk_6
+    21300014: pirate1-stab-walk_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -121,31 +125,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pirate1-left-idle_0
+      name: pirate1-stab-walk_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 57
-        width: 15
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 452094bd84d61b942b7961820b66ed0b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pirate1-left-idle_1
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 57
+        x: 7
+        y: 56
         width: 15
         height: 34
       alignment: 0
@@ -155,37 +139,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b97c2c3f657804c4eb675f463dfdda6d
+      spriteID: 008e3e73e2894df41af41e668ff8cd8a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirate1-left-idle_2
+      name: pirate1-stab-walk_1
       rect:
         serializedVersion: 2
-        x: 60
-        y: 57
-        width: 15
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdcdf884b0383e74e951dbe31d4b473e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pirate1-left-idle_3
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 9
+        x: 34
+        y: 56
         width: 15
         height: 34
       alignment: 0
@@ -195,7 +159,127 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 779a0e80e1cc5dc46882a1d5cf17c896
+      spriteID: 632f9a32a1da5b3459c5be90bf67c178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-stab-walk_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 56
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7db7d5c27dae64eb7712d0ff56527a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-stab-walk_3
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 56
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8513d5241f361f14cb0e3040d54a7c01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-stab-walk_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 8
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbb33de7e1f41945b496d7b6acbc538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-stab-walk_5
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 8
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd207cbc68fb00646b3fbf1cdf994dc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-stab-walk_6
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 8
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae1f9f11308f3147b01b985c670ee29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate1-stab-walk_7
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 8
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f7e9f7b5f71c24db5faeb6512bf0a8
       vertices: []
       indices: 
       edges: []
@@ -203,7 +287,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ba04bab951f84b14aa846c93af80bf98
+    spriteID: 0b196a9750a1da5419de7a47ea925df8
     vertices: []
     indices: 
     edges: []
