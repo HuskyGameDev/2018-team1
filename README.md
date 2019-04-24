@@ -5,7 +5,7 @@ A side scrolling adventure game where you take the control of a pirate as she at
 
 ## Controls
 
-Move with the arrow keys or WASD. Jump with space and attack with left click.
+Move with the arrow keys or WASD. Jump with space and attack with left click. Escape opens the pause menu while in the game.
 
 ## Credits
 
