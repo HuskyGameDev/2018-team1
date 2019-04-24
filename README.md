@@ -9,8 +9,8 @@ Move with the arrow keys or WASD. Jump with space and attack with left click.
 
 ## Credits
 
-*Paul Wrubel - Team Lead / Programmer
-*Brandon Paupore - Programmer
-*Andrew Stanley - Programmer
-*Crystal Fletcher - Programmer
-*Maddie LeClair - Artist
+* Paul Wrubel - Team Lead / Programmer
+* Brandon Paupore - Programmer
+* Andrew Stanley - Programmer
+* Crystal Fletcher - Programmer
+* Maddie LeClair - Artist
