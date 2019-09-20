@@ -7,10 +7,16 @@ A side scrolling adventure game where you take the control of a pirate as she at
 
 Move with the arrow keys or WASD. Jump with space and attack with left click. Escape opens the pause menu while in the game.
 
+## Version
+
+* Unity 3.5
+
 ## Credits
 
-* Paul Wrubel - Team Lead / Programmer
-* Brandon Paupore - Programmer
+* Brandon Paupore - Team Lead / Programmer
+* Wes Grove - Programmer
+* Devin Farmer - Programmer
 * Andrew Stanley - Programmer
 * Crystal Fletcher - Programmer
-* Maddie LeClair - Artist
+* Maddie LeClair - Programmer / Artist
+* Paul Wrubel - Original Team Lead / Programmer
