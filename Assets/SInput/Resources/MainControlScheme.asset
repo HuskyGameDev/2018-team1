@@ -79,13 +79,23 @@ MonoBehaviour:
     mouseInputs: 
     virtualInputs: []
   - name: Cancel
-    keyboardInputs: 32000000
+    keyboardInputs: 
     gamepadInputs: 02000000
     mouseInputs: 
     virtualInputs: []
   - name: Join
     keyboardInputs: 30000000
     gamepadInputs: 17000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Crouch
+    keyboardInputs: 1700000002000000
+    gamepadInputs: 
+    mouseInputs: 
+    virtualInputs: []
+  - name: Start
+    keyboardInputs: 32000000
+    gamepadInputs: 
     mouseInputs: 
     virtualInputs: []
   smartControls:
