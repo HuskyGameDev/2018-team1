@@ -45,7 +45,7 @@ public class Jump : MonoBehaviour {
         }
 
         // Check if eligible for jumping (grounded and pressing button)
-        if ((Input.GetAxisRaw("Vertical") > 0 || Input.GetAxisRaw("Jump") > 0) && canJump()) {
+        if ((Sinput.GetAxisRaw("Vertical") > 0 || Sinput.GetAxisRaw("Jump") > 0) && canJump()) {
             // Jump!
             if (rb2d.velocity.y <= 0.001f) {
                 rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);

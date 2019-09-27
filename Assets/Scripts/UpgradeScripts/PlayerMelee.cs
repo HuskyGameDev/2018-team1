@@ -15,7 +15,7 @@ public class PlayerMelee : MonoBehaviour
             if (attacking == 0)
                 meleeAttack.enabled = false;
         }
-        if (Input.GetButtonDown("MeleeAttack")) {
+        if (Sinput.GetButtonDown("MeleeAttack")) {
             meleeAttack.enabled = true;
             attacking = 4;
             animator.SetTrigger("Attack");

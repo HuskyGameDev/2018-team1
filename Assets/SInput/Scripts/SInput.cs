@@ -205,7 +205,7 @@ public static class Sinput {
 	/// </summary>
 	public static void SinputUpdate() {
 		if (lastUpdateFrame == Time.frameCount) return;
-
+		
 		lastUpdateFrame = Time.frameCount;
 
 		//make sure everything is set up
