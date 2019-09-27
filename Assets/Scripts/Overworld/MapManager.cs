@@ -39,24 +39,24 @@ public class MapManager : MonoBehaviour
 	{
 		bool isPaused = PauseMenu.GetComponent<PauseMenu>().gameIsPaused;
 
-		if (Input.GetAxis("Vertical") > 0)
+		if (Sinput.GetAxis("Vertical") > 0)
 		{
 			Character.TrySetDirection(Direction.Up);
 		}
-		else if(Input.GetAxis("Vertical") < 0)
+		else if(Sinput.GetAxis("Vertical") < 0)
 		{
 			Character.TrySetDirection(Direction.Down);
 		}
-		else if(Input.GetAxis("Horizontal") < 0)
+		else if(Sinput.GetAxis("Horizontal") < 0)
 		{
 			Character.TrySetDirection(Direction.Left);
 		}
-		else if(Input.GetAxis("Horizontal") > 0)
+		else if(Sinput.GetAxis("Horizontal") > 0)
 		{
 			Character.TrySetDirection(Direction.Right);
 		}
 		//Check for both the submit button and the fact that we are NOT paused
-		else if(Input.GetButtonDown("Submit") && (isPaused == false))
+		else if(Sinput.GetButtonDown("Submit") && (isPaused == false))
 		{
 			Global.lvlToLoad = Character.CurrentPin.LevelName;
 			SceneManager.LoadScene(Character.CurrentPin.SceneToLoad);
