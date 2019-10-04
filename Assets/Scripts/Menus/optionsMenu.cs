@@ -37,7 +37,7 @@ public class optionsMenu : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetButtonDown("Cancel"))
+		if (Sinput.GetButtonDown("Cancel"))
 		{
 			if (this.transform.Find("VideoOptions").gameObject.activeSelf)
 			{

@@ -25,7 +25,7 @@ public class MoveLeft : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // If we are moving right, call the function to play the sound
-        if (Input.GetAxisRaw("Horizontal") < 0) {
+        if (Sinput.GetAxisRaw("Horizontal") < 0) {
             Footstep();
         }
 	}
@@ -34,7 +34,7 @@ public class MoveLeft : MonoBehaviour {
   private void FixedUpdate() {
 
         // Movement independent from jumping
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveHorizontal = Sinput.GetAxisRaw("Horizontal");
         if (moveHorizontal < 0) {
             animator.SetBool("WalkingLeft", true);
             Vector3 movement = new Vector3(moveHorizontal, 0, 0);

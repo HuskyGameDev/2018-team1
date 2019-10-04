@@ -32,8 +32,8 @@ public class Crouch : MonoBehaviour {
     private void FixedUpdate() {
 
         // Movement independent from jumping
-        float moveVertical = Input.GetAxisRaw("Vertical");
-        if (moveVertical < 0 || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
+        float moveVertical = Sinput.GetAxisRaw("Vertical");
+        if (moveVertical < 0 || Sinput.GetButton("Crouch")) {
             if (crouching2D.enabled == false) {
                 GetComponent<MoveLeft>().speed *= 0.5f;
                 GetComponent<MoveRight>().speed *= 0.5f;
