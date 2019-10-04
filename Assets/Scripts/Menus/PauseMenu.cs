@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Start"))
+		if (Sinput.GetButtonDown("Start"))
 		{
 			if (gameIsPaused)
 			{
@@ -35,7 +35,7 @@ public class PauseMenu : MonoBehaviour {
 				pause();
 			}
 		}
-		if (gameIsPaused && Input.GetButtonDown("Cancel"))
+		if (gameIsPaused && Sinput.GetButtonDown("Cancel"))
 		{
 			resume();
 		}
