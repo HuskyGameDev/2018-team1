@@ -58,6 +58,7 @@ public class MeleePirateController :  Controller {
         if (timeUntilJump == -1)
             timeUntilJump = Random.Range(minJumpTime, maxJumpTime);
     }
+    
     private void AttemptJump() {
          // Check if eligible for jumping (grounded)
         if (isGrounded()) {
@@ -85,7 +86,6 @@ public class MeleePirateController :  Controller {
             attacking--;
             if (attacking == 0) {
                 meleeAttack.enabled = false;
-
             }
         }
 	}
