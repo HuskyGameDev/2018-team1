@@ -6,19 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour {
     public string level;
+
     public void LoadFlatland() {
-        SceneManager.LoadScene("W1-4(F)");
+        string lev = SceneManager.GetActiveScene().name;
+        PersistentData.changeScene(lev, "W1-4(F)");
     }
+
     public void LoadPlatform() {
-        SceneManager.LoadScene("W1-1");
+        string lev = SceneManager.GetActiveScene().name;
+        PersistentData.changeScene(lev, "W1-1");
     }
+
     public void LoadOverworld() {
         string lev = SceneManager.GetActiveScene().name;
         lev = lev.Substring(1);
         Debug.Log("Level name: " + lev);
         Global.lvlToLoad = lev;
-        SceneManager.LoadScene("Overworld");
+        PersistentData.changeScene(lev, "Overworld");
     }
+
     public void LoadLevel() {
         if (level == "Overworld")
         {
@@ -26,10 +32,17 @@ public class LoadScene : MonoBehaviour {
         }
         else
         {
-            SceneManager.LoadScene(level);
+            string lev = SceneManager.GetActiveScene().name;
+            PersistentData.changeScene(lev, level);
         }
         
     }
+
+    public void LoadMenuFromControls() {
+        string cont = SceneManager.GetActiveScene().name;
+        PersistentData.changeScene(cont, "MainMenu");
+    }
+
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player"))
             LoadLevel();
