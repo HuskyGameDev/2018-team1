@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour{
 
     private Queue<string> sentences;
 
-    void Start(){
+    void Awake(){
         sentences = new Queue<string>();
     }
 
@@ -29,18 +29,15 @@ public class DialogueManager : MonoBehaviour{
     }
 
     public void DisplayNextSentence(){
-        if(Sinput.GetButtonDown("Submit")){
-            if(sentences.Count == 0){
-                EndDialogue();
-                return;
-            }
-            string sentence = sentences.Dequeue();
-            dialogueText.text = sentence;
+        if(sentences.Count == 0){
+            EndDialogue();
+            return;
         }
+        string sentence = sentences.Dequeue();
+        dialogueText.text = sentence;
     }
 
     void EndDialogue(){
-        Debug.Log("End of Conversation");
         animator.SetBool("IsOpen", false);
 
     }
