@@ -31194,7 +31194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press 'a' to continue.
+  m_Text: Press spacebar to continue.
 --- !u!222 &1550616057
 CanvasRenderer:
   m_ObjectHideFlags: 0
