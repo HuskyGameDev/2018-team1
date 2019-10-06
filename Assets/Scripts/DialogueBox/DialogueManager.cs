@@ -29,12 +29,14 @@ public class DialogueManager : MonoBehaviour{
     }
 
     public void DisplayNextSentence(){
-        if(sentences.Count == 0){
-            EndDialogue();
-            return;
+        if(Sinput.GetButtonDown("Submit")){
+            if(sentences.Count == 0){
+                EndDialogue();
+                return;
+            }
+            string sentence = sentences.Dequeue();
+            dialogueText.text = sentence;
         }
-        string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
     }
 
     void EndDialogue(){
