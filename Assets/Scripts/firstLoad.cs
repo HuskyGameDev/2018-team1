@@ -14,6 +14,7 @@ public class firstLoad : MonoBehaviour {
 		}
 		else
 		{
+			img.color = new Color(1f, 1f, 1f);
 			Global.firstRun = false;
 		}
 	}
