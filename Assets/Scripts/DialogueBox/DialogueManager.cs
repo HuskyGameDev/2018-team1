@@ -11,12 +11,13 @@ public class DialogueManager : MonoBehaviour{
 
     private Queue<string> sentences;
 
-    void Start(){
+    void Awake(){
         sentences = new Queue<string>();
     }
 
     public void StartDialogue(Dialogue dialogue){
         animator.SetBool("IsOpen", true);
+
         nameText.text = dialogue.name;
 
         sentences.Clear();
@@ -26,6 +27,12 @@ public class DialogueManager : MonoBehaviour{
         }
 
         DisplayNextSentence();
+    }
+
+    void Update(){
+        if(Sinput.GetButtonDown("Submit")){
+            DisplayNextSentence();
+        }
     }
 
     public void DisplayNextSentence(){
@@ -38,7 +45,6 @@ public class DialogueManager : MonoBehaviour{
     }
 
     void EndDialogue(){
-        Debug.Log("End of Conversation");
         animator.SetBool("IsOpen", false);
 
     }
