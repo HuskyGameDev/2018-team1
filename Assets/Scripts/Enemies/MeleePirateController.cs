@@ -69,6 +69,9 @@ public class MeleePirateController :  Controller {
     public override void Die() {
         GameObject.Destroy(gameObject);
     }
+    private void FlipX() {
+        GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+    }
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
              player = other.GetComponent<Transform>();
@@ -92,7 +95,6 @@ public class MeleePirateController :  Controller {
     private void Attack() {
         attacking = 4;
         animator.SetTrigger("Attack");
-        GetComponent<SpriteRenderer>().flipX = true;
         meleeAttack.enabled = true;
     }
 }
