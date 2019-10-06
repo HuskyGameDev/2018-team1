@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class optionsMenu : MonoBehaviour {
 
@@ -46,10 +47,6 @@ public class optionsMenu : MonoBehaviour {
 			else if (this.transform.Find("VolumeOptions").gameObject.activeSelf)
 			{
 				fromVolume();
-			}
-			else if (this.transform.Find("Controls").gameObject.activeSelf)
-			{
-				fromControls();
 			}
 			else
 			{
@@ -95,15 +92,6 @@ public class optionsMenu : MonoBehaviour {
 
 	public void toControls()
 	{
-		this.transform.Find("MainOptions").gameObject.SetActive(false);
-		this.transform.Find("Controls").gameObject.SetActive(true);
-		ControlsOptionsSelectable.Select();
-	}
-
-	public void fromControls()
-	{
-		this.transform.Find("Controls").gameObject.SetActive(false);
-		this.transform.Find("MainOptions").gameObject.SetActive(true);
-		MainControlsSelectable.Select();
+		PersistentData.changeScene(SceneManager.GetActiveScene().name, "SinputRebind");
 	}
 }
