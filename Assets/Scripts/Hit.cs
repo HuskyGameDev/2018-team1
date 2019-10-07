@@ -24,7 +24,7 @@ public class Hit : MonoBehaviour {
             }
         }
     }
-    void Update() {
+    void LateUpdate() {
         // Show hurt boxes if being run from editor
         if (!PersistentData.ordinary)
             GetComponent<SpriteRenderer>().enabled = GetComponent<Collider2D>().enabled;

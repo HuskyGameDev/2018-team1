@@ -77,16 +77,21 @@ public class MeleePirateController :  Controller {
              seenPlayer = true;
         }
     }
-    void FaceRight() {
+    void FaceReverse() {
         GetComponent<SpriteRenderer>().flipX = true;
-        meleeAttack.enabled = false;
+        meleeAttack.transform.position.x = .7f;
     }
-    void FaceLeft() {
+    void FaceStandard() {
         GetComponent<SpriteRenderer>().flipX = false;
-        meleeAttack.enabled = false;
     }
-    void ToggleHitBox() {
+    void ToggleHurtBox() {
         meleeAttack.enabled = !meleeAttack.enabled;
+    }
+    void HurtBoxEnable() {
+        meleeAttack.enabled = true;
+    }
+    void HurtBoxDisable() {
+        meleeAttack.enabled = false;
     }
 	// Update is called once per frame
 	void Update () {
