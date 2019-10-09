@@ -38,41 +38,6 @@ MonoBehaviour:
     gamepadInputs: 01000000
     mouseInputs: 
     virtualInputs: []
-  - name: Fire1
-    keyboardInputs: 22000000
-    gamepadInputs: 08000000
-    mouseInputs: 0c000000
-    virtualInputs: []
-  - name: Fire2
-    keyboardInputs: 24000000
-    gamepadInputs: 06000000
-    mouseInputs: 0d000000
-    virtualInputs: []
-  - name: Fire3
-    keyboardInputs: 20000000
-    gamepadInputs: 05000000
-    mouseInputs: 0e000000
-    virtualInputs: []
-  - name: Look Left
-    keyboardInputs: 
-    gamepadInputs: 13000000
-    mouseInputs: 01000000
-    virtualInputs: []
-  - name: Look Right
-    keyboardInputs: 
-    gamepadInputs: 14000000
-    mouseInputs: 02000000
-    virtualInputs: []
-  - name: Look Up
-    keyboardInputs: 
-    gamepadInputs: 15000000
-    mouseInputs: 03000000
-    virtualInputs: []
-  - name: Look Down
-    keyboardInputs: 
-    gamepadInputs: 16000000
-    mouseInputs: 04000000
-    virtualInputs: []
   - name: Submit
     keyboardInputs: 33000000
     gamepadInputs: 01000000
@@ -81,11 +46,6 @@ MonoBehaviour:
   - name: Cancel
     keyboardInputs: 
     gamepadInputs: 02000000
-    mouseInputs: 
-    virtualInputs: []
-  - name: Join
-    keyboardInputs: 30000000
-    gamepadInputs: 17000000
     mouseInputs: 
     virtualInputs: []
   - name: Crouch
@@ -111,24 +71,6 @@ MonoBehaviour:
   - name: Vertical
     positiveControl: Up
     negativeControl: Down
-    deadzone: 0.001
-    gravity: 3
-    speed: 3
-    snap: 0
-    scale: 1
-    invert: 0
-  - name: Look Horizontal
-    positiveControl: Look Right
-    negativeControl: Look Left
-    deadzone: 0.001
-    gravity: 3
-    speed: 3
-    snap: 0
-    scale: 1
-    invert: 0
-  - name: Look Vertical
-    positiveControl: Look Up
-    negativeControl: Look Down
     deadzone: 0.001
     gravity: 3
     speed: 3
