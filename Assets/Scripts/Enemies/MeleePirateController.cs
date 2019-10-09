@@ -79,10 +79,15 @@ public class MeleePirateController :  Controller {
     }
     void FaceReverse() {
         GetComponent<SpriteRenderer>().flipX = true;
-        meleeAttack.transform.position.x = .7f;
+        Vector3 pos = meleeAttack.transform.localPosition;
+        pos.x = -.7f;
+        meleeAttack.transform.localPosition = pos;
     }
     void FaceStandard() {
         GetComponent<SpriteRenderer>().flipX = false;
+        Vector3 pos = meleeAttack.transform.localPosition;
+        pos.x = .7f;
+        meleeAttack.transform.localPosition = pos;
     }
     void ToggleHurtBox() {
         meleeAttack.enabled = !meleeAttack.enabled;
