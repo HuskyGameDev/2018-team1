@@ -20,3 +20,8 @@ Move with the arrow keys or WASD. Jump with space and attack with left click. Es
 * Crystal Fletcher - Programmer
 * Maddie LeClair - Programmer / Artist
 * Paul Wrubel - Original Team Lead / Programmer
+
+## External Software & Products
+
+* Sinput is available for optional donation over at [sophieh.itch.io](https://sophieh.itch.io/sinput)
+* LiberationMono is free to use via the [SIL Open Font License](https://en.wikipedia.org/wiki/SIL_Open_Font_License).
