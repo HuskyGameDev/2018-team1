@@ -18,7 +18,6 @@ public class MeleePirateController :  Controller {
     private bool seenPlayer = false;
     private Transform player;
 
-    private int attacking;
     public Collider2D meleeAttack;
 	// Use this for initialization
 	void Start () {
@@ -58,6 +57,7 @@ public class MeleePirateController :  Controller {
         if (timeUntilJump == -1)
             timeUntilJump = Random.Range(minJumpTime, maxJumpTime);
     }
+    
     private void AttemptJump() {
          // Check if eligible for jumping (grounded)
         if (isGrounded()) {
@@ -68,31 +68,44 @@ public class MeleePirateController :  Controller {
     public override void Die() {
         GameObject.Destroy(gameObject);
     }
+    private void FlipX() {
+        GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+    }
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
              player = other.GetComponent<Transform>();
              seenPlayer = true;
         }
     }
-    
+    void FaceReverse() {
+        GetComponent<SpriteRenderer>().flipX = true;
+        Vector3 pos = meleeAttack.transform.localPosition;
+        pos.x = -.7f;
+        meleeAttack.transform.localPosition = pos;
+    }
+    void FaceStandard() {
+        GetComponent<SpriteRenderer>().flipX = false;
+        Vector3 pos = meleeAttack.transform.localPosition;
+        pos.x = .7f;
+        meleeAttack.transform.localPosition = pos;
+    }
+    void ToggleHurtBox() {
+        meleeAttack.enabled = !meleeAttack.enabled;
+    }
+    void HurtBoxEnable() {
+        meleeAttack.enabled = true;
+    }
+    void HurtBoxDisable() {
+        meleeAttack.enabled = false;
+    }
 	// Update is called once per frame
 	void Update () {
         if (seenPlayer) {
             if ((player.position - transform.position).magnitude < attackReach) 
                 Attack();
         }
-        if (attacking > 0) {
-            attacking--;
-            if (attacking == 0) {
-                meleeAttack.enabled = false;
-
-            }
-        }
 	}
     private void Attack() {
-        attacking = 4;
         animator.SetTrigger("Attack");
-        GetComponent<SpriteRenderer>().flipX = true;
-        meleeAttack.enabled = true;
     }
 }
