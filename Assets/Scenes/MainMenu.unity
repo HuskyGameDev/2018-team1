@@ -390,7 +390,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
-      objectReference: {fileID: 289913773}
+      objectReference: {fileID: 1843367625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 111f5ebc012696648a1ede5d6b71e477, type: 3}
 --- !u!224 &70473714 stripped
@@ -616,7 +616,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
-      objectReference: {fileID: 1009541884}
+      objectReference: {fileID: 1843367625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 111f5ebc012696648a1ede5d6b71e477, type: 3}
 --- !u!224 &691266591 stripped
