@@ -1188,6 +1188,11 @@ PrefabInstance:
       propertyPath: unloadTriggerList.Array.data[0]
       value: -358577003
       objectReference: {fileID: 0}
+    - target: {fileID: 2799561052750950887, guid: b161d4496877a064789ccb92d56afb87,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b161d4496877a064789ccb92d56afb87, type: 3}
 --- !u!1 &633096190
@@ -31056,8 +31061,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230.2, y: -43.3}
-  m_SizeDelta: {x: 159, y: 26.1}
+  m_AnchoredPosition: {x: 207.8, y: -43.3}
+  m_SizeDelta: {x: 203.9, y: 26.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550616056
 MonoBehaviour:
