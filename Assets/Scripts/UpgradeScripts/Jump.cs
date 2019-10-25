@@ -11,6 +11,7 @@ public class Jump : MonoBehaviour {
 
     // Internal variables
     private int currentJumpFrameBuffer;
+    bool wasGrounded;
 
     // Player Components
     private Rigidbody2D rb2d;
@@ -29,6 +30,7 @@ public class Jump : MonoBehaviour {
         transform = GetComponent<Transform>();
         rb2d = GetComponent<Rigidbody2D>();
         collider2d = GetComponent<Collider2D>();
+        wasGrounded = false;
 
     }
 	
@@ -63,12 +65,23 @@ public class Jump : MonoBehaviour {
 
     private bool canJump() {
         
-        if (isGrounded()) {
-            if (currentJumpFrameBuffer == 0) {
-                return true;
-            }
-        } else {
-            currentJumpFrameBuffer = jumpFrameBuffer;
+        // if (wasGrounded || isGrounded()) {
+        //     if(wasGrounded && !isGrounded()){
+        //         wasGrounded = false;
+        //     }
+        //     if (currentJumpFrameBuffer == 0) {
+        //         return true;
+        //     }
+        // } else {
+        //     if (currentJumpFrameBuffer == 0) {
+        //         return true;
+        //     }
+        // } else {
+        //     currentJumpFrameBuffer = jumpFrameBuffer;
+        // }
+        // return false;
+        if(wasGrounded || isGrounded()){
+            return true;
         }
         return false;
 
@@ -99,9 +112,10 @@ public class Jump : MonoBehaviour {
         // bool rightGrounded = rightNormal.Equals(normalizedUp);
 
         if (leftGrounded || rightGrounded) {
+            wasGrounded=true;
             return true;
         }
-        
+        wasGrounded=false;
         return false;
     }
 }
