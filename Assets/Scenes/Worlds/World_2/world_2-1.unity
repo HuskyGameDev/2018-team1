@@ -218,7 +218,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 263483490}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7949879b2e43724586de47d9ff868b9, type: 3}
 --- !u!1 &263483487
@@ -554,7 +554,7 @@ Tilemap:
   - first: {x: 176, y: -14, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 1
       m_TileColorIndex: 3
       m_ObjectToInstantiate: {fileID: 0}
@@ -969,8 +969,8 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 85640e80f8bae104c93f5a4aa57fe3c1, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 207be0c99dc0c57418feab5322225108, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 7aba8610eace2944daf00ae4d91545d0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 3
@@ -989,8 +989,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 7aba8610eace2944daf00ae4d91545d0, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
@@ -1277,6 +1277,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114658014473459460, guid: b161d4496877a064789ccb92d56afb87,
+        type: 3}
+      propertyPath: unloadTriggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658014473459460, guid: b161d4496877a064789ccb92d56afb87,
+        type: 3}
+      propertyPath: unloadTriggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658014473459460, guid: b161d4496877a064789ccb92d56afb87,
+        type: 3}
+      propertyPath: unloadTriggerList.Array.data[0]
+      value: -358577003
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658014473459460, guid: b161d4496877a064789ccb92d56afb87,
+        type: 3}
+      propertyPath: unloadTriggerList.Array.data[0]
+      value: -358577003
+      objectReference: {fileID: 0}
     - target: {fileID: 4917480838805810, guid: b161d4496877a064789ccb92d56afb87, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1314,15 +1334,10 @@ PrefabInstance:
       propertyPath: m_callbackData
       value: 
       objectReference: {fileID: 1245017271}
-    - target: {fileID: 114658014473459460, guid: b161d4496877a064789ccb92d56afb87,
+    - target: {fileID: 2799561052750950887, guid: b161d4496877a064789ccb92d56afb87,
         type: 3}
-      propertyPath: unloadTriggerList.Array.size
+      propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114658014473459460, guid: b161d4496877a064789ccb92d56afb87,
-        type: 3}
-      propertyPath: unloadTriggerList.Array.data[0]
-      value: -358577003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b161d4496877a064789ccb92d56afb87, type: 3}

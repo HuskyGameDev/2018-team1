@@ -39,19 +39,19 @@ public class MapManager : MonoBehaviour
 	{
 		bool isPaused = PauseMenu.GetComponent<PauseMenu>().gameIsPaused;
 
-		if (Sinput.GetAxis("Vertical") > 0)
+		if (Sinput.GetButtonDownRepeating("Up"))
 		{
 			Character.TrySetDirection(Direction.Up);
 		}
-		else if(Sinput.GetAxis("Vertical") < 0)
+		else if(Sinput.GetButtonDownRepeating("Down"))
 		{
 			Character.TrySetDirection(Direction.Down);
 		}
-		else if(Sinput.GetAxis("Horizontal") < 0)
+		else if(Sinput.GetButtonDownRepeating("Left"))
 		{
 			Character.TrySetDirection(Direction.Left);
 		}
-		else if(Sinput.GetAxis("Horizontal") > 0)
+		else if(Sinput.GetButtonDownRepeating("Right"))
 		{
 			Character.TrySetDirection(Direction.Right);
 		}

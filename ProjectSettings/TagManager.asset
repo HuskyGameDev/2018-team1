@@ -66,3 +66,6 @@ TagManager:
   - name: Water
     uniqueID: 4144375347
     locked: 0
+  - name: Debug
+    uniqueID: 777195357
+    locked: 0
