@@ -587,10 +587,10 @@ public class AkPluginActivator
 		var projectPath = System.IO.Path.GetDirectoryName(AkUtilities.GetFullPath(UnityEngine.Application.dataPath,
 			WwiseSettings.LoadSettings().WwiseProjectPath));
 
-		var pfMap = AkUtilities.GetPlatformMapping();
+		AkWwiseInitializationSettings.UpdatePlatforms();
 
 		//Go through all BasePlatforms 
-		foreach (var pairPF in pfMap)
+		foreach (var pairPF in AkUtilities.PlatformMapping)
 		{
 			//Go through all custom platforms related to that base platform and check if any of the bank files were updated.
 			var bParse = forceUpdate;
