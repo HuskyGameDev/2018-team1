@@ -9,22 +9,22 @@ Event	ID	Name			Wwise Object Path	Notes
 	3833651337	Jump			\Default Work Unit\Jump	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	68733773	Grass Footsteps#01	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_009485A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01		17938
-	260992621	Scurry_01	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Crab movement_E65ED33F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Crab\Movement\Scurry_01		164176
-	354552467	Grass Footsteps#01_06	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_F72BE7EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_06		21202
-	394612318	Scurry_02	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Crab movement_DB1BD259.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Crab\Movement\Scurry_02		212444
-	528344221	Scurry_1	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Crab movement_67C5E199.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Crab\Movement\Scurry_1		202792
-	541555683	StickSwooshTake01	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\StickSwooshTake01_0376FD74.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake01		26370
-	572718178	Grass Footsteps#01_01	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_4E1E06C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_01		15618
-	656437654	Ouch_3	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Hurt_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Pirate\Ouch\Ouch_3		83016
-	697895135	Ouch_2	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Hurt_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Pirate\Ouch\Ouch_2		110304
-	740179424	UpgradeCoin	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Upgrade Coin_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\UpgradeCoin		220644
-	799564673	Booster	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Booster_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Booster		128768
-	807304314	Grass Footsteps#01_03	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_1844861C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_03		22526
-	823793172	Ouch_1	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Hurt_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Pirate\Ouch\Ouch_1		88344
-	909150698	StickSwooshTake02	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\StickSwooshTake02_7AED70D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake02		17712
-	937844091	Grass Footsteps#01_02	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_083F33FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_02		19862
-	1013950220	Grass Footsteps#01_04	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_26D98D6A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_04		27474
-	1019705529	Hit_Gore	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Hit_Gore_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hit_Gore		61332
-	1032810323	Grass Footsteps#01_05	C:\Users\dstockero\2019f-team9\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_4670D95B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_05		27474
+	68733773	Grass Footsteps#01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_009485A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01		17938
+	260992621	Scurry_01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Crab movement_E65ED33F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Crab\Movement\Scurry_01		164176
+	354552467	Grass Footsteps#01_06	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_F72BE7EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_06		21202
+	394612318	Scurry_02	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Crab movement_DB1BD259.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Crab\Movement\Scurry_02		212444
+	528344221	Scurry_1	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Crab movement_67C5E199.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Crab\Movement\Scurry_1		202792
+	541555683	StickSwooshTake01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\StickSwooshTake01_0376FD74.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake01		26370
+	572718178	Grass Footsteps#01_01	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_4E1E06C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_01		15618
+	656437654	Ouch_3	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Hurt_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Pirate\Ouch\Ouch_3		83016
+	697895135	Ouch_2	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Hurt_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Pirate\Ouch\Ouch_2		110304
+	740179424	UpgradeCoin	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Upgrade Coin_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\UpgradeCoin		220644
+	799564673	Booster	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Booster_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Booster		128768
+	807304314	Grass Footsteps#01_03	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_1844861C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_03		22526
+	823793172	Ouch_1	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Hurt_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Pirate\Ouch\Ouch_1		88344
+	909150698	StickSwooshTake02	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\StickSwooshTake02_7AED70D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Sword_Swing\StickSwooshTake02		17712
+	937844091	Grass Footsteps#01_02	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_083F33FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_02		19862
+	1013950220	Grass Footsteps#01_04	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_26D98D6A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_04		27474
+	1019705529	Hit_Gore	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Hit_Gore_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Hit_Gore		61332
+	1032810323	Grass Footsteps#01_05	C:\Users\a-astockero\Documents\2018-team1\2018-team1_WwiseProject\.cache\Mac\SFX\Grass Footsteps#01_4670D95B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Full\Jump\Grass Footsteps#01_05		27474
 
