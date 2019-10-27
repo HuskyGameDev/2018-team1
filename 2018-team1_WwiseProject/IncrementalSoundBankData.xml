@@ -4,14 +4,14 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Ambient" Hash="2699927238" Timestamp="1553724699"/>
-				<File Name="Beach_amb" Hash="4239433484" Timestamp="1553726655"/>
-				<File Name="Init" Hash="403170349" Timestamp="1543608351"/>
-				<File Name="MainBank" Hash="1950723031" Timestamp="1553724699"/>
+				<File Name="Beach_amb" Hash="1963026808" Timestamp="1572208944"/>
+				<File Name="Init" Hash="403170349" Timestamp="1572208944"/>
+				<File Name="MainBank" Hash="3264141075" Timestamp="1572208944"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1434382961" Timestamp="1553726655"/>
+				<File Name="" Hash="755216697" Timestamp="1572208944"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -19,14 +19,14 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Ambient" Hash="2699927238" Timestamp="1553724698"/>
-				<File Name="Beach_amb" Hash="4239433484" Timestamp="1553726653"/>
-				<File Name="Init" Hash="3720209211" Timestamp="1543608351"/>
-				<File Name="MainBank" Hash="1950723031" Timestamp="1553724698"/>
+				<File Name="Beach_amb" Hash="1963026808" Timestamp="1572208943"/>
+				<File Name="Init" Hash="3720209211" Timestamp="1572208943"/>
+				<File Name="MainBank" Hash="3264141075" Timestamp="1572208943"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1374661567" Timestamp="1553726653"/>
+				<File Name="" Hash="3657606919" Timestamp="1572208943"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
