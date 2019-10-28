@@ -7,21 +7,26 @@ public class Jump : MonoBehaviour {
     // Public properties
     public float jumpForce;
     public int jumpFrameBuffer;
+    public int doubleJumpFrameBuffer;
     public LayerMask groundLayer;
+    public bool hasDoubleJumpAbility=false;
 
     // Internal variables
     private int currentJumpFrameBuffer;
-    bool wasGrounded;
+    public int currentDoubleJumpFrameBuffer;
+    public bool usedSecondJump=false;
 
     // Player Components
     private Rigidbody2D rb2d;
     private Collider2D collider2d;
     private new Transform transform;
 
-    public void SetValues(float jumpForce, int jumpFrameBuffer, LayerMask groundLayer) {
+    public void SetValues(float jumpForce, int jumpFrameBuffer,int doubleJumpFrameBuffer, LayerMask groundLayer) {
         this.jumpForce = jumpForce;
         this.jumpFrameBuffer = jumpFrameBuffer;
+        this.doubleJumpFrameBuffer=doubleJumpFrameBuffer;
         this.groundLayer = groundLayer;
+        
     }
 	// Use this for initialization
 	void Start () {
@@ -30,7 +35,6 @@ public class Jump : MonoBehaviour {
         transform = GetComponent<Transform>();
         rb2d = GetComponent<Rigidbody2D>();
         collider2d = GetComponent<Collider2D>();
-        wasGrounded = false;
 
     }
 	
@@ -41,16 +45,24 @@ public class Jump : MonoBehaviour {
     private bool jumping;
     // called once per physics step
     private void FixedUpdate() {
-        if (jumping && isGrounded()) {
+        if (isGrounded()) {
             GetComponent<Animator>().SetTrigger("Land");
             jumping = false;
+            usedSecondJump=false;
+            currentDoubleJumpFrameBuffer=doubleJumpFrameBuffer;
         }
 
         // Check if eligible for jumping (grounded and pressing button)
         if ((Sinput.GetAxisRaw("Vertical") > 0 || Sinput.GetAxisRaw("Jump") > 0) && canJump()) {
             // Jump!
-            if (rb2d.velocity.y <= 0.001f) {
-                rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+            if(!usedSecondJump&&!isGrounded()){
+                jump();
+                usedSecondJump=true;
+                AkSoundEngine.PostEvent("Jump", gameObject);
+                GetComponent<Animator>().SetTrigger("Jump");
+                jumping = true;
+            }else if (rb2d.velocity.y <= 0.001f){
+                jump();
                 AkSoundEngine.PostEvent("Jump", gameObject);
                 GetComponent<Animator>().SetTrigger("Jump");
                 jumping = true;
@@ -60,30 +72,29 @@ public class Jump : MonoBehaviour {
         if (currentJumpFrameBuffer > 0) {
             currentJumpFrameBuffer--;
         }
+        if(!isGrounded()&&currentDoubleJumpFrameBuffer>0){
+            currentDoubleJumpFrameBuffer--;
+        }
         
+    }
+
+    private void jump(){
+        rb2d.velocity=new Vector2(rb2d.velocity.x,0);
+        rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
     }
 
     private bool canJump() {
         
-        // if (wasGrounded || isGrounded()) {
-        //     if(wasGrounded && !isGrounded()){
-        //         wasGrounded = false;
-        //     }
-        //     if (currentJumpFrameBuffer == 0) {
-        //         return true;
-        //     }
-        // } else {
-        //     if (currentJumpFrameBuffer == 0) {
-        //         return true;
-        //     }
-        // } else {
-        //     currentJumpFrameBuffer = jumpFrameBuffer;
-        // }
-        // return false;
-        if(wasGrounded || isGrounded()){
-            return true;
+        if (hasDoubleJumpAbility&&!usedSecondJump&&currentDoubleJumpFrameBuffer == 0) {
+                return true;
+        } else if (isGrounded()&&currentJumpFrameBuffer==0) {
+                return true;
+        } 
+        else {
+             currentDoubleJumpFrameBuffer=doubleJumpFrameBuffer;
+            return false;
         }
-        return false;
+        
 
     }
 
@@ -112,10 +123,12 @@ public class Jump : MonoBehaviour {
         // bool rightGrounded = rightNormal.Equals(normalizedUp);
 
         if (leftGrounded || rightGrounded) {
-            wasGrounded=true;
             return true;
         }
-        wasGrounded=false;
+        
         return false;
+    }
+    public void addDoubleJump(){
+        hasDoubleJumpAbility=true;
     }
 }

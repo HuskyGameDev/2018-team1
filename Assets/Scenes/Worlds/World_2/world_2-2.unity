@@ -19425,6 +19425,11 @@ PrefabInstance:
       propertyPath: unloadTriggerList.Array.data[0]
       value: -358577003
       objectReference: {fileID: 0}
+    - target: {fileID: 2799561052750950887, guid: b161d4496877a064789ccb92d56afb87,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b161d4496877a064789ccb92d56afb87, type: 3}
 --- !u!4 &789947727 stripped
