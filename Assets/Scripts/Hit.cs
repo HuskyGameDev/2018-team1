@@ -27,6 +27,6 @@ public class Hit : MonoBehaviour {
     void LateUpdate() {
         // Show hurt boxes if being run from editor
         if (!PersistentData.ordinary)
-            GetComponent<TilemapRenderer>().enabled = GetComponent<Collider2D>().enabled;
+            GetComponent<SpriteRenderer>().enabled = GetComponent<Collider2D>().enabled;
     }
 }
