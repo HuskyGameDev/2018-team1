@@ -123,4 +123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeToAdd: DoubleJump
-  animator: Animations/female-protag/Patch/Player-Patch
+  animator: Animations/female-protag/Player

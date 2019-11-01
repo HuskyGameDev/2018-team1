@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
 			PersistentData.upgrades.Add("MoveLeft");
 			PersistentData.animator = "Animations/female-protag/Player";
 			PersistentData.upgrades.Add("Crouch");
-			PersistentData.upgrades.Add("DoubleJump");
+			//PersistentData.upgrades.Add("DoubleJump");
 		}
 		foreach (string s in PersistentData.upgrades) {
 			AddUpgrade(s);
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour {
 		Crouch comp = player.AddComponent<Crouch>() as Crouch;
 	}
 	private void AddDoubleJump(){
-		Jump j=new Jump();
+		Jump j=player.GetComponent<Jump>();
 		j.addDoubleJump();
 	}
 	// Update is called once per frame
