@@ -19,12 +19,14 @@ public class mainMenu : MonoBehaviour {
 			optionsMenu.SetActive(true);
 			OptionsControlsButton.Select();
 		}
+		FullScreenMode fsMode = Screen.fullScreenMode;
+		Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, Screen.fullScreenMode, 60);
+		Screen.fullScreen = true;
 	}
 
 	public void PlayGame()
 	{
 		SceneManager.LoadScene("W1-1");
-		
 	}
 
 	public void OptionsMenu()

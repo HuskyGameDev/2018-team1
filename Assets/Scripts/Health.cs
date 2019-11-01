@@ -3,12 +3,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 // Handles HP manipulation
 public class Health : MonoBehaviour {
-    public Text healthText;
+    
     public int iFrames;
     private int iFrameCounter;
     public int maxHealth; 
     //Should be modified through Reduce/IncreaseHealth()
-    private int health;
+    protected int health;
 
     public void Set(int health) {
         this.health = health;
@@ -60,6 +60,5 @@ public class Health : MonoBehaviour {
             GetComponent<SpriteRenderer>().color = c;
             iFrameCounter--;
         }
-        healthText.text = "" + string.Format("Health: {0,3}/",health) + maxHealth;
     }
 }

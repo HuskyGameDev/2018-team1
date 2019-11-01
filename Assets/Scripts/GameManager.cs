@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 			PersistentData.upgrades.Add("MoveRight");
 			PersistentData.upgrades.Add("Jump");
 			PersistentData.upgrades.Add("MoveLeft");
-			PersistentData.animator = "Animations/female-protag/Player";
+			PersistentData.animator = "Animations/female-protag/Unarmed/Player";
 			PersistentData.upgrades.Add("Crouch");
 			//PersistentData.upgrades.Add("DoubleJump");
 		}
