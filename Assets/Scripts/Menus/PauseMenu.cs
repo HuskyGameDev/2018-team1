@@ -60,9 +60,7 @@ public class PauseMenu : MonoBehaviour {
 
 	public void saveGame()
 	{
-		SaveGame.Instance.playerPosition = player.position;
-		SaveGame.Instance.cameraPosition = cam.position;
-		SaveGame.Save();
+		SaveLoad.Save();
 		Debug.Log("Saving Game...");
 	}
 
@@ -75,9 +73,10 @@ public class PauseMenu : MonoBehaviour {
 
 	public void loadSave()
 	{
-		SaveGame.Load();
-		player.position = SaveGame.Instance.playerPosition;
-		cam.position = SaveGame.Instance.cameraPosition;
+		SaveLoad.Load();
+		player.position = SaveLoad.saveGame.playerPosition;
+		cam.position = SaveLoad.saveGame.cameraPosition;
+		
 		Debug.Log("Loading Save...");
 	}
 
