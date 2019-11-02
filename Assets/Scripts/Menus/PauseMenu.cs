@@ -11,7 +11,6 @@ public class PauseMenu : MonoBehaviour {
 
 	public Transform player;
 	public Transform cam;
-	private Vector3 playerStart;
 	
 	public GameObject pauseMenuUI;
 
@@ -19,7 +18,6 @@ public class PauseMenu : MonoBehaviour {
 
 	void Start() {
 		Cursor.visible = false;
-		playerStart = player.position;
 	}
 
 	// Update is called once per frame

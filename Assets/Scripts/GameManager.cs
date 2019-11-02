@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour {
 		pm.animator = player.GetComponent<Animator>();
 	}
 	private void AddCrouch() {
-		Crouch comp = player.AddComponent<Crouch>() as Crouch;
+		player.AddComponent<Crouch>();
 	}
 	private void AddDoubleJump(){
 		Jump j=player.GetComponent<Jump>();

@@ -73,7 +73,7 @@ namespace SinputSystems{
 		}
 
 		//loading stuff
-		static string activeControlName = "";
+
 		static string[] joysticks;
 		public static Control[] LoadControls(Control[] schemeToReplace, string schemeName){
 			//we pass the existing control scheme so that info on needed common bindings can be kept

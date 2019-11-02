@@ -105,7 +105,6 @@ public partial class AkUtilities
 			{ UnityEditor.BuildTarget.WSAPlayer, new[] { "Windows" } },
 			{ UnityEditor.BuildTarget.StandaloneLinux64, new[] { "Linux" } },
 			{ UnityEditor.BuildTarget.StandaloneLinuxUniversal, new[] { "Linux" } },
-			{ UnityEditor.BuildTarget.PSP2, new[] { "VitaHW", "VitaSW" } },
 			{ UnityEditor.BuildTarget.PS4, new[] { "PS4" } },
 			{ UnityEditor.BuildTarget.XboxOne, new[] { "XboxOne" } }
 		};
