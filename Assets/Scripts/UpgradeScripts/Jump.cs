@@ -8,14 +8,13 @@ public class Jump : MonoBehaviour {
     public float jumpForce;
     public int jumpFrameBuffer;
     public int doubleJumpFrameBuffer;
-    public int coyoteFrameBuffer;
     public LayerMask groundLayer;
     public bool hasDoubleJumpAbility=false;
 
     // Internal variables
     private int currentJumpFrameBuffer;
     public int currentDoubleJumpFrameBuffer;
-    private int currentCoyoteFrameBuffer;
+    private int coyoteFramesNotGrounded;
     public bool usedSecondJump=false;
     private float timeLeftGround;
 
@@ -24,11 +23,10 @@ public class Jump : MonoBehaviour {
     private Collider2D collider2d;
     private new Transform transform;
 
-    public void SetValues(float jumpForce, int jumpFrameBuffer,int doubleJumpFrameBuffer,int coyoteFrameBuffer, LayerMask groundLayer) {
+    public void SetValues(float jumpForce, int jumpFrameBuffer,int doubleJumpFrameBuffer, LayerMask groundLayer) {
         this.jumpForce = jumpForce;
         this.jumpFrameBuffer = jumpFrameBuffer;
         this.doubleJumpFrameBuffer=doubleJumpFrameBuffer;
-        this.coyoteFrameBuffer=coyoteFrameBuffer;
         this.groundLayer = groundLayer;
         
     }
@@ -54,8 +52,9 @@ public class Jump : MonoBehaviour {
             jumping = false;
             usedSecondJump=false;
             currentDoubleJumpFrameBuffer=doubleJumpFrameBuffer;
+            coyoteFramesNotGrounded=0;
         }else{
-            timeLeftGround=Time.time;
+            coyoteFramesNotGrounded++;
         }
 
         // Check if eligible for jumping (grounded and pressing button)
@@ -78,11 +77,8 @@ public class Jump : MonoBehaviour {
         if (currentJumpFrameBuffer > 0) {
             currentJumpFrameBuffer--;
         }
-        if(!isGrounded()&&currentDoubleJumpFrameBuffer>0){
+        if(isGrounded()&&currentDoubleJumpFrameBuffer>0){
             currentDoubleJumpFrameBuffer--;
-        }
-        if(currentCoyoteFrameBuffer>0){
-            currentCoyoteFrameBuffer--;
         }
         
     }
@@ -98,7 +94,7 @@ public class Jump : MonoBehaviour {
                 return true;
         } else if (isGrounded()&&currentJumpFrameBuffer==0) {
                 return true;
-        } else if(Time.time-timeLeftGround<.5f){
+        } else if(coyoteFramesNotGrounded<6){
             return true;
         }
         else {
