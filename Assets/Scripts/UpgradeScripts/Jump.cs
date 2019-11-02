@@ -8,23 +8,27 @@ public class Jump : MonoBehaviour {
     public float jumpForce;
     public int jumpFrameBuffer;
     public int doubleJumpFrameBuffer;
+    public int coyoteFrameBuffer;
     public LayerMask groundLayer;
     public bool hasDoubleJumpAbility=false;
 
     // Internal variables
     private int currentJumpFrameBuffer;
     public int currentDoubleJumpFrameBuffer;
+    private int currentCoyoteFrameBuffer;
     public bool usedSecondJump=false;
+    private float timeLeftGround;
 
     // Player Components
     private Rigidbody2D rb2d;
     private Collider2D collider2d;
     private new Transform transform;
 
-    public void SetValues(float jumpForce, int jumpFrameBuffer,int doubleJumpFrameBuffer, LayerMask groundLayer) {
+    public void SetValues(float jumpForce, int jumpFrameBuffer,int doubleJumpFrameBuffer,int coyoteFrameBuffer, LayerMask groundLayer) {
         this.jumpForce = jumpForce;
         this.jumpFrameBuffer = jumpFrameBuffer;
         this.doubleJumpFrameBuffer=doubleJumpFrameBuffer;
+        this.coyoteFrameBuffer=coyoteFrameBuffer;
         this.groundLayer = groundLayer;
         
     }
@@ -50,6 +54,8 @@ public class Jump : MonoBehaviour {
             jumping = false;
             usedSecondJump=false;
             currentDoubleJumpFrameBuffer=doubleJumpFrameBuffer;
+        }else{
+            timeLeftGround=Time.time;
         }
 
         // Check if eligible for jumping (grounded and pressing button)
@@ -75,6 +81,9 @@ public class Jump : MonoBehaviour {
         if(!isGrounded()&&currentDoubleJumpFrameBuffer>0){
             currentDoubleJumpFrameBuffer--;
         }
+        if(currentCoyoteFrameBuffer>0){
+            currentCoyoteFrameBuffer--;
+        }
         
     }
 
@@ -89,7 +98,9 @@ public class Jump : MonoBehaviour {
                 return true;
         } else if (isGrounded()&&currentJumpFrameBuffer==0) {
                 return true;
-        } 
+        } else if(Time.time-timeLeftGround<.5f){
+            return true;
+        }
         else {
              currentDoubleJumpFrameBuffer=doubleJumpFrameBuffer;
             return false;
