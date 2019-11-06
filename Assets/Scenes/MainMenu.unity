@@ -1280,6 +1280,7 @@ GameObject:
   - component: {fileID: 1277556138}
   - component: {fileID: 1277556140}
   - component: {fileID: 1277556137}
+  - component: {fileID: 1277556141}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1379,6 +1380,32 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1277556141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277556136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b09ae16e79a22408c4f7906081297a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  eventID: 573402725
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: 27d2ec8671adb6448125d23683fdc07e
+  multiPositionArray: []
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
 --- !u!1 &1305783939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1505,7 @@ GameObject:
   - component: {fileID: 1572508196}
   - component: {fileID: 1572508195}
   - component: {fileID: 1572508194}
+  - component: {fileID: 1572508197}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1537,6 +1565,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1572508197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572508193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c08171e755535c4ba5ff692fc37e0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  bankName: Beach_amb
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: 859de664112a8f428165e1864c5ba7a0
 --- !u!114 &1638907206 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114448410635884812, guid: ebc74431444390f41b5281c5416d0817,
