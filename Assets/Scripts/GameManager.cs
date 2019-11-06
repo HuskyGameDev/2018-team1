@@ -79,11 +79,29 @@ public class GameManager : MonoBehaviour {
 		Jump j=player.GetComponent<Jump>();
 		j.addDoubleJump();
 	}
+	private void RemoveUpgrades() {
+		if (player.GetComponent<MoveLeft>() != null)
+			Destroy(player.GetComponent<MoveLeft>());
+		if (player.GetComponent<Jump>() != null)
+			Destroy(player.GetComponent<Jump>());
+		if (player.GetComponent<Crouch>() != null)
+			Destroy(player.GetComponent<Crouch>());
+			////// TODO : REMOVE PERSISTENT DATA
+	}
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown("v") && Input.GetKeyDown("b") && Input.GetKeyDown("n"))
 				PersistentData.devMode = true;
 		if (PersistentData.devMode) {
+			if (Input.GetKeyDown(KeyCode.F1)) {
+				RemoveUpgrades();
+				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Peg-Patch/Player-PegPatch") as RuntimeAnimatorController;
+			}
+			if (Input.GetKeyDown(KeyCode.F2)) {
+				RemoveUpgrades();
+				// add left movement and persist data
+				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Peg/Peg") as RuntimeAnimatorController;
+			}
 			if (Input.GetKeyDown(KeyCode.F8)) {
 				PersistentData.ordinary = false;
 				Start();
