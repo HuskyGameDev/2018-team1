@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour {
 	}
 	private void AddJump() {
 		Jump comp = player.AddComponent<Jump>() as Jump;
-		comp.SetValues(4.5f, 6,2, 1 << LayerMask.NameToLayer("Ground"));
+		comp.SetValues(4.5f, 6, 2, 4, 1 << LayerMask.NameToLayer("Ground"));
 	}
 	private void AddDagger() {
 		GameObject attack = new GameObject();
