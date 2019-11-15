@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
 			PersistentData.upgrades.Add("MoveLeft");
 			PersistentData.animator = "Animations/female-protag/Unarmed/Player";
 			PersistentData.upgrades.Add("Crouch");
+			//PersistentData.upgrades.Add("DoubleJump");
 		}
 		foreach (string s in PersistentData.upgrades) {
 			AddUpgrade(s);
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour {
 			AddDagger();
 		else if (s == "Crouch")
 			AddCrouch();
+		else if (s== "DoubleJump")
+			AddDoubleJump();
 	}
 	private void AddLeftMovement() {
 		MoveLeft comp = player.AddComponent<MoveLeft>() as MoveLeft;
@@ -47,7 +50,7 @@ public class GameManager : MonoBehaviour {
 	}
 	private void AddJump() {
 		Jump comp = player.AddComponent<Jump>() as Jump;
-		comp.SetValues(4.5f, 6, 1 << LayerMask.NameToLayer("Ground"));
+		comp.SetValues(4.5f, 6, 2, 4, 1 << LayerMask.NameToLayer("Ground"));
 	}
 	private void AddDagger() {
 		GameObject attack = new GameObject();
@@ -71,7 +74,11 @@ public class GameManager : MonoBehaviour {
 		pm.animator = player.GetComponent<Animator>();
 	}
 	private void AddCrouch() {
-		Crouch comp = player.AddComponent<Crouch>() as Crouch;
+		player.AddComponent<Crouch>();
+	}
+	private void AddDoubleJump(){
+		Jump j=player.GetComponent<Jump>();
+		j.addDoubleJump();
 	}
 	// Update is called once per frame
 	void Update () {

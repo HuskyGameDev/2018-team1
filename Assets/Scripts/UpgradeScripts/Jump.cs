@@ -7,20 +7,30 @@ public class Jump : MonoBehaviour {
     // Public properties
     public float jumpForce;
     public int jumpFrameBuffer;
+    public int doubleJumpFrameBuffer;
+    public bool usedSecondJump=false;
     public LayerMask groundLayer;
+    public bool hasDoubleJumpAbility=false;
+    public int maxCoyoteFrames;
 
     // Internal variables
     private int currentJumpFrameBuffer;
+    public int currentDoubleJumpFrameBuffer;
+    private int coyoteFramesNotGrounded;
+    private bool isGroundedFixedUpdate; //used so that isGrounded() method is only called once per physics step
 
     // Player Components
     private Rigidbody2D rb2d;
     private Collider2D collider2d;
     private new Transform transform;
 
-    public void SetValues(float jumpForce, int jumpFrameBuffer, LayerMask groundLayer) {
+    public void SetValues(float jumpForce, int jumpFrameBuffer,int doubleJumpFrameBuffer, int maxCoyoteFrames, LayerMask groundLayer) {
         this.jumpForce = jumpForce;
         this.jumpFrameBuffer = jumpFrameBuffer;
+        this.doubleJumpFrameBuffer=doubleJumpFrameBuffer;
+        this.maxCoyoteFrames=maxCoyoteFrames;
         this.groundLayer = groundLayer;
+        
     }
 	// Use this for initialization
 	void Start () {
@@ -36,42 +46,64 @@ public class Jump : MonoBehaviour {
 	void Update () {
 	}
 
-    private bool jumping;
     // called once per physics step
     private void FixedUpdate() {
-        if (jumping && isGrounded()) {
+        if (isGrounded()) {
+            isGroundedFixedUpdate=true;
             GetComponent<Animator>().SetTrigger("Land");
-            jumping = false;
-        }
-
-        // Check if eligible for jumping (grounded and pressing button)
-        if ((Sinput.GetAxisRaw("Vertical") > 0 || Sinput.GetAxisRaw("Jump") > 0) && canJump()) {
-            // Jump!
-            if (rb2d.velocity.y <= 0.001f) {
-                rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
-                AkSoundEngine.PostEvent("Jump", gameObject);
-                GetComponent<Animator>().SetTrigger("Jump");
-                jumping = true;
+            usedSecondJump=false;
+            currentDoubleJumpFrameBuffer=doubleJumpFrameBuffer;
+            coyoteFramesNotGrounded=0;
+        }else{
+            isGroundedFixedUpdate=false;
+            coyoteFramesNotGrounded++;
+            if(coyoteFramesNotGrounded>=maxCoyoteFrames){
+                currentJumpFrameBuffer=jumpFrameBuffer;
             }
         }
 
-        if (currentJumpFrameBuffer > 0) {
+        // Check if eligible for jumping (grounded and pressing button)
+        if (Sinput.GetAxisRaw("Vertical") > 0 || Sinput.GetAxisRaw("Jump") > 0) {
+            // Jump!
+            if(canDoubleJump()){
+                jump();
+                AkSoundEngine.PostEvent("Jump", gameObject);
+                GetComponent<Animator>().SetTrigger("Jump");
+            }else if (canJump()&&rb2d.velocity.y <= 0.001f){
+                jump();
+                AkSoundEngine.PostEvent("Jump", gameObject);
+                GetComponent<Animator>().SetTrigger("Jump");
+            }
+        }
+
+        if (isGroundedFixedUpdate&&currentJumpFrameBuffer > 0) {
             currentJumpFrameBuffer--;
+        }
+        if(!isGroundedFixedUpdate&&currentDoubleJumpFrameBuffer>0){
+            currentDoubleJumpFrameBuffer--;
         }
         
     }
 
+    private void jump(){
+        rb2d.velocity=new Vector2(rb2d.velocity.x,0);
+        rb2d.AddForce(300 * transform.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+    }
+
     private bool canJump() {
         
-        if (isGrounded()) {
-            if (currentJumpFrameBuffer == 0) {
+        if (currentJumpFrameBuffer==0&&(isGroundedFixedUpdate|| coyoteFramesNotGrounded<maxCoyoteFrames)) {
                 return true;
-            }
-        } else {
-            currentJumpFrameBuffer = jumpFrameBuffer;
         }
         return false;
-
+    }
+    private bool canDoubleJump(){
+        if (hasDoubleJumpAbility&&!usedSecondJump&&currentDoubleJumpFrameBuffer == 0&&!isGroundedFixedUpdate&&coyoteFramesNotGrounded>=maxCoyoteFrames) {
+            usedSecondJump=true;
+            return true;
+        }
+        currentDoubleJumpFrameBuffer=doubleJumpFrameBuffer;
+        return false;
     }
 
     // Raycasting method to check if on the ground (or close enough that the difference is negligible)
@@ -103,5 +135,8 @@ public class Jump : MonoBehaviour {
         }
         
         return false;
+    }
+    public void addDoubleJump(){
+        hasDoubleJumpAbility=true;
     }
 }
