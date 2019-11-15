@@ -7,6 +7,7 @@
 
 /// This class is an example of how to load banks in Wwise, if the bank data was preloaded in memory.  
 /// This would be useful for situations where you use the WWW class
+using UnityEngine.Networking;
 public class AkMemBankLoader : UnityEngine.MonoBehaviour
 {
 	private const int WaitMs = 50;
@@ -26,7 +27,7 @@ public class AkMemBankLoader : UnityEngine.MonoBehaviour
 	private System.IntPtr ms_pInMemoryBankPtr = System.IntPtr.Zero;
 	private System.Runtime.InteropServices.GCHandle ms_pinnedArray;
 
-	private UnityEngine.WWW ms_www;
+	private UnityWebRequest ms_www;
 
 	private void Start()
 	{
@@ -54,9 +55,9 @@ public class AkMemBankLoader : UnityEngine.MonoBehaviour
 
 	private System.Collections.IEnumerator LoadFile()
 	{
-		ms_www = new UnityEngine.WWW(m_bankPath);
+		ms_www = new UnityWebRequest(m_bankPath);
 
-		yield return ms_www;
+		yield return ms_www.SendWebRequest();
 
 		uint in_uInMemoryBankSize = 0;
 
@@ -64,14 +65,14 @@ public class AkMemBankLoader : UnityEngine.MonoBehaviour
 		try
 		{
 			ms_pinnedArray =
-				System.Runtime.InteropServices.GCHandle.Alloc(ms_www.bytes, System.Runtime.InteropServices.GCHandleType.Pinned);
+				System.Runtime.InteropServices.GCHandle.Alloc(ms_www.downloadHandler.data, System.Runtime.InteropServices.GCHandleType.Pinned);
 			ms_pInMemoryBankPtr = ms_pinnedArray.AddrOfPinnedObject();
-			in_uInMemoryBankSize = (uint) ms_www.bytes.Length;
+			in_uInMemoryBankSize = (uint) ms_www.downloadHandler.data.Length;
 
 			// Array inside the WWW object is not aligned. Allocate a new array for which we can guarantee the alignment.
 			if ((ms_pInMemoryBankPtr.ToInt64() & AK_BANK_PLATFORM_DATA_ALIGNMENT_MASK) != 0)
 			{
-				var alignedBytes = new byte[ms_www.bytes.Length + AK_BANK_PLATFORM_DATA_ALIGNMENT];
+				var alignedBytes = new byte[ms_www.downloadHandler.data.Length + AK_BANK_PLATFORM_DATA_ALIGNMENT];
 				var new_pinnedArray =
 					System.Runtime.InteropServices.GCHandle.Alloc(alignedBytes, System.Runtime.InteropServices.GCHandleType.Pinned);
 				var new_pInMemoryBankPtr = new_pinnedArray.AddrOfPinnedObject();
@@ -87,7 +88,7 @@ public class AkMemBankLoader : UnityEngine.MonoBehaviour
 				}
 
 				// Copy the bank's bytes in our new array, at the correct aligned offset.
-				System.Array.Copy(ms_www.bytes, 0, alignedBytes, alignedOffset, ms_www.bytes.Length);
+				System.Array.Copy(ms_www.downloadHandler.data, 0, alignedBytes, alignedOffset, ms_www.downloadHandler.data.Length);
 
 				ms_pInMemoryBankPtr = new_pInMemoryBankPtr;
 				ms_pinnedArray.Free();

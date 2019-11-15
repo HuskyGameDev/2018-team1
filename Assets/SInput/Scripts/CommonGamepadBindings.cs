@@ -24,7 +24,6 @@ namespace SinputSystems {
 			if (Application.platform == RuntimePlatform.Android) thisOS = OSFamily.Android;
 			if (Application.platform == RuntimePlatform.IPhonePlayer) thisOS = OSFamily.IOS;
 			if (Application.platform == RuntimePlatform.PS4) thisOS = OSFamily.PS4;
-			if (Application.platform == RuntimePlatform.PSP2) thisOS = OSFamily.PSVita;
 			if (Application.platform == RuntimePlatform.XboxOne) thisOS = OSFamily.XboxOne;
 			if (Application.platform == RuntimePlatform.Switch) thisOS = OSFamily.Switch;
 

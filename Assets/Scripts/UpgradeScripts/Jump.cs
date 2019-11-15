@@ -46,13 +46,11 @@ public class Jump : MonoBehaviour {
 	void Update () {
 	}
 
-    private bool jumping;
     // called once per physics step
     private void FixedUpdate() {
         if (isGrounded()) {
             isGroundedFixedUpdate=true;
             GetComponent<Animator>().SetTrigger("Land");
-            jumping = false;
             usedSecondJump=false;
             currentDoubleJumpFrameBuffer=doubleJumpFrameBuffer;
             coyoteFramesNotGrounded=0;
@@ -71,12 +69,10 @@ public class Jump : MonoBehaviour {
                 jump();
                 AkSoundEngine.PostEvent("Jump", gameObject);
                 GetComponent<Animator>().SetTrigger("Jump");
-                jumping = true;
             }else if (canJump()&&rb2d.velocity.y <= 0.001f){
                 jump();
                 AkSoundEngine.PostEvent("Jump", gameObject);
                 GetComponent<Animator>().SetTrigger("Jump");
-                jumping = true;
             }
         }
 
