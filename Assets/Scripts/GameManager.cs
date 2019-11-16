@@ -86,7 +86,8 @@ public class GameManager : MonoBehaviour {
 			Destroy(player.GetComponent<Jump>());
 		if (player.GetComponent<Crouch>() != null)
 			Destroy(player.GetComponent<Crouch>());
-			////// TODO : REMOVE PERSISTENT DATA
+		PersistentData.upgrades = new HashSet<string>();
+		PersistentData.upgrades.Add("MoveRight");
 	}
 	// Update is called once per frame
 	void Update () {
@@ -99,8 +100,27 @@ public class GameManager : MonoBehaviour {
 			}
 			if (Input.GetKeyDown(KeyCode.F2)) {
 				RemoveUpgrades();
-				// add left movement and persist data
+				AddLeftMovement();
+				PersistentData.upgrades.Add("MoveLeft");
 				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Peg/Peg") as RuntimeAnimatorController;
+			}
+			if (Input.GetKeyDown(KeyCode.F3)) {
+				RemoveUpgrades();
+				AddLeftMovement();
+				AddJump();
+				PersistentData.upgrades.Add("MoveLeft");
+				PersistentData.upgrades.Add("Jump");
+				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Unarmed/Player") as RuntimeAnimatorController;
+			}
+			if (Input.GetKeyDown(KeyCode.F4)) {
+				RemoveUpgrades();
+				AddLeftMovement();
+				AddJump();
+				AddDagger();
+				PersistentData.upgrades.Add("MoveLeft");
+				PersistentData.upgrades.Add("Jump");
+				PersistentData.upgrades.Add("Dagger");
+				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Dagger/Player-Dagger") as RuntimeAnimatorController;
 			}
 			if (Input.GetKeyDown(KeyCode.F8)) {
 				PersistentData.ordinary = false;
