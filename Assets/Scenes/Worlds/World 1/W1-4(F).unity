@@ -15249,7 +15249,7 @@ PrefabInstance:
     - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
         type: 3}
