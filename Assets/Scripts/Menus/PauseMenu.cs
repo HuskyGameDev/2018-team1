@@ -7,17 +7,37 @@ using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour {
 
-	public bool gameIsPaused = false;
 
+	[Header("UI Elements")]
+	public GameObject pauseMenuUI;
+	public Selectable ResumeButton;
+
+	public Selectable SaveButton;
+
+	public Selectable LoadButton;
+
+	[Header("Positions")]
 	public Transform player;
 	public Transform cam;
-	
-	public GameObject pauseMenuUI;
+	private Vector3 playerStart;
 
-	public Selectable PauseMenuStart;
+	[Header("Additional Info")]
+	public SaveLoad saveLoad;
+
+	public bool gameIsPaused = false;
+
+	public Character overworldCharacter;
 
 	void Start() {
 		Cursor.visible = false;
+		playerStart = player.position;
+		if (overworldCharacter == null)
+		{
+			Vector3 resumePosition = ResumeButton.transform.position;
+			ResumeButton.transform.position = new Vector3(resumePosition.x, resumePosition.y-60, resumePosition.z);
+			SaveButton.gameObject.SetActive(false);
+			LoadButton.gameObject.SetActive(false);
+		}
 	}
 
 	// Update is called once per frame
@@ -53,12 +73,12 @@ public class PauseMenu : MonoBehaviour {
 		Time.timeScale = 0f;
 		Cursor.visible = true;
 		gameIsPaused = true;
-		PauseMenuStart.Select();
+		ResumeButton.Select();
 	}
 
 	public void saveGame()
 	{
-		SaveLoad.Save();
+		saveLoad.Save(player.position, cam.position, overworldCharacter.CurrentPin.LevelName);
 		Debug.Log("Saving Game...");
 	}
 
@@ -71,10 +91,14 @@ public class PauseMenu : MonoBehaviour {
 
 	public void loadSave()
 	{
-		SaveLoad.Load();
-		player.position = SaveLoad.saveGame.playerPosition;
-		cam.position = SaveLoad.saveGame.cameraPosition;
-		
+		saveLoad.Load();
+		player.position = saveLoad.saveGame.playerPosition.V3;
+		cam.position = saveLoad.saveGame.cameraPosition.V3;
+		Global.lvlToLoad = saveLoad.saveGame.levelName;
+		resume();
+		AkSoundEngine.StopAll();
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name,LoadSceneMode.Single);
+
 		Debug.Log("Loading Save...");
 	}
 

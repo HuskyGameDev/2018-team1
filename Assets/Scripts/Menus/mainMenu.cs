@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,8 +12,27 @@ public class mainMenu : MonoBehaviour {
 	public Selectable OptionsControlsButton;
 	public GameObject optionsMenu;
 
+	public Selectable continueButton;
+	public Selectable newGame;
+	public Selectable quitGame;
+
+	public SaveLoad saveLoad;
+
 	private void Start() {
 		Global.lvlToLoad = "1-1";
+		if(File.Exists(Application.persistentDataPath + "/save.pkr"))
+		{
+			continueButton.gameObject.SetActive(true);
+			continueButton.Select();
+
+			Navigation quitNav = quitGame.navigation;
+			quitNav.selectOnDown = continueButton;
+			quitGame.navigation = quitNav;
+
+			Navigation newNav = newGame.navigation;
+			newNav.selectOnUp = continueButton;
+			newGame.navigation = newNav;
+		}
 		if ( PersistentData.lastScene == "SinputRebind")
 		{
 			this.gameObject.SetActive(false);
@@ -21,6 +41,7 @@ public class mainMenu : MonoBehaviour {
 		}
 		Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, Screen.fullScreenMode, 60);
 		Screen.fullScreen = true;
+		
 	}
 
 	public void PlayGame()
@@ -28,6 +49,10 @@ public class mainMenu : MonoBehaviour {
 		SceneManager.LoadScene("W1-1");
 	}
 
+	public void ContinueGame()
+	{
+		//TODO:go to map method with a way to trigger load game
+	}
 	public void OptionsMenu()
 	{
 		this.gameObject.SetActive(false);
