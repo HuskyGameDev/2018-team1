@@ -832,6 +832,7 @@ MonoBehaviour:
   continueButton: {fileID: 1163660252}
   newGame: {fileID: 1009541884}
   quitGame: {fileID: 289913773}
+  saveLoad: {fileID: 0}
 --- !u!1 &991570075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,7 +1271,7 @@ PrefabInstance:
     - target: {fileID: 224325626634982340, guid: ebc74431444390f41b5281c5416d0817,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -45
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 1712065595941518, guid: ebc74431444390f41b5281c5416d0817, type: 3}
       propertyPath: m_IsActive
@@ -1279,6 +1280,11 @@ PrefabInstance:
     - target: {fileID: 1753759114547530, guid: ebc74431444390f41b5281c5416d0817, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790522034743711904, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc74431444390f41b5281c5416d0817, type: 3}
