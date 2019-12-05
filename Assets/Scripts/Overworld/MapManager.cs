@@ -15,6 +15,10 @@ public class MapManager : MonoBehaviour
 	private void Start ()
 	{
 		// Pass a ref and default the player Starting Pin
+		if ( PersistentData.lastScene == "MainMenu" )
+		{
+			PauseMenu.GetComponent<PauseMenu>().loadSave();
+		}
 		Character.Initialise(this, pin.toPin(Global.lvlToLoad));
 	}
 
@@ -59,7 +63,7 @@ public class MapManager : MonoBehaviour
 		else if(Sinput.GetButtonDown("Submit") && (isPaused == false))
 		{
 			Global.lvlToLoad = Character.CurrentPin.LevelName;
-			SceneManager.LoadScene(Character.CurrentPin.SceneToLoad);
+			PersistentData.changeScene("Overworld", Character.CurrentPin.SceneToLoad);
 		}
 	}
 
