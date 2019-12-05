@@ -223,15 +223,15 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &25091393 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 83645068666321958, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07,
+--- !u!1 &25091392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 83645068666321957, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07,
     type: 3}
   m_PrefabInstance: {fileID: 395031148}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &112959904 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 83645068081864030, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07,
+--- !u!224 &25091393 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 83645068666321958, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07,
     type: 3}
   m_PrefabInstance: {fileID: 395031148}
   m_PrefabAsset: {fileID: 0}
@@ -65366,7 +65366,7 @@ PrefabInstance:
         type: 3}
       propertyPath: upgradeGetUI
       value: 
-      objectReference: {fileID: 112959904}
+      objectReference: {fileID: 25091392}
     - target: {fileID: 114410442256163882, guid: 84d481d2c94e8594aaa6a1a18dbf8796,
         type: 3}
       propertyPath: upgradeText
