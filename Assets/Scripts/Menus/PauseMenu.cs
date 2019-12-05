@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour {
 	private Vector3 playerStart;
 
 	[Header("Additional Info")]
-	public SaveLoad saveLoad;
+	public saveLoad saveLoad;
 
 	public bool gameIsPaused = false;
 

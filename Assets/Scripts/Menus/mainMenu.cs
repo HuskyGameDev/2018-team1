@@ -16,7 +16,7 @@ public class mainMenu : MonoBehaviour {
 	public Selectable newGame;
 	public Selectable quitGame;
 
-	public SaveLoad saveLoad;
+	public saveLoad saveLoad;
 
 	private void Start() {
 		Global.lvlToLoad = "1-1";

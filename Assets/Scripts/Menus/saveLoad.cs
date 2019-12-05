@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 using System.IO;
  
  // referenced this guide on how to make a save/load script: https://gamedevelopment.tutsplus.com/tutorials/how-to-save-and-load-your-players-progress-in-unity--cms-20934
-public class SaveLoad : MonoBehaviour {
+public class saveLoad : MonoBehaviour {
  
     public Game saveGame;
 
