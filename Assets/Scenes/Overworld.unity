@@ -653,30 +653,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6967726867117794230}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &785996160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785996159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7070d9ab4fea3174aa676eafbdda831a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveGame:
-    playerPosition:
-      x: 0
-      y: 0
-      z: 0
-    cameraPosition:
-      x: 0
-      y: 0
-      z: 0
-    upgrades: []
-    levelName: 
-    lastScene: 
 --- !u!1 &1040162413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,21 +1436,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224221917772029972, guid: c7949879b2e43724586de47d9ff868b9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224221917772029972, guid: c7949879b2e43724586de47d9ff868b9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224221917772029972, guid: c7949879b2e43724586de47d9ff868b9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 114721627805219276, guid: c7949879b2e43724586de47d9ff868b9,
         type: 3}
       propertyPath: player
@@ -1490,11 +1451,5 @@ PrefabInstance:
       propertyPath: overworldCharacter
       value: 
       objectReference: {fileID: 679568749}
-    - target: {fileID: 114721627805219276, guid: c7949879b2e43724586de47d9ff868b9,
-        type: 3}
-      propertyPath: saveLoad
-      value: 
-      objectReference: {fileID: 785996160}
-    m_RemovedComponents:
-    - {fileID: 8814616487146032112, guid: c7949879b2e43724586de47d9ff868b9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7949879b2e43724586de47d9ff868b9, type: 3}
