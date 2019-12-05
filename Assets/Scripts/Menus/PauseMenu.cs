@@ -95,6 +95,7 @@ public class PauseMenu : MonoBehaviour {
 		player.position = saveLoad.saveGame.playerPosition.V3;
 		cam.position = saveLoad.saveGame.cameraPosition.V3;
 		Global.lvlToLoad = saveLoad.saveGame.levelName;
+		PersistentData.lastScene = saveLoad.saveGame.lastScene;
 		resume();
 		AkSoundEngine.StopAll();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name,LoadSceneMode.Single);

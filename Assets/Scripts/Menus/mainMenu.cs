@@ -46,12 +46,13 @@ public class mainMenu : MonoBehaviour {
 
 	public void PlayGame()
 	{
-		SceneManager.LoadScene("W1-1");
+		PersistentData.changeScene("MainMenu", "W1-1");
 	}
 
 	public void ContinueGame()
 	{
 		//TODO:go to map method with a way to trigger load game
+		PersistentData.changeScene("MainMenu", "Overworld");
 	}
 	public void OptionsMenu()
 	{

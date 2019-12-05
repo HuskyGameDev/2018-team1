@@ -1705,7 +1705,7 @@ PrefabInstance:
     - target: {fileID: 114517691203188566, guid: 111f5ebc012696648a1ede5d6b71e477,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayGame
+      value: ContinueGame
       objectReference: {fileID: 0}
     - target: {fileID: 114517691203188566, guid: 111f5ebc012696648a1ede5d6b71e477,
         type: 3}

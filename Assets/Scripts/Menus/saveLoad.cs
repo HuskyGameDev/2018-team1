@@ -21,6 +21,7 @@ public class SaveLoad : MonoBehaviour {
         saveGame.playerPosition.V3 = playerPos;
         saveGame.cameraPosition.V3 = cameraPos;
         saveGame.levelName = levelName;
+        saveGame.lastScene = PersistentData.lastScene;
         BinaryFormatter bf = new BinaryFormatter();
         //Application.persistentDataPath is a string, so if you wanted you can put that into debug.log if you want to know where save games are located
         FileStream file = File.Create (Application.persistentDataPath + "/save.pkr"); //you can call it anything you want
@@ -70,6 +71,7 @@ public class Game
     public List<string> upgrades;
 
     public string levelName;
+    public string lastScene;
 
     public Game()
     {
@@ -77,5 +79,6 @@ public class Game
         cameraPosition = new Vector3Serializer();
         upgrades = null;
         levelName = "";
+        lastScene = "";
     }
 }
