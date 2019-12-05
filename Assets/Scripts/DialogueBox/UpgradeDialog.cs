@@ -4,47 +4,31 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UpgradeAdder : MonoBehaviour {
-
-	public string upgradeToAdd;
-	public string animator;
-
-	// variables used to generate the text boxes that appear when collecting upgrades
-	public bool paused = false;
+public class UpgradeDialog : MonoBehaviour
+{
+    public string upgradeToAdd;
+    public static bool paused = false;
 	public GameObject upgradeGetUI;
 
     public Text upgradeText;
     public Text descriptionText;
 
-	public void upgradeGot() {
-		upgradeGetUI.SetActive(false);
-		//Time.timeScale = 1f;
-		paused = false;
-	}
-
-	void upgradeGet() {
-		upgradeGetUI.SetActive(true);
-		//Time.timeScale = 0f;
-		paused = true;		
-		print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
-	// Use this for initialization
-	void Start () {
-		if (PersistentData.upgrades.Contains(upgradeToAdd)) {
-			gameObject.SetActive(false);
-		}
-	}
-
-	void Update() {
-
-		print("Game Paused? " + paused);
-		if (paused && Sinput.GetButtonDown("Submit"))
+    // Update is called once per frame
+    void Update()
+    {
+       if (paused && Sinput.GetButtonDown("Submit"))
 		{
 			upgradeGot();
-		}
-    }	
-	private void OnTriggerEnter2D(Collider2D otherCollider) {
+		} 
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherCollider) {
 		if (otherCollider.CompareTag("Player")) {
 			//paused = true;
 			upgradeGet();
@@ -72,14 +56,19 @@ public class UpgradeAdder : MonoBehaviour {
 					descriptionText.text = "NOT YET IMPLEMENTED";
 					break;               
 			}
+        }
+    }
 
-			if (!PersistentData.upgrades.Contains(upgradeToAdd)) {
-				PersistentData.upgrades.Add(upgradeToAdd);
-				otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade(upgradeToAdd);
-				otherCollider.gameObject.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(animator) as RuntimeAnimatorController;
-				PersistentData.animator = animator;				
-			}
-			Destroy(gameObject);
-		}
+    void upgradeGet() {
+		upgradeGetUI.SetActive(true);
+		Time.timeScale = 0f;
+		paused = true;		
+		print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    }
+
+    public void upgradeGot() {
+		upgradeGetUI.SetActive(false);
+		Time.timeScale = 1f;
+		paused = false;
 	}
 }
