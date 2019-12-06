@@ -15,12 +15,13 @@ public class UpgradeAdder : MonoBehaviour {
 	}
 	
 	private void OnTriggerEnter2D(Collider2D otherCollider) {
-		if (otherCollider.CompareTag("Player") && !PersistentData.upgrades.Contains(upgradeToAdd)) {
-			PersistentData.upgrades.Add(upgradeToAdd);
-			otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade(upgradeToAdd);
-			otherCollider.gameObject.GetComponent<Animator>().runtimeAnimatorController = 
-				Resources.Load(animator) as RuntimeAnimatorController;
-			PersistentData.animator = animator;
+		if (otherCollider.CompareTag("Player")) {
+			if (!PersistentData.upgrades.Contains(upgradeToAdd)) {
+				PersistentData.upgrades.Add(upgradeToAdd);
+				otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade(upgradeToAdd);
+				otherCollider.gameObject.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(animator) as RuntimeAnimatorController;
+				PersistentData.animator = animator;
+			}
 			Destroy(gameObject);
 		}
 	}

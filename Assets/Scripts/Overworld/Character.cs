@@ -5,7 +5,7 @@ public class Character : MonoBehaviour
     public float Speed = 3f;
     public bool IsMoving { get; private set; }
 
-    public Pin CurrentPin { get; private set; }
+    public Pin CurrentPin { get; set; }
     private Pin _targetPin;
     private MapManager _mapManager;
     Vector3 offset = new Vector3(0f, 1.0f, 0f); //offset the character to have their feet on the level dot

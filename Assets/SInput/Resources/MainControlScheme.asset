@@ -58,6 +58,11 @@ MonoBehaviour:
     gamepadInputs: 
     mouseInputs: 
     virtualInputs: []
+  - name: MeleeAttack
+    keyboardInputs: 
+    gamepadInputs: 
+    mouseInputs: 0c000000
+    virtualInputs: []
   smartControls:
   - name: Horizontal
     positiveControl: Right
