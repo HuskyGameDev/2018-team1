@@ -16,18 +16,18 @@ public class UpgradeAdder : MonoBehaviour {
     public Text upgradeText;
     public Text descriptionText;
 
-	public void upgradeGot() {
-		upgradeGetUI.SetActive(false);
-		//Time.timeScale = 1f;
-		paused = false;
-	}
-
 	void upgradeGet() {
 		upgradeGetUI.SetActive(true);
-		//Time.timeScale = 0f;
+		Time.timeScale = 0f;
 		paused = true;		
-		print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     }
+
+	public void upgradeGot() {
+		upgradeGetUI.SetActive(false);
+		Time.timeScale = 1f;
+		paused = false;
+		Destroy(gameObject);
+	}	
 
 	// Use this for initialization
 	void Start () {
@@ -67,6 +67,10 @@ public class UpgradeAdder : MonoBehaviour {
 					upgradeText.text = "You gained the ability to crouch!";
 					descriptionText.text = "Press 'S' or push down on the left analog stick to crouch.\nYou can also move while crouching.";
 					break;
+				case "Dagger":
+					upgradeText.text = "You gained a melee attack!";
+					descriptionText.text = "Click the Left Mouse Button to attack with your dagger.";
+					break;
 				default :
 					upgradeText.text = "NOT YET IMPLEMENTED";
 					descriptionText.text = "NOT YET IMPLEMENTED";
@@ -79,7 +83,7 @@ public class UpgradeAdder : MonoBehaviour {
 				otherCollider.gameObject.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(animator) as RuntimeAnimatorController;
 				PersistentData.animator = animator;				
 			}
-			Destroy(gameObject);
+			//Destroy(gameObject);
 		}
 	}
 }
