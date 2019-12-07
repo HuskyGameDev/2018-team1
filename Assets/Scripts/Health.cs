@@ -47,7 +47,7 @@ public class Health : MonoBehaviour {
     }
 
     private void PlayerDied() {
-        SceneManager.LoadScene("MainMenu");
+        PersistentData.changeScene(SceneManager.GetActiveScene().name, "MainMenu");
     }
 
     void Update() {
