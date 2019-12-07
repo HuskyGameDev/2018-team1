@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+[System.Serializable]
 public static class Global {
 
 	public static string lvlToLoad;
@@ -11,6 +12,7 @@ public static class Global {
 
 }
 
+[System.Serializable]
 public class PersistentData : MonoBehaviour {
 	public static HashSet<string> upgrades = new HashSet<string>();
 	public static bool devMode;
