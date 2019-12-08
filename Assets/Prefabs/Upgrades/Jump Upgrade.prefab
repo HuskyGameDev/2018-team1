@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 997157922746817359, guid: 508b25230bde876469a7cba068da78ae,
         type: 3}
       propertyPath: animator
-      value: Animations/female-protag/Peg/Peg
+      value: Animations/female-protag/Unarmed/Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 508b25230bde876469a7cba068da78ae, type: 3}
