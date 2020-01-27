@@ -3,17 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 [System.Serializable]
-public static class Global {
-
+public static class PersistentData {
 	public static string lvlToLoad;
 	public static bool firstRun = true;
-
-}
-
-[System.Serializable]
-public class PersistentData : MonoBehaviour {
+	public static int UnlockData = 1; //int to be xor-ed for level loading
 	public static HashSet<string> upgrades = new HashSet<string>();
 	public static bool devMode;
 	public static bool ordinary = false;
