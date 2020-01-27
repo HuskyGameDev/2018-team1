@@ -21,7 +21,7 @@ public class LoadScene : MonoBehaviour {
         string lev = SceneManager.GetActiveScene().name;
         lev = lev.Substring(1);
         Debug.Log("Level name: " + lev);
-        Global.lvlToLoad = lev;
+        PersistentData.lvlToLoad = lev;
         PersistentData.changeScene(lev, "Overworld");
     }
 
