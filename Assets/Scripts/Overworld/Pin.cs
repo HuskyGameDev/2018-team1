@@ -58,7 +58,7 @@ public class Pin : MonoBehaviour
 			GetComponent<SpriteRenderer>().enabled = false;
 		}
 
-		enabled = ((PersistentData.UnlockData & key) != 0);
+		unlocked = ((PersistentData.UnlockData & key) != 0);
 	}
 	
 	/// <summary>
