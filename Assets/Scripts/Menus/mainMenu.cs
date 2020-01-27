@@ -19,7 +19,7 @@ public class mainMenu : MonoBehaviour {
 	public saveLoad saveLoad;
 
 	private void Start() {
-		Global.lvlToLoad = "1-1";
+		PersistentData.lvlToLoad = "1-1";
 		if(File.Exists(Application.persistentDataPath + "/save.pkr"))
 		{
 			continueButton.gameObject.SetActive(true);

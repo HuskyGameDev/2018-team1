@@ -18,6 +18,10 @@ public class Pin : MonoBehaviour
 	public bool HideIcon;
 	public string SceneToLoad;
 	public string LevelName;
+
+	[Header("Unlocked")]
+	public bool unlocked;
+	public int key;
 	
 	[Header("Pins")] //
 	public Pin UpPin;
@@ -53,6 +57,8 @@ public class Pin : MonoBehaviour
 		{
 			GetComponent<SpriteRenderer>().enabled = false;
 		}
+
+		enabled = ((PersistentData.UnlockData & key) != 0);
 	}
 	
 	/// <summary>
@@ -66,13 +72,49 @@ public class Pin : MonoBehaviour
 		switch (direction)
 		{
 			case Direction.Up:
-				return UpPin;
+			{
+				if( UpPin != null && UpPin.unlocked )
+				{
+					return UpPin;
+				}
+				else
+				{
+					return null;
+				}
+			}
 			case Direction.Down:
-				return DownPin;
+			{
+				if( DownPin != null && DownPin.unlocked )
+				{
+					return DownPin;
+				}
+				else
+				{
+					return null;
+				}
+			}
 			case Direction.Left:
-				return LeftPin;
+			{
+				if( LeftPin != null && LeftPin.unlocked )
+				{
+					return LeftPin;
+				}
+				else
+				{
+					return null;
+				}
+			}
 			case Direction.Right:
-				return RightPin;
+			{
+				if( RightPin != null && RightPin.unlocked )
+				{
+					return RightPin;
+				}
+				else
+				{
+					return null;
+				}
+			}
 			default:
 				throw new ArgumentOutOfRangeException("direction", direction, null);
 		}

@@ -19,7 +19,7 @@ public class MapManager : MonoBehaviour
 		{
 			PauseMenu.GetComponent<PauseMenu>().loadSave();
 		}
-		Character.Initialise(this, pin.toPin(Global.lvlToLoad));
+		Character.Initialise(this, pin.toPin(PersistentData.lvlToLoad));
 	}
 
 
@@ -62,7 +62,7 @@ public class MapManager : MonoBehaviour
 		//Check for both the submit button and the fact that we are NOT paused
 		else if(Sinput.GetButtonDown("Submit") && (isPaused == false))
 		{
-			Global.lvlToLoad = Character.CurrentPin.LevelName;
+			PersistentData.lvlToLoad = Character.CurrentPin.LevelName;
 			PersistentData.changeScene("Overworld", Character.CurrentPin.SceneToLoad);
 		}
 	}
