@@ -71,6 +71,10 @@ public class UpgradeAdder : MonoBehaviour {
 					upgradeText.text = "You gained a melee attack!";
 					descriptionText.text = "Click the Left Mouse Button to attack with your dagger.";
 					break;
+				case "DoubleJump":
+					upgradeText.text = "You gained a second jump!";
+					descriptionText.text = "Try jumping again while in airborne";
+					break;
 				default :
 					upgradeText.text = "NOT YET IMPLEMENTED";
 					descriptionText.text = "NOT YET IMPLEMENTED";

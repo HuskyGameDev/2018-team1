@@ -77,8 +77,10 @@ public class GameManager : MonoBehaviour {
 		player.AddComponent<Crouch>();
 	}
 	private void AddDoubleJump(){
-		Jump j=player.GetComponent<Jump>();
-		j.addDoubleJump();
+		// Jump j=player.GetComponent<Jump>();
+		// j.addDoubleJump();
+		print("trying to add doublejump");
+		PersistentData.upgrades.Add("DoubleJump");
 	}
 	private void RemoveUpgrades() {
 		if (player.GetComponent<MoveLeft>() != null)
