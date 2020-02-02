@@ -38,7 +38,7 @@ public class UpgradeAdder : MonoBehaviour {
 
 	void Update() {
 
-		print("Game Paused? " + paused);
+		//print("Game Paused? " + paused);
 		if (paused && Sinput.GetButtonDown("Submit"))
 		{
 			upgradeGot();
