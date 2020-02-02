@@ -18,28 +18,19 @@ public class Crouch : MonoBehaviour {
         crouching2D = coll[1];
 	}
     
+    public Collider2D getStanding2D() {
+        return standing2D;
+    }
+    public Collider2D getCrouching2D() {
+        return crouching2D;
+    }
     // called once per physics step
     private void FixedUpdate() {
-
         // Movement independent from jumping
         float moveVertical = Sinput.GetAxisRaw("Vertical");
-        if (moveVertical < 0 || Sinput.GetButton("Crouch")) {
-            if (crouching2D.enabled == false) {
-                GetComponent<MoveLeft>().speed *= 0.5f;
-                GetComponent<MoveRight>().speed *= 0.5f;
-            }
-            standing2D.enabled = false;
-            crouching2D.enabled = true;
-            //animator.SetBool("Crouch", true);
-        } else {
-            if (crouching2D.enabled == true) {
-                GetComponent<MoveLeft>().speed *= 2f;
-                GetComponent<MoveRight>().speed *= 2f;
-            }
-            crouching2D.enabled = false;
-            standing2D.enabled = true;
-            //animator.SetBool("Crouch", false);
-        }
-        
+        if (moveVertical < 0 || Sinput.GetButton("Crouch"))
+            GetComponent<Animator>().SetBool("Crouching", true);
+        else 
+            GetComponent<Animator>().SetBool("Crouching", false);
     }
 }

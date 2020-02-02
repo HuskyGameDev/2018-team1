@@ -19,11 +19,11 @@ public class GameManager : MonoBehaviour {
 			PersistentData.upgrades.Add("Crouch");
 			//PersistentData.upgrades.Add("DoubleJump");
 		}
+		player.GetComponent<Animator>().runtimeAnimatorController = 
+			Resources.Load(PersistentData.animator) as RuntimeAnimatorController; 
 		foreach (string s in PersistentData.upgrades) {
 			AddUpgrade(s);
 		}	
-		player.GetComponent<Animator>().runtimeAnimatorController = 
-			Resources.Load(PersistentData.animator) as RuntimeAnimatorController; 
 	}
 
 	public void AddUpgrade(string s) {
@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour {
 			AddCrouch();
 		else if (s== "DoubleJump")
 			AddDoubleJump();
+		else if (s == "Slide")
+			AddSlide();
 	}
 	private void AddLeftMovement() {
 		MoveLeft comp = player.AddComponent<MoveLeft>() as MoveLeft;
@@ -79,6 +81,10 @@ public class GameManager : MonoBehaviour {
 	private void AddDoubleJump(){
 		Jump j=player.GetComponent<Jump>();
 		j.addDoubleJump();
+	}
+	private void AddSlide() {
+		// TODO: give the player the sliding ability
+		//player.AddComponent<Crouch>();
 	}
 	private void RemoveUpgrades() {
 		if (player.GetComponent<MoveLeft>() != null)
@@ -122,6 +128,48 @@ public class GameManager : MonoBehaviour {
 				PersistentData.upgrades.Add("Jump");
 				PersistentData.upgrades.Add("Dagger");
 				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Dagger/Player-Dagger") as RuntimeAnimatorController;
+			}
+			if (Input.GetKeyDown(KeyCode.F5)) {
+				RemoveUpgrades();
+				AddLeftMovement();
+				AddJump();
+				AddDagger();
+				AddCrouch();
+				PersistentData.upgrades.Add("MoveLeft");
+				PersistentData.upgrades.Add("Jump");
+				PersistentData.upgrades.Add("Dagger");
+				PersistentData.upgrades.Add("Crouch");
+				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol") as RuntimeAnimatorController;
+			}
+			if (Input.GetKeyDown(KeyCode.F6)) {
+				RemoveUpgrades();
+				AddLeftMovement();
+				AddJump();
+				AddDagger();
+				AddCrouch();
+				AddDoubleJump();
+				PersistentData.upgrades.Add("MoveLeft");
+				PersistentData.upgrades.Add("Jump");
+				PersistentData.upgrades.Add("Dagger");
+				PersistentData.upgrades.Add("Crouch");
+				PersistentData.upgrades.Add("DoubleJump");
+				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol") as RuntimeAnimatorController;
+			}
+			if (Input.GetKeyDown(KeyCode.F7)) {
+				RemoveUpgrades();
+				AddLeftMovement();
+				AddJump();
+				AddDagger();
+				AddCrouch();
+				AddDoubleJump();
+				AddSlide();
+				PersistentData.upgrades.Add("MoveLeft");
+				PersistentData.upgrades.Add("Jump");
+				PersistentData.upgrades.Add("Dagger");
+				PersistentData.upgrades.Add("Crouch");
+				PersistentData.upgrades.Add("DoubleJump");
+				PersistentData.upgrades.Add("Slide");
+				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol") as RuntimeAnimatorController;
 			}
 			if (Input.GetKeyDown(KeyCode.F8)) {
 				PersistentData.ordinary = false;
