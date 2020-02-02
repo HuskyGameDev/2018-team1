@@ -33,6 +33,11 @@ public class mainMenu : MonoBehaviour {
 			newNav.selectOnUp = continueButton;
 			newGame.navigation = newNav;
 		}
+		else
+		{
+			continueButton.gameObject.SetActive(true);
+			continueButton.interactable = false;
+		}
 		if ( PersistentData.lastScene == "SinputRebind")
 		{
 			this.gameObject.SetActive(false);

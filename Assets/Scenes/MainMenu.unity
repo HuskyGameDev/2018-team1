@@ -1648,7 +1648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1941495724149476, guid: 111f5ebc012696648a1ede5d6b71e477, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224886876996729246, guid: 111f5ebc012696648a1ede5d6b71e477,
         type: 3}
@@ -1770,6 +1770,31 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
       objectReference: {fileID: 289913773}
+    - target: {fileID: 114517691203188566, guid: 111f5ebc012696648a1ede5d6b71e477,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 114517691203188566, guid: 111f5ebc012696648a1ede5d6b71e477,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 114517691203188566, guid: 111f5ebc012696648a1ede5d6b71e477,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 114517691203188566, guid: 111f5ebc012696648a1ede5d6b71e477,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0.49019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 114517691203188566, guid: 111f5ebc012696648a1ede5d6b71e477,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 111f5ebc012696648a1ede5d6b71e477, type: 3}
 --- !u!224 &1775787301 stripped
