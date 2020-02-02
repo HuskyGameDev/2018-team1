@@ -230,7 +230,9 @@ PrefabInstance:
     - target: {fileID: 114595418987754608, guid: 111f5ebc012696648a1ede5d6b71e477,
         type: 3}
       propertyPath: m_Text
-      value: Options
+      value: 'Options
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 114517691203188566, guid: 111f5ebc012696648a1ede5d6b71e477,
         type: 3}
@@ -1010,6 +1012,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11500000, guid: b8729689436848f4eb7f100cabb7c7b5,
         type: 3}
+    - target: {fileID: 114685106853477860, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Options.m_Options.Array.data[0].m_Text
+      value: Resolution
+      objectReference: {fileID: 0}
     - target: {fileID: 224807465762864336, guid: ebc74431444390f41b5281c5416d0817,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1285,6 +1292,57 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205813048333738, guid: ebc74431444390f41b5281c5416d0817, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114502853471306156, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Text
+      value: Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114066651192675402, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Text
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 114274269945431862, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Back
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114152066094734794, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Text
+      value: Controls
+      objectReference: {fileID: 0}
+    - target: {fileID: 114216726294858138, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Text
+      value: Video
+      objectReference: {fileID: 0}
+    - target: {fileID: 114911740914629852, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Text
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 114197322587201848, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Text
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968953533068154190, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Text
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 114403477592952428, guid: ebc74431444390f41b5281c5416d0817,
+        type: 3}
+      propertyPath: m_Text
+      value: Fullscreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc74431444390f41b5281c5416d0817, type: 3}

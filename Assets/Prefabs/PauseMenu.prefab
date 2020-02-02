@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'MENU
+  m_Text: 'Menu
 
 '
 --- !u!1 &1031357789066978
@@ -159,7 +159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'EXIT LEVEL
+  m_Text: 'Exit Level
 
 '
 --- !u!1 &1046275451266438
@@ -452,7 +452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'RESUME
+  m_Text: 'Resume
 
 '
 --- !u!1 &1286359550936732
@@ -1090,7 +1090,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SAVE
+  m_Text: 'Save
 
 '
 --- !u!1 &1804413365833434
@@ -1171,7 +1171,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'LOAD
+  m_Text: 'Load
 
 '
 --- !u!1 &1948765406089964
@@ -1381,6 +1381,6 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'QUIT
+  m_Text: 'Quit
 
 '
