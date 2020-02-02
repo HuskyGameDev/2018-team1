@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
 	}
 	private void AddJump() {
 		Jump comp = player.AddComponent<Jump>() as Jump;
-		comp.SetValues(4.5f, 6, 2, 4, 1 << LayerMask.NameToLayer("Ground"));
+		comp.SetValues(4.5f, 4, 2, 4, 1 << LayerMask.NameToLayer("Ground"));
 	}
 	private void AddDagger() {
 		GameObject attack = new GameObject();
@@ -77,10 +77,7 @@ public class GameManager : MonoBehaviour {
 		player.AddComponent<Crouch>();
 	}
 	private void AddDoubleJump(){
-		// Jump j=player.GetComponent<Jump>();
-		// j.addDoubleJump();
-		print("trying to add doublejump");
-		PersistentData.upgrades.Add("DoubleJump");
+		player.GetComponent<Jump>().addDoubleJump();
 	}
 	private void RemoveUpgrades() {
 		if (player.GetComponent<MoveLeft>() != null)

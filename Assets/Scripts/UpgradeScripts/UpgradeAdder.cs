@@ -83,6 +83,7 @@ public class UpgradeAdder : MonoBehaviour {
 
 			if (!PersistentData.upgrades.Contains(upgradeToAdd)) {
 				PersistentData.upgrades.Add(upgradeToAdd);
+				print(upgradeToAdd);
 				otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade(upgradeToAdd);
 				otherCollider.gameObject.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(animator) as RuntimeAnimatorController;
 				PersistentData.animator = animator;				

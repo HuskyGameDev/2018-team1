@@ -33466,6 +33466,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpgradeBox
       objectReference: {fileID: 0}
+    - target: {fileID: 83645068666321957, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 83645068666321958, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33570,6 +33575,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 83645068825334019, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07,
+        type: 3}
+      propertyPath: m_Text
+      value: '[placeholder]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 83645069682971737, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07,
+        type: 3}
+      propertyPath: m_Text
+      value: '[placeholder]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 83645069972886395, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07,
+        type: 3}
+      propertyPath: m_Text
+      value: Press 'space' to continue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc4db3ebbcbe8cf4a8cd60977cdd4b07, type: 3}
