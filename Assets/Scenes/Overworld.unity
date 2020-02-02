@@ -589,7 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAutomatic: 0
   HideIcon: 0
-  SceneToLoad: W1-4(F)
+  SceneToLoad: W1-F
   LevelName: 1-F
   unlocked: 1
   key: 1

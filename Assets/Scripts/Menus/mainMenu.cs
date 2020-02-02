@@ -22,7 +22,6 @@ public class mainMenu : MonoBehaviour {
 		PersistentData.lvlToLoad = "1-1";
 		if(File.Exists(Application.persistentDataPath + "/save.pkr"))
 		{
-			continueButton.gameObject.SetActive(true);
 			continueButton.Select();
 
 			Navigation quitNav = quitGame.navigation;
@@ -35,7 +34,6 @@ public class mainMenu : MonoBehaviour {
 		}
 		else
 		{
-			continueButton.gameObject.SetActive(true);
 			continueButton.interactable = false;
 		}
 		if ( PersistentData.lastScene == "SinputRebind")
