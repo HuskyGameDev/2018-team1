@@ -18,6 +18,8 @@ public class mainMenu : MonoBehaviour {
 
 	public saveLoad saveLoad;
 
+	public Image image1;
+
 	private void Start() {
 		PersistentData.lvlToLoad = "1-1";
 		if(File.Exists(Application.persistentDataPath + "/save.pkr"))
@@ -61,6 +63,7 @@ public class mainMenu : MonoBehaviour {
 	{
 		this.gameObject.SetActive(false);
 		optionsMenu.SetActive(true);
+		image1.enabled = false;
 		OptionsStartButton.Select();
 	}
 
