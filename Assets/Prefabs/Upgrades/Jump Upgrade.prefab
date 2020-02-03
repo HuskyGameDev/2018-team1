@@ -15,12 +15,12 @@ PrefabInstance:
     - target: {fileID: 886877550767801671, guid: 508b25230bde876469a7cba068da78ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 113.48
       objectReference: {fileID: 0}
     - target: {fileID: 886877550767801671, guid: 508b25230bde876469a7cba068da78ae,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 886877550767801671, guid: 508b25230bde876469a7cba068da78ae,
         type: 3}
@@ -76,6 +76,21 @@ PrefabInstance:
         type: 3}
       propertyPath: animator
       value: Animations/female-protag/Unarmed/Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 997157922746817359, guid: 508b25230bde876469a7cba068da78ae,
+        type: 3}
+      propertyPath: upgradeGetUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 997157922746817359, guid: 508b25230bde876469a7cba068da78ae,
+        type: 3}
+      propertyPath: upgradeText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 997157922746817359, guid: 508b25230bde876469a7cba068da78ae,
+        type: 3}
+      propertyPath: descriptionText
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 508b25230bde876469a7cba068da78ae, type: 3}

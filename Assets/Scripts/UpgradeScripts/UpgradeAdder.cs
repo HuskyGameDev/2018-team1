@@ -71,6 +71,10 @@ public class UpgradeAdder : MonoBehaviour {
 					upgradeText.text = "You gained a melee attack!";
 					descriptionText.text = "Click the Left Mouse Button to attack with your dagger.";
 					break;
+				case "DoubleJump":
+					upgradeText.text = "You gained a second jump!";
+					descriptionText.text = "Try jumping again while in airborne";
+					break;
 				default :
 					upgradeText.text = "NOT YET IMPLEMENTED";
 					descriptionText.text = "NOT YET IMPLEMENTED";
@@ -79,6 +83,7 @@ public class UpgradeAdder : MonoBehaviour {
 
 			if (!PersistentData.upgrades.Contains(upgradeToAdd)) {
 				PersistentData.upgrades.Add(upgradeToAdd);
+				print(upgradeToAdd);
 				otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade(upgradeToAdd);
 				otherCollider.gameObject.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(animator) as RuntimeAnimatorController;
 				PersistentData.animator = animator;				
