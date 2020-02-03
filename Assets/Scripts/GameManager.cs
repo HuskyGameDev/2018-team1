@@ -96,85 +96,77 @@ public class GameManager : MonoBehaviour {
 		PersistentData.upgrades = new HashSet<string>();
 		PersistentData.upgrades.Add("MoveRight");
 	}
+	private void PlayerState2() {
+		RemoveUpgrades();
+		AddLeftMovement();
+		PersistentData.upgrades.Add("MoveLeft");
+	}
+	private void PlayerState3() {
+		PlayerState2();
+		AddJump();
+		PersistentData.upgrades.Add("Jump");
+	}
+	private void PlayerState4() {
+		PlayerState3();
+		AddDagger();
+		PersistentData.upgrades.Add("Dagger");
+	}
+	private void PlayerState5() {
+		PlayerState4();
+		AddCrouch();
+		PersistentData.upgrades.Add("Crouch");
+	}
+	private void PlayerState6() {
+		PlayerState5();
+		AddDoubleJump();
+		PersistentData.upgrades.Add("DoubleJump");
+	}
+	private void PlayerState7() {
+		PlayerState6();
+		AddSlide();
+		PersistentData.upgrades.Add("Slide");
+	}
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown("v") && Input.GetKeyDown("b") && Input.GetKeyDown("n"))
 				PersistentData.devMode = true;
 		if (PersistentData.devMode) {
+			// Move Right
 			if (Input.GetKeyDown(KeyCode.F1)) {
 				RemoveUpgrades();
 				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Peg-Patch/Player-PegPatch") as RuntimeAnimatorController;
 			}
+			// Move Left + Right
 			if (Input.GetKeyDown(KeyCode.F2)) {
-				RemoveUpgrades();
-				AddLeftMovement();
-				PersistentData.upgrades.Add("MoveLeft");
+				PlayerState2();
 				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Peg/Peg") as RuntimeAnimatorController;
 			}
+			// Jump, Move Left + Right
 			if (Input.GetKeyDown(KeyCode.F3)) {
-				RemoveUpgrades();
-				AddLeftMovement();
-				AddJump();
-				PersistentData.upgrades.Add("MoveLeft");
-				PersistentData.upgrades.Add("Jump");
+				PlayerState3();
 				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Unarmed/Player") as RuntimeAnimatorController;
 			}
+			// Dagger, Jump, Move Left + Right
 			if (Input.GetKeyDown(KeyCode.F4)) {
-				RemoveUpgrades();
-				AddLeftMovement();
-				AddJump();
-				AddDagger();
-				PersistentData.upgrades.Add("MoveLeft");
-				PersistentData.upgrades.Add("Jump");
-				PersistentData.upgrades.Add("Dagger");
+				PlayerState4();
 				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/Dagger/Player-Dagger") as RuntimeAnimatorController;
 			}
+			// Crouch, Dagger, Jump, Move Left + Right
 			if (Input.GetKeyDown(KeyCode.F5)) {
-				RemoveUpgrades();
-				AddLeftMovement();
-				AddJump();
-				AddDagger();
-				AddCrouch();
-				PersistentData.upgrades.Add("MoveLeft");
-				PersistentData.upgrades.Add("Jump");
-				PersistentData.upgrades.Add("Dagger");
-				PersistentData.upgrades.Add("Crouch");
+				PlayerState5();
 				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol") as RuntimeAnimatorController;
 			}
+			// Double Jump, Crouch, Dagger, Move Left + Right
 			if (Input.GetKeyDown(KeyCode.F6)) {
-				RemoveUpgrades();
-				AddLeftMovement();
-				AddJump();
-				AddDagger();
-				AddCrouch();
-				AddDoubleJump();
-				PersistentData.upgrades.Add("MoveLeft");
-				PersistentData.upgrades.Add("Jump");
-				PersistentData.upgrades.Add("Dagger");
-				PersistentData.upgrades.Add("Crouch");
-				PersistentData.upgrades.Add("DoubleJump");
+				PlayerState6();
 				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol") as RuntimeAnimatorController;
 			}
+			// Sliding, Double Jump, Crouch, Dagger, Move Left + Right
 			if (Input.GetKeyDown(KeyCode.F7)) {
-				RemoveUpgrades();
-				AddLeftMovement();
-				AddJump();
-				AddDagger();
-				AddCrouch();
-				AddDoubleJump();
-				AddSlide();
-				PersistentData.upgrades.Add("MoveLeft");
-				PersistentData.upgrades.Add("Jump");
-				PersistentData.upgrades.Add("Dagger");
-				PersistentData.upgrades.Add("Crouch");
-				PersistentData.upgrades.Add("DoubleJump");
-				PersistentData.upgrades.Add("Slide");
+				PlayerState7();
 				player.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol") as RuntimeAnimatorController;
 			}
-			if (Input.GetKeyDown(KeyCode.F8)) {
-				PersistentData.ordinary = false;
-				Start();
-			}
+			// Double the player's speed
 			if (Input.GetKeyDown(KeyCode.F9)) {
 				player.GetComponent<MoveRight>().speed = player.GetComponent<MoveRight>().speed * 2;
 				player.GetComponent<MoveLeft>().speed = player.GetComponent<MoveLeft>().speed * 2;
