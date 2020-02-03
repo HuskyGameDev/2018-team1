@@ -9,6 +9,7 @@ public class Crouch : MonoBehaviour {
     // Player Components
     private Collider2D standing2D;
     private Collider2D crouching2D;
+    private Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,7 @@ public class Crouch : MonoBehaviour {
         Collider2D[] coll = GetComponents<Collider2D>();
         standing2D = coll[0];
         crouching2D = coll[1];
+        anim = GetComponent<Animator>();
 	}
     
     public Collider2D getStanding2D() {
@@ -29,8 +31,9 @@ public class Crouch : MonoBehaviour {
         // Movement independent from jumping
         float moveVertical = Sinput.GetAxisRaw("Vertical");
         if (moveVertical < 0 || Sinput.GetButton("Crouch"))
-            GetComponent<Animator>().SetBool("Crouching", true);
+            anim.SetBool("Crouching", true);
         else 
-            GetComponent<Animator>().SetBool("Crouching", false);
+            if (anim.GetBool("Crouching"))
+                anim.SetBool("Crouching", false);
     }
 }
