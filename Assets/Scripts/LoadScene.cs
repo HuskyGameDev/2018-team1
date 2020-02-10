@@ -40,7 +40,7 @@ public class LoadScene : MonoBehaviour {
 
     public void LoadMenuFromControls() {
         string cont = SceneManager.GetActiveScene().name;
-        PersistentData.changeScene(cont, "MainMenu");
+        PersistentData.changeScene(cont, "StartMenu");
     }
 
     void OnTriggerEnter2D(Collider2D other) {
