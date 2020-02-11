@@ -7,23 +7,20 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject player;
 
-	private float defaultSpeed = 1f;
+	public float defaultSpeed = 1f;
 
 	// Use this for initialization
 	void Start () {
+		foreach (string s in PersistentData.upgrades) {
+			AddUpgrade(s);
+		}
 		if (!PersistentData.ordinary) {
-			PersistentData.upgrades.Add("MoveRight");
-			PersistentData.upgrades.Add("Jump");
-			PersistentData.upgrades.Add("MoveLeft");
-			PersistentData.animator = "Animations/female-protag/Unarmed/Player";
-			PersistentData.upgrades.Add("Crouch");
+			PlayerState5();
+			PersistentData.animator = "Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol";
 			//PersistentData.upgrades.Add("DoubleJump");
 		}
 		player.GetComponent<Animator>().runtimeAnimatorController = 
-			Resources.Load(PersistentData.animator) as RuntimeAnimatorController; 
-		foreach (string s in PersistentData.upgrades) {
-			AddUpgrade(s);
-		}	
+			Resources.Load(PersistentData.animator) as RuntimeAnimatorController; 	
 	}
 
 	public void AddUpgrade(string s) {
@@ -87,6 +84,8 @@ public class GameManager : MonoBehaviour {
 		//player.AddComponent<Crouch>();
 	}
 	private void RemoveUpgrades() {
+		if (player.GetComponent<MoveRight>() != null)
+			Destroy(player.GetComponent<MoveRight>());
 		if (player.GetComponent<MoveLeft>() != null)
 			Destroy(player.GetComponent<MoveLeft>());
 		if (player.GetComponent<Jump>() != null)
@@ -94,6 +93,7 @@ public class GameManager : MonoBehaviour {
 		if (player.GetComponent<Crouch>() != null)
 			Destroy(player.GetComponent<Crouch>());
 		PersistentData.upgrades = new HashSet<string>();
+		AddRightMovement();
 		PersistentData.upgrades.Add("MoveRight");
 	}
 	private void PlayerState2() {
