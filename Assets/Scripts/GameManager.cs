@@ -88,6 +88,12 @@ public class GameManager : MonoBehaviour {
 			Destroy(player.GetComponent<MoveLeft>());
 		if (player.GetComponent<Jump>() != null)
 			Destroy(player.GetComponent<Jump>());
+		if (player.GetComponent<PlayerMelee>() != null) {
+			PlayerMelee pm = player.GetComponent<PlayerMelee>();
+			foreach (Transform child in pm.transform)
+				Destroy(child.gameObject);
+			Destroy(pm);
+		}
 		if (player.GetComponent<Crouch>() != null)
 			Destroy(player.GetComponent<Crouch>());
 		PersistentData.upgrades = new HashSet<string>();
