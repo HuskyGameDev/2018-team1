@@ -18,11 +18,12 @@ public class mainMenu : MonoBehaviour {
 
 	public saveLoad saveLoad;
 
+	public Image image1;
+
 	private void Start() {
 		PersistentData.lvlToLoad = "1-1";
 		if(File.Exists(Application.persistentDataPath + "/save.pkr"))
 		{
-			continueButton.gameObject.SetActive(true);
 			continueButton.Select();
 
 			Navigation quitNav = quitGame.navigation;
@@ -32,6 +33,10 @@ public class mainMenu : MonoBehaviour {
 			Navigation newNav = newGame.navigation;
 			newNav.selectOnUp = continueButton;
 			newGame.navigation = newNav;
+		}
+		else
+		{
+			continueButton.interactable = false;
 		}
 		if ( PersistentData.lastScene == "SinputRebind")
 		{
@@ -58,6 +63,7 @@ public class mainMenu : MonoBehaviour {
 	{
 		this.gameObject.SetActive(false);
 		optionsMenu.SetActive(true);
+		image1.enabled = false;
 		OptionsStartButton.Select();
 	}
 

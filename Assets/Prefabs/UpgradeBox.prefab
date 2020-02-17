@@ -235,7 +235,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[placeholder]'
+  m_Text: my suffering
 --- !u!1 &83645069682971743
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[placeholder]'
+  m_Text: end
 --- !u!1 &83645069972886393
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,4 +393,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press 'space' to continue
+  m_Text: Press 'space' to continue, or not

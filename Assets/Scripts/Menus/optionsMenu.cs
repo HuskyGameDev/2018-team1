@@ -22,6 +22,8 @@ public class optionsMenu : MonoBehaviour {
 	public Selectable ControlsOptionsSelectable;
 	public Selectable MainMenuSelectable;
 
+	public Image image1;
+
 	protected List<string> options;
 
 	// Use this for initialization
@@ -90,6 +92,7 @@ public class optionsMenu : MonoBehaviour {
 	{
 		this.gameObject.SetActive(false);
 		backTarget.SetActive(true);
+		image1.enabled = true;
 		MainMenuSelectable.Select();
 	}
 

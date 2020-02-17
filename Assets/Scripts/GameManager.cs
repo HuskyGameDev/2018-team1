@@ -15,9 +15,8 @@ public class GameManager : MonoBehaviour {
 			AddUpgrade(s);
 		}
 		if (!PersistentData.ordinary) {
-			PlayerState5();
+			PlayerState6();
 			PersistentData.animator = "Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol";
-			//PersistentData.upgrades.Add("DoubleJump");
 		}
 		player.GetComponent<Animator>().runtimeAnimatorController = 
 			Resources.Load(PersistentData.animator) as RuntimeAnimatorController; 	
@@ -49,7 +48,7 @@ public class GameManager : MonoBehaviour {
 	}
 	private void AddJump() {
 		Jump comp = player.AddComponent<Jump>() as Jump;
-		comp.SetValues(4.5f, 6, 2, 4, 1 << LayerMask.NameToLayer("Ground"));
+		comp.SetValues(4.5f, 2, 2, 4, 1 << LayerMask.NameToLayer("Ground"));
 	}
 	private void AddDagger() {
 		GameObject attack = new GameObject();
@@ -76,8 +75,7 @@ public class GameManager : MonoBehaviour {
 		player.AddComponent<Crouch>();
 	}
 	private void AddDoubleJump(){
-		Jump j=player.GetComponent<Jump>();
-		j.addDoubleJump();
+		player.GetComponent<Jump>().addDoubleJump();
 	}
 	private void AddSlide() {
 		// TODO: give the player the sliding ability

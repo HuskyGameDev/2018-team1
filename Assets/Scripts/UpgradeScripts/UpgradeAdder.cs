@@ -74,6 +74,10 @@ public class UpgradeAdder : MonoBehaviour {
 				case "Slide":
 					upgradeText.text = "You gained the ability to slide!";
 					descriptionText.text = "Crouch while moving to slide.";
+          break;
+				case "DoubleJump":
+					upgradeText.text = "You gained a second jump!";
+					descriptionText.text = "Try jumping again while in airborne";
 					break;
 				default :
 					upgradeText.text = "NOT YET IMPLEMENTED";
@@ -83,6 +87,7 @@ public class UpgradeAdder : MonoBehaviour {
 
 			if (!PersistentData.upgrades.Contains(upgradeToAdd)) {
 				PersistentData.upgrades.Add(upgradeToAdd);
+				print(upgradeToAdd);
 				otherCollider.gameObject.GetComponent<GameManager>().AddUpgrade(upgradeToAdd);
 				otherCollider.gameObject.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(animator) as RuntimeAnimatorController;
 				PersistentData.animator = animator;				

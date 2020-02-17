@@ -51,6 +51,10 @@ public class UpgradeDialog : MonoBehaviour
 					upgradeText.text = "You gained the ability to crouch!";
 					descriptionText.text = "Press 'S' or push down on the left analog stick to crouch.\nYou can also move while crouching.";
 					break;
+				case "DoubleJump":
+					upgradeText.text = "You gained a second jump!";
+					descriptionText.text = "Try jumping again while in airborne";
+					break;
 				default :
 					upgradeText.text = "NOT YET IMPLEMENTED";
 					descriptionText.text = "NOT YET IMPLEMENTED";
