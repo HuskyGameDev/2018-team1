@@ -64,6 +64,11 @@ public class GameManager : MonoBehaviour {
 		hit.damage = 35;
 		hit.knockback = 1000;
 
+		SpriteRenderer sr = attack.AddComponent<SpriteRenderer>() as SpriteRenderer;
+	//	sr.sprite = Resources.Load("Square") as SomethingProbably;
+		sr.color = Color.red;
+		sr.sortingLayerName = "Entities";
+
 		attack.transform.SetParent(player.transform);
 		attack.transform.localPosition = Vector3.zero;
 		
