@@ -52,29 +52,23 @@ public class GameManager : MonoBehaviour {
 	}
 	private void AddDagger() {
 		GameObject attack = new GameObject();
+		attack.transform.SetParent(player.transform);
+		attack.transform.localPosition = new Vector2(.7f, 0);
+		attack.transform.localScale = new Vector2(.9f, 1.5f);
 
 		BoxCollider2D hitbox = attack.AddComponent<BoxCollider2D>() as BoxCollider2D;
 
 		hitbox.isTrigger = true;
 		hitbox.enabled = false;
-		hitbox.size = new Vector2(.9f, .5f);
-		hitbox.offset = new Vector2(.7f, 0);
 
 		Hit hit = attack.AddComponent<Hit>() as Hit;
 		hit.damage = 35;
 		hit.knockback = 1000;
 
 		SpriteRenderer sr = attack.AddComponent<SpriteRenderer>() as SpriteRenderer;
-	//	sr.sprite = Resources.Load("Square") as SomethingProbably;
+		sr.sprite = Resources.Load<Sprite>("Square") as Sprite;
 		sr.color = Color.red;
 		sr.sortingLayerName = "Entities";
-
-		attack.transform.SetParent(player.transform);
-		attack.transform.localPosition = Vector3.zero;
-		
-		PlayerMelee pm = player.AddComponent<PlayerMelee>() as PlayerMelee;
-		pm.meleeAttack = hitbox;
-		pm.animator = player.GetComponent<Animator>();
 	}
 	private void AddCrouch() {
 		player.AddComponent<Crouch>();
