@@ -9,8 +9,6 @@ public class Hit : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 
         if ((other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy")) && !other.isTrigger) {
-            
-			GetComponent<Collider2D>().enabled = false;
 
             if (other.gameObject.GetComponent<Health>().ReduceHealth(damage) != -1) {
                 if (transform.position.x > other.gameObject.transform.position.x) {
