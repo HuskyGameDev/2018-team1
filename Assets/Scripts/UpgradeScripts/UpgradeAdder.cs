@@ -38,7 +38,7 @@ public class UpgradeAdder : MonoBehaviour {
 
 	void Update() {
 
-		print("Game Paused? " + paused);
+		//print("Game Paused? " + paused);
 		if (paused && Sinput.GetButtonDown("Submit"))
 		{
 			upgradeGot();
@@ -71,6 +71,10 @@ public class UpgradeAdder : MonoBehaviour {
 					upgradeText.text = "You gained a melee attack!";
 					descriptionText.text = "Click the Left Mouse Button to attack with your dagger.";
 					break;
+				case "Slide":
+					upgradeText.text = "You gained the ability to slide!";
+					descriptionText.text = "Crouch while moving to slide.";
+          break;
 				case "DoubleJump":
 					upgradeText.text = "You gained a second jump!";
 					descriptionText.text = "Try jumping again while in airborne";
