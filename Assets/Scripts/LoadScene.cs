@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,24 @@ public class LoadScene : MonoBehaviour {
     public void LoadLevel() {
         if (level == "Overworld")
         {
+            int lev = convertToLevelID(SceneManager.GetActiveScene().name.Substring(3));
+            switch ( SceneManager.GetActiveScene().name.Substring(1,1) )
+            {
+                case "1":
+                    PersistentData.World1Levels |= lev;
+                    break;
+                case "2":
+                    PersistentData.World2Levels |= lev;
+                    break;
+                case "3":
+                    PersistentData.World3Levels |= lev;
+                    break;
+                case "4":
+                    PersistentData.World4Levels |= lev;
+                    break;
+                default:
+                    break;
+            }
             LoadOverworld();
         }
         else
@@ -36,6 +55,34 @@ public class LoadScene : MonoBehaviour {
             PersistentData.changeScene(lev, level);
         }
         
+    }
+
+
+    //TODO: GET CHILD OBJECTS & USE WITH PINS
+    /**
+    foreach (Transform child in allChildren)
+          {
+              child.gameObject.SetActive(false);
+          }
+     */
+
+    private static int convertToLevelID(string value)
+    {
+        if ( value == "F" || value == "F1")
+        {
+            return 256;
+        }
+        else if ( value == "F2" )
+        {
+            return 512;
+        }
+        int result = 0;
+        for (int i = 0; i < value.Length; i++)
+        {
+            char letter = value[i];
+            result = 10 * result + (letter - 48);
+        }
+        return (int)Math.Pow(2, result);
     }
 
     public void LoadMenuFromControls() {

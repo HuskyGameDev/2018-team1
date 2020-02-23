@@ -42,7 +42,6 @@ public class Pin : MonoBehaviour
 	/// </summary>
 	private void Start()
 	{
-
 		// Load the directions into a dictionary for easy access
 		_pinDirections = new Dictionary<Direction, Pin>
 		{
@@ -52,14 +51,61 @@ public class Pin : MonoBehaviour
 			{ Direction.Right, RightPin }
 		};
 		
-		// Hide the icon if needed
-		if (HideIcon)
+		Char[] space = {' '};
+		String[] split = gameObject.name.Split(space);
+		bool disableMe = false;
+
+		switch ( split[0].Substring(1,1) )
 		{
-			GetComponent<SpriteRenderer>().enabled = false;
+			case "1":
+				disableMe = ((PersistentData.World1Levels & convertToLevelID(split[0].Substring(3))) != 0);
+				break;
+			case "2":
+				disableMe = ((PersistentData.World2Levels & convertToLevelID(split[0].Substring(3))) != 0);
+				break;
+			case "3":
+				disableMe = ((PersistentData.World3Levels & convertToLevelID(split[0].Substring(3))) != 0);
+				break;
+			case "4":
+				disableMe = ((PersistentData.World4Levels & convertToLevelID(split[0].Substring(3))) != 0);
+				break;
+			default:
+				break;
+		}
+		Transform[] allChildren = GetComponentsInChildren<Transform>();
+		foreach (Transform child in allChildren)
+		{
+			if ( child.gameObject.name == "RedX" && disableMe)
+			{
+				child.gameObject.SetActive(false);
+			}
+			else if ( child.gameObject.name == "GreenX" && !disableMe)
+			{
+				child.gameObject.SetActive(false);
+			}
 		}
 
 		unlocked = ((PersistentData.UnlockData & key) != 0);
 	}
+
+	private static int convertToLevelID(string value)
+    {
+        if ( value == "F" || value == "F1")
+        {
+            return 256;
+        }
+        else if ( value == "F2" )
+        {
+            return 512;
+        }
+        int result = 0;
+        for (int i = 0; i < value.Length; i++)
+        {
+            char letter = value[i];
+            result = 10 * result + (letter - 48);
+        }
+        return (int)Math.Pow(2, result);
+    }
 	
 	/// <summary>
 	/// Get the pin in a selected direction
@@ -159,12 +205,12 @@ public class Pin : MonoBehaviour
 		GameObject[] objs = GameObject.FindGameObjectsWithTag("pin collection");
 		foreach(GameObject p in objs)
 		{
-			Debug.Log("Pins: " + p);
+			//Debug.Log("Pins: " + p);
 			foreach (Transform child in p.transform)
 			{
-				Debug.Log("Child (individual pin): " + child);
+				//Debug.Log("Child (individual pin): " + child);
 				Pin ret = child.gameObject.GetComponent("Pin") as Pin;
-				Debug.Log("pin? " + ret);
+				//Debug.Log("pin? " + ret);
 				if (ret.LevelName == lvlName)
 				{
 					return ret;

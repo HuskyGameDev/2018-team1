@@ -23,9 +23,9 @@ public class Character : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
-        Debug.Log("start of FixedUpdate");
+        //Debug.Log("start of FixedUpdate");
         if (_targetPin == null) return;
-        Debug.Log("after null return");
+        //Debug.Log("after null return");
 
         // Get the characters current position and the targets position
         
