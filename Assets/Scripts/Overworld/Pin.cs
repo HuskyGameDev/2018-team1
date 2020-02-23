@@ -77,11 +77,11 @@ public class Pin : MonoBehaviour
 		{
 			if ( child.gameObject.name == "RedX" && disableMe)
 			{
-				child.gameObject.SetActive(false);
+				child.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 			}
 			else if ( child.gameObject.name == "GreenX" && !disableMe)
 			{
-				child.gameObject.SetActive(false);
+				child.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 			}
 		}
 
