@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : Health
 {
     public Text healthText;
-    public MeleeAttack meleeAttack;
-    void Update()
+    public Collider2D meleeAttack;
+    void LateUpdate()
     {
         healthText.text = "" + string.Format("Health: {0,3}/", GetCurrentHealth()) + maxHealth;
     }
