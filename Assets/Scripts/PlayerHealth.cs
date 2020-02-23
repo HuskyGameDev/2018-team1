@@ -5,11 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PlayerHealth : Health
 {
-    public Text healthText;
     public Collider2D meleeAttack;
+    public RectTransform healthBar;
+
     void LateUpdate()
     {
-        healthText.text = "" + string.Format("Health: {0,3}/", GetCurrentHealth()) + maxHealth;
+        healthBar.sizeDelta = new Vector2(GetCurrentHealth() * 3, healthBar.sizeDelta.y);
     }
 
     // Couldn't find a better place to put this, it handles the player melee attack toggling/position
