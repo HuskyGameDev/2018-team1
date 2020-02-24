@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class PlayerMelee : MonoBehaviour
 {
-    public Collider2D meleeAttack;
-    private int attacking;
-    public Animator animator;
+    private Animator animator;
+
+    void Start() {
+        animator = gameObject.GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
-        if (attacking > 0) {
-            attacking--;
-            if (attacking == 0)
-                meleeAttack.enabled = false;
-        }
         if (Sinput.GetButtonDown("MeleeAttack")) {
-            meleeAttack.enabled = true;
-            attacking = 4;
             animator.SetTrigger("Attack");
         }
     }

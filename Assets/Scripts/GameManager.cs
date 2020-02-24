@@ -52,24 +52,26 @@ public class GameManager : MonoBehaviour {
 	}
 	private void AddDagger() {
 		GameObject attack = new GameObject();
+		attack.transform.SetParent(player.transform);
+		attack.transform.localPosition = new Vector2(.7f, 0);
+		attack.transform.localScale = new Vector2(.9f, 1.5f);
 
 		BoxCollider2D hitbox = attack.AddComponent<BoxCollider2D>() as BoxCollider2D;
 
 		hitbox.isTrigger = true;
 		hitbox.enabled = false;
-		hitbox.size = new Vector2(.9f, .5f);
-		hitbox.offset = new Vector2(.7f, 0);
 
 		Hit hit = attack.AddComponent<Hit>() as Hit;
 		hit.damage = 35;
 		hit.knockback = 1000;
 
-		attack.transform.SetParent(player.transform);
-		attack.transform.localPosition = Vector3.zero;
-		
-		PlayerMelee pm = player.AddComponent<PlayerMelee>() as PlayerMelee;
-		pm.meleeAttack = hitbox;
-		pm.animator = player.GetComponent<Animator>();
+		SpriteRenderer sr = attack.AddComponent<SpriteRenderer>() as SpriteRenderer;
+		sr.sprite = Resources.Load<Sprite>("Square") as Sprite;
+		sr.color = Color.red;
+		sr.sortingLayerName = "Entities";
+
+		PlayerMelee pm = player.AddComponent<PlayerMelee>();
+		player.GetComponent<PlayerHealth>().meleeAttack = hitbox;
 	}
 	private void AddCrouch() {
 		player.AddComponent<Crouch>();
@@ -88,11 +90,17 @@ public class GameManager : MonoBehaviour {
 			Destroy(player.GetComponent<MoveLeft>());
 		if (player.GetComponent<Jump>() != null)
 			Destroy(player.GetComponent<Jump>());
+		if (player.GetComponent<PlayerMelee>() != null) {
+			PlayerMelee pm = player.GetComponent<PlayerMelee>();
+			foreach (Transform child in pm.transform)
+				if (child.name != "Canvas") 
+					Destroy(child.gameObject);
+			Destroy(pm);
+		}
 		if (player.GetComponent<Crouch>() != null)
 			Destroy(player.GetComponent<Crouch>());
 		PersistentData.upgrades = new HashSet<string>();
 		AddRightMovement();
-		PersistentData.upgrades.Add("MoveRight");
 	}
 	private void PlayerState2() {
 		RemoveUpgrades();
