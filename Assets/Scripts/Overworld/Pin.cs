@@ -79,10 +79,6 @@ public class Pin : MonoBehaviour
 			{
 				child.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 			}
-			else if ( child.gameObject.name == "GreenX" && !disableMe)
-			{
-				child.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-			}
 		}
 
 		unlocked = ((PersistentData.UnlockData & key) != 0);
