@@ -59,15 +59,6 @@ public class LoadScene : MonoBehaviour {
         
     }
 
-
-    //TODO: GET CHILD OBJECTS & USE WITH PINS
-    /**
-    foreach (Transform child in allChildren)
-          {
-              child.gameObject.SetActive(false);
-          }
-     */
-
     private static int convertToLevelID(string value)
     {
         if ( value == "F" || value == "F1")
