@@ -69,6 +69,9 @@ public class GameManager : MonoBehaviour {
 		sr.sprite = Resources.Load<Sprite>("Square") as Sprite;
 		sr.color = Color.red;
 		sr.sortingLayerName = "Entities";
+
+		PlayerMelee pm = player.AddComponent<PlayerMelee>();
+		player.GetComponent<PlayerHealth>().meleeAttack = hitbox;
 	}
 	private void AddCrouch() {
 		player.AddComponent<Crouch>();
@@ -90,14 +93,14 @@ public class GameManager : MonoBehaviour {
 		if (player.GetComponent<PlayerMelee>() != null) {
 			PlayerMelee pm = player.GetComponent<PlayerMelee>();
 			foreach (Transform child in pm.transform)
-				Destroy(child.gameObject);
+				if (child.name != "Canvas") 
+					Destroy(child.gameObject);
 			Destroy(pm);
 		}
 		if (player.GetComponent<Crouch>() != null)
 			Destroy(player.GetComponent<Crouch>());
 		PersistentData.upgrades = new HashSet<string>();
 		AddRightMovement();
-		PersistentData.upgrades.Add("MoveRight");
 	}
 	private void PlayerState2() {
 		RemoveUpgrades();
