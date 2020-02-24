@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour {
     public string level;
+    public int unlock;
 
     public void LoadFlatland() {
         string lev = SceneManager.GetActiveScene().name;
@@ -27,6 +28,7 @@ public class LoadScene : MonoBehaviour {
     }
 
     public void LoadLevel() {
+        PersistentData.UnlockData ^= unlock;
         if (level == "Overworld")
         {
             int lev = convertToLevelID(SceneManager.GetActiveScene().name.Substring(3));
