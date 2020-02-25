@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
 		}
 		player.GetComponent<Animator>().runtimeAnimatorController = 
 			Resources.Load(PersistentData.animator) as RuntimeAnimatorController; 	
+		Scale sroar = player.AddComponent<Scale>();
+		sroar.scaleFactor = .95f;
 	}
 
 	public void AddUpgrade(string s) {
@@ -131,6 +133,11 @@ public class GameManager : MonoBehaviour {
 		PlayerState6();
 		AddSlide();
 		PersistentData.upgrades.Add("Slide");
+	}
+
+	void FixedUpdate () {
+		if (Random.Range(0, 500f) < 100)
+			player.GetComponent<Scale>().Apply();
 	}
 	// Update is called once per frame
 	void Update () {
