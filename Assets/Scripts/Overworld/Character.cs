@@ -2,13 +2,13 @@
 
 public class Character : MonoBehaviour
 {
-    public float Speed = 3f;
+    public float Speed = 15f;
     public bool IsMoving { get; private set; }
 
     public Pin CurrentPin { get; set; }
     private Pin _targetPin;
     private MapManager _mapManager;
-    Vector3 offset = new Vector3(0f, 1.0f, 0f); //offset the character to have their feet on the level dot
+    Vector3 offset = new Vector3(0f, .67f, 0f); //offset the character to have their feet on the level dot
 
 
     public void Initialise(MapManager mapManager, Pin startPin)
@@ -23,7 +23,9 @@ public class Character : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
+        //Debug.Log("start of FixedUpdate");
         if (_targetPin == null) return;
+        //Debug.Log("after null return");
 
         // Get the characters current position and the targets position
         
