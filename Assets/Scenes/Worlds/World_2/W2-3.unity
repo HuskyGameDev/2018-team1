@@ -28667,11 +28667,7 @@ Transform:
   m_Children:
   - {fileID: 1956976197}
   - {fileID: 1145027209}
-<<<<<<< HEAD
-  - {fileID: 446772507}
-=======
   - {fileID: 834047902}
->>>>>>> master
   - {fileID: 73615818}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -29769,16 +29765,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!4 &1013334624
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4974528576429294, guid: 1d47f490d2dc01a478e3d60f928c3032,
-    type: 3}
-  m_PrefabInstance: {fileID: 834047901}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986093644}
-=======
 --- !u!1 &1039545141
 GameObject:
   m_ObjectHideFlags: 0
@@ -29838,18 +29824,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039545141}
->>>>>>> master
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-<<<<<<< HEAD
-  m_Father: {fileID: 446772507}
-  m_RootOrder: 0
-=======
   m_Father: {fileID: 0}
   m_RootOrder: 6
->>>>>>> master
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1145027208
 GameObject:
@@ -44014,19 +43994,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-<<<<<<< HEAD
---- !u!1 &1986093644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 834047901}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1013334624}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-=======
 --- !u!1 &1967535044
 GameObject:
   m_ObjectHideFlags: 0
@@ -44041,14 +44008,11 @@ GameObject:
   - component: {fileID: 1967535045}
   m_Layer: 5
   m_Name: Canvas
->>>>>>> master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-=======
 --- !u!114 &1967535045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44129,7 +44093,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
->>>>>>> master
 --- !u!4 &2023211648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4126953044781348, guid: 8dff0f30d5e77d749934bd2e0ff2b97b,
