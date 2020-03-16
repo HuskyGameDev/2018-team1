@@ -11,4 +11,7 @@ public class Scale : MonoBehaviour
        scale *= new Vector2(scaleFactor, scaleFactor);
        gameObject.transform.localScale = scale;
     }
+    public void Remove() {
+       gameObject.transform.localScale = new Vector2(1, 1);
+    }
 }
