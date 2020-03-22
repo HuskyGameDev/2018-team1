@@ -10750,12 +10750,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1772692096 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1725537600592244, guid: b161d4496877a064789ccb92d56afb87,
-    type: 3}
-  m_PrefabInstance: {fileID: 754313756}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1776896749
 GameObject:
   m_ObjectHideFlags: 0
@@ -10914,9 +10908,9 @@ GameObject:
   - component: {fileID: 2029764180}
   - component: {fileID: 2029764184}
   - component: {fileID: 2029764183}
+  - component: {fileID: 2029764185}
   - component: {fileID: 2029764182}
   - component: {fileID: 2029764181}
-  - component: {fileID: 2029764185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10960,14 +10954,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029764179}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97dd19ec25f99034b961f7e55824fe2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_listeners:
-    initialListenerList:
-    - {fileID: 0}
+    initialListenerList: []
     useDefaultListeners: 1
   isEnvironmentAware: 0
   isStaticObject: 0
@@ -11047,7 +11040,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lavaRockPrefab: {fileID: 8337459542706665884, guid: 3612baf89b6bb404c8f0e7981e44f64e,
     type: 3}
-  player: {fileID: 1772692096}
   spawnDelay: 0.3
   camTransform: {fileID: 0}
 --- !u!1 &2044302497
