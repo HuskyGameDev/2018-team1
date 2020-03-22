@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 2b1919985d50f4147a1ecfc8a9aeffcf
   - enabled: 0
-    path: Assets/Scenes/MainMenu.unity
+    path: 
     guid: 8920c4940f319bf4b851a6dedf8e0411
   - enabled: 1
     path: Assets/Scenes/SinputRebind.unity
@@ -32,4 +32,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Worlds/World_1/W1-F.unity
     guid: bc96b4c0e46bc53408f74ac45a40d8b8
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_2/W2-1.unity
+    guid: f1ee8312fb5c179458d720d70b056573
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_2/W2-2.unity
+    guid: 645819172899e6c4a801a588e2c47c4d
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_2/W2-3.unity
+    guid: 7b5c8add1ec1f86448f59e4e242b8b0d
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_2/W2-4.unity
+    guid: de120c161cf7c474cb16c063f64065cf
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_3/W3-1.unity
+    guid: 97b8cb0d5b26e0f43a190c788a457a04
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_3/W3-2.unity
+    guid: aeff25bf3f9929143b8aa2a7ef22b4d7
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_3/W3-3.unity
+    guid: 08bf56531c383154a962d5054a874433
   m_configObjects: {}
