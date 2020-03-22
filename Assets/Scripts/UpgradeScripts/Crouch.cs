@@ -9,16 +9,16 @@ public class Crouch : MonoBehaviour {
 //    // Player Components
     // private Collider2D standing2D;
     // private Collider2D crouching2D;
-    // private Animator anim;
+    private Animator anim;
 
-	// // Use this for initialization
-	// void Start () {
-    //     // Gather components
-    //     Collider2D[] coll = GetComponents<Collider2D>();
-    //     standing2D = coll[0];
-    //     crouching2D = coll[1];
-    //     anim = GetComponent<Animator>();
-	// }
+	// Use this for initialization
+	void Start () {
+        // Gather components
+        // Collider2D[] coll = GetComponents<Collider2D>();
+        // standing2D = coll[0];
+        // crouching2D = coll[1];
+        anim = GetComponent<Animator>();
+	}
     
     // public Collider2D getStanding2D() {
     //     return standing2D;
