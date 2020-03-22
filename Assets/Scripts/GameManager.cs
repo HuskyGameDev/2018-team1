@@ -132,6 +132,10 @@ public class GameManager : MonoBehaviour {
 		AddSlide();
 		PersistentData.upgrades.Add("Slide");
 	}
+
+	void FixedUpdate () {
+		
+	}
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown("v") && Input.GetKeyDown("b") && Input.GetKeyDown("n"))
