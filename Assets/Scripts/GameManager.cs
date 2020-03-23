@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour {
 		sr.color = Color.red;
 		sr.sortingLayerName = "Entities";
 
-		PlayerMelee pm = player.AddComponent<PlayerMelee>();
+		player.AddComponent<PlayerMelee>();
 		player.GetComponent<PlayerHealth>().meleeAttack = hitbox;
 	}
 	private void AddCrouch() {
