@@ -350,7 +350,7 @@ PrefabInstance:
     - target: {fileID: 224221917772029972, guid: c7949879b2e43724586de47d9ff868b9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224221917772029972, guid: c7949879b2e43724586de47d9ff868b9,
         type: 3}
@@ -1179,6 +1179,8 @@ GameObject:
   - component: {fileID: 679568751}
   - component: {fileID: 679568750}
   - component: {fileID: 679568749}
+  - component: {fileID: 679568753}
+  - component: {fileID: 679568752}
   m_Layer: 0
   m_Name: pirate1_fw_p
   m_TagString: Untagged
@@ -1261,6 +1263,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &679568752
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679568748}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9410701792c343c4492e63d9c3845ab4, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &679568753
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679568748}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 809a62e19687ba542a7cdacc1126238f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &718520384
 GameObject:
   m_ObjectHideFlags: 0
