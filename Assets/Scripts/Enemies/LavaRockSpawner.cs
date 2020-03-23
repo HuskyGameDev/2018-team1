@@ -22,6 +22,10 @@ public class LavaRockSpawner : MonoBehaviour
         rb=lr.GetComponent<Rigidbody2D>();
         lr.transform.position=new Vector2(Random.Range(camTransform.position.x-20,camTransform.position.x+20),camTransform.position.y+15);
         Vector2 sideForce=new Vector2(Random.Range(-50,50),0);
+        float scale=Random.Range(1f,3f);
+        lr.transform.localScale*=scale;
+        lr.GetComponentInChildren<HitLavaRock>().damage=(int)(5*scale);
+        lr.GetComponentInChildren<HitLavaRock>().knockback=1500*scale;
         rb.AddForce(sideForce,ForceMode2D.Impulse);
         rb.AddTorque(Random.Range(-20,20),ForceMode2D.Impulse);
 
