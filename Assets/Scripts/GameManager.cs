@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour {
 
 		Hit hit = attack.AddComponent<Hit>() as Hit;
 		hit.damage = 35;
-		hit.knockback = 1000;
+		hit.knockback = 1300;
 
 		SpriteRenderer sr = attack.AddComponent<SpriteRenderer>() as SpriteRenderer;
 		sr.sprite = Resources.Load<Sprite>("Square") as Sprite;

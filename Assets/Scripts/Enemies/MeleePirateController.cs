@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using System.Collections;
 public class MeleePirateController :  Controller {
      //Base statistics
     public int startingHealth;
@@ -101,11 +101,13 @@ public class MeleePirateController :  Controller {
 	// Update is called once per frame
 	void Update () {
         if (seenPlayer) {
-            if ((player.position - transform.position).magnitude < attackReach) 
-                Attack();
+            if ((player.position - transform.position).magnitude < attackReach) {
+                StartCoroutine(AttackCoroutine());
+            }
         }
 	}
-    private void Attack() {
+    private IEnumerator AttackCoroutine() {
+        yield return new WaitForSeconds(.375f);
         animator.SetTrigger("Attack");
     }
 }
