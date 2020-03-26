@@ -17,7 +17,7 @@ public class LavaRock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y<camTransform.position.y-15){
+        if(transform.position.y<camTransform.position.y-50){
             Destroy(this.gameObject);
         }
     }
