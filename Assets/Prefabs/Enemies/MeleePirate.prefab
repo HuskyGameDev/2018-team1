@@ -70,8 +70,8 @@ MonoBehaviour:
   minJumpForce: 4
   maxJumpForce: 6
   animator: {fileID: 95000548221763744}
-  startingHealth: 150
-  damage: 2
+  startingHealth: 75
+  damage: 4
   speed: 0.25
   minJumpTime: 20
   maxJumpTime: 50
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2091861575
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a2783f41fda2ad245bdffc668c6aea51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -290,8 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 924cdf6c5476ed44babeba87e42bacd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  knockback: 1000
+  damage: 4
+  knockback: 800
 --- !u!212 &1139101694948002895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2091861575
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: de4dea6b604c9f044869d448a097f77f, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
