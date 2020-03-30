@@ -83,7 +83,7 @@ public class Health : MonoBehaviour {
     }
 
     private void PlayerDied() {
-        PersistentData.changeScene(SceneManager.GetActiveScene().name, "StartMenu");
+        PersistentData.changeScene(SceneManager.GetActiveScene().name, "Overworld");
     }
 
     void Update() {
