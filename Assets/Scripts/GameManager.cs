@@ -69,7 +69,8 @@ public class GameManager : MonoBehaviour {
 		sr.sprite = Resources.Load<Sprite>("Square") as Sprite;
 		sr.color = Color.red;
 		sr.sortingLayerName = "Entities";
-
+		sr.enabled = false;
+		
 		player.AddComponent<PlayerMelee>();
 		player.GetComponent<PlayerHealth>().meleeAttack = hitbox;
 	}
