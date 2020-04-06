@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 			AddUpgrade(s);
 		}
 		if (!PersistentData.ordinary) {
-			PlayerState6();
+			PlayerState7();
 			PersistentData.animator = "Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol";
 		}
 		player.GetComponent<Animator>().runtimeAnimatorController = 
