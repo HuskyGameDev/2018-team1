@@ -70,6 +70,8 @@ public class PirateKingController :  Controller {
             finalState = true;
             StartCoroutine(FinalJump());
         }
+        if (transform.position.x < -50f || transform.position.y < -50f || transform.position.x > 170f || transform.position.y > 50f)
+            mrPresident();
     }
     
     protected void JumpRight() {
@@ -157,5 +159,12 @@ public class PirateKingController :  Controller {
         rb2d.velocity = new Vector2 (0, 0);
         transform.position = finalPosition;
         stop = false;
+    }
+    private void mrPresident() {
+        rb2d.velocity = new Vector2 (0, 0);
+        if (finalState)
+            transform.position = new Vector3 (133, 0, 0);
+        else
+            transform.position = new Vector3 (42, 18, 0);
     }
 }
