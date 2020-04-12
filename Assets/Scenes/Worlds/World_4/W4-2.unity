@@ -38977,11 +38977,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799561052750950887, guid: b161d4496877a064789ccb92d56afb87,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 212258159074815306, guid: b161d4496877a064789ccb92d56afb87,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -38991,6 +38986,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799561052750950887, guid: b161d4496877a064789ccb92d56afb87,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323408567049080, guid: b161d4496877a064789ccb92d56afb87,
         type: 3}
@@ -39090,6 +39090,92 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1569594382
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7766113293534422068, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueCapsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.name
+      value: Pirate Marianne
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "This is starting to get incredibly dangerous, but I won\u2019t let a
+        few falling volcanic rocks and some measly lava get between me and the throne
+        of pirate-dom. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: PIRATE KING HERE I COME.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05e9395db46e6468f9ffa28996da2701, type: 3}
 --- !u!1 &1661401920
 GameObject:
   m_ObjectHideFlags: 0

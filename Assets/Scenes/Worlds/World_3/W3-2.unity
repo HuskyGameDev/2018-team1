@@ -2197,7 +2197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1382815187
 GameObject:
@@ -3458,7 +3458,7 @@ PrefabInstance:
     - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
         type: 3}
       propertyPath: dialogue.name
-      value: 'Pirate '
+      value: Pirate Marianne
       objectReference: {fileID: 0}
     - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
         type: 3}
@@ -18653,7 +18653,7 @@ Transform:
   - {fileID: 1743080764}
   - {fileID: 29668917}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2111570296
 GameObject:
