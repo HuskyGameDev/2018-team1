@@ -26,9 +26,11 @@ public class LavaRockSpawner : MonoBehaviour
         lr.transform.localScale*=scale;
         lr.GetComponentInChildren<HitLavaRock>().damage=(int)(5*scale);
         lr.GetComponentInChildren<HitLavaRock>().knockback=1500*scale;
+        rb.mass=3*scale;
         rb.AddForce(sideForce,ForceMode2D.Impulse);
-        rb.AddTorque(Random.Range(-20,20),ForceMode2D.Impulse);
-        rb.gravityScale=.03f*(4f-scale);
+        rb.AddTorque(Random.Range(-10,10),ForceMode2D.Impulse);
+        rb.gravityScale=1;
+        rb.drag=2.5f*scale;
     }
 
     IEnumerator spawnRoutine(){
