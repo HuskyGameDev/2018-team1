@@ -840,11 +840,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2799561052750950887, guid: b161d4496877a064789ccb92d56afb87,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 212258159074815306, guid: b161d4496877a064789ccb92d56afb87,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -854,6 +849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799561052750950887, guid: b161d4496877a064789ccb92d56afb87,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323408567049080, guid: b161d4496877a064789ccb92d56afb87,
         type: 3}
@@ -79334,3 +79334,88 @@ PrefabInstance:
       objectReference: {fileID: 406474535}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7949879b2e43724586de47d9ff868b9, type: 3}
+--- !u!1001 &2042045341
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7766113293534422068, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueCapsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.name
+      value: Pirate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "I\u2019m slidin\u2019 all o'er the place on this here icy terrain."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "Me tropical pirate feet aren\u2019t used to slick hills like the ones
+        here. "
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05e9395db46e6468f9ffa28996da2701, type: 3}
