@@ -34520,7 +34520,7 @@ PrefabInstance:
     - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
         type: 3}
       propertyPath: dialogue.name
-      value: Pirate
+      value: Pirate Marianne
       objectReference: {fileID: 0}
     - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
         type: 3}
