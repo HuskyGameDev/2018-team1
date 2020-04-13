@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{1511F883-671D-4380-871E-95B5BCDE684A}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{1511F883-671D-4380-871E-95B5BCDE684A}" SchemaVersion="97">
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{1511F883-671D-4380-871E-95B5BCDE684A}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="MainBank" ID="{98656663-88D3-4C32-8939-F8F617B5454F}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Crab_Movement" ID="{95E5A860-52AC-435B-93A0-FF76262EEA8D}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Sword_Swing" ID="{32524949-976E-439F-B1F6-D02D1FD9D540}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Jump" ID="{A2ED043A-F70A-45D9-9528-ECC62E023E64}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Booster" ID="{80C7F192-9F8A-48F7-BBD0-847D90C1EA58}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="FootStep" ID="{419B705A-8104-4D2A-AE88-5519A0826227}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Upgrade_Coin" ID="{C8B3648D-B6A8-4DEC-88A0-CAE79AEB0AF9}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Damage_Gore" ID="{30A31577-5990-4ED1-BFE2-E647BC09A43D}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Enemy_HitVox" ID="{4ACB195D-84B4-4FBC-82C3-687F5E8164E0}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Crab_Movement" ID="{95E5A860-52AC-435B-93A0-FF76262EEA8D}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Cannon" ID="{DC28F44F-4939-439A-891D-9C39390AB5AE}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Sword_Swing" ID="{32524949-976E-439F-B1F6-D02D1FD9D540}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PirateKing_Hit" ID="{C1558AED-27F8-4485-8506-B78F7615340B}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Jump" ID="{A2ED043A-F70A-45D9-9528-ECC62E023E64}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PirateKing_Laugh" ID="{B3D8C9C4-4814-46B8-97B1-86AB593585E7}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Lava_Ambience" ID="{927DD0F9-8C14-48D7-9C8C-67C64FAACFF9}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Booster" ID="{80C7F192-9F8A-48F7-BBD0-847D90C1EA58}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="FootStep" ID="{419B705A-8104-4D2A-AE88-5519A0826227}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Upgrade_Coin" ID="{C8B3648D-B6A8-4DEC-88A0-CAE79AEB0AF9}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Damage_Gore" ID="{30A31577-5990-4ED1-BFE2-E647BC09A43D}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Parrot" ID="{82E76C00-C2A9-4EDB-B511-C97D9ABEB850}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enemy_HitVox" ID="{4ACB195D-84B4-4FBC-82C3-687F5E8164E0}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Lava_Ambience_Stop" ID="{A169D9A6-D8B5-4FD1-8AED-B4993A6A7160}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Beach_amb" ID="{64E69D85-2A11-428F-8165-E1864C5BA7A0}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Beach_Ambience" ID="{86ECD227-AD71-44B6-8125-D23683FDC07E}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Beach_Ambience" ID="{86ECD227-AD71-44B6-8125-D23683FDC07E}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Beach_Ambience_Stop" ID="{00F197ED-1419-4D5B-A383-3B8BA8544483}" WorkUnitID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
