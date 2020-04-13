@@ -312,11 +312,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 2799561052750950887, guid: b161d4496877a064789ccb92d56afb87,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 212258159074815306, guid: b161d4496877a064789ccb92d56afb87,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -326,6 +321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799561052750950887, guid: b161d4496877a064789ccb92d56afb87,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50164452154884078, guid: b161d4496877a064789ccb92d56afb87,
         type: 3}
@@ -5454,6 +5454,97 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1095754203
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7766113293534422068, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueCapsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.name
+      value: Pirate Marianne
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "MORE TRAPS?!  I\u2019m starting to get real sick o' this here rowdy
+        bunch.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "I must be getting close to their base though considering the amount
+        o\u2019 traps I be seein\u2019.  I\u2019ll just keep pushing forward."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05e9395db46e6468f9ffa28996da2701, type: 3}
 --- !u!1001 &1165943110
 PrefabInstance:
   m_ObjectHideFlags: 0
