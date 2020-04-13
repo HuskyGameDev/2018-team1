@@ -12216,6 +12216,96 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a032352cd7a14e43a9ed9e4e234399f, type: 3}
+--- !u!1001 &383786544
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7766113293534422068, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueCapsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.name
+      value: Pirate Marianne
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Finally!  I can give these scallywags a piece of me mind! ARRGG!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: 'I better make sure I have a dagger ready just in case they''re ready
+        to put up a fight!  '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05e9395db46e6468f9ffa28996da2701, type: 3}
 --- !u!1 &423577019
 GameObject:
   m_ObjectHideFlags: 0
@@ -16298,111 +16388,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2095800366
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7766113293534422068, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueCapsule
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113293534422069, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: upgradeName
-      value: Dagger
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: checkHasUpgrade
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: Those guys look rough!
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[1]
-      value: I should probably go back and try to find a weapon.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[2]
-      value: Now that I think about it, it looked like people lost a lot of stuff
-        in that cave.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766113292430229763, guid: 05e9395db46e6468f9ffa28996da2701,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[3]
-      value: Maybe somebody left a dagger there.
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 05e9395db46e6468f9ffa28996da2701, type: 3}
 --- !u!1001 &501608222482092712
 PrefabInstance:
   m_ObjectHideFlags: 0
