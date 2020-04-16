@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class ChangeVolume : MonoBehaviour
 {
 
-	public Slider thisSlider
-	public float masterVolume;
-	public float sfxVolume;
-	public float musicVolume;
+	public Slider thisSlider;
+	public int MasterVolume;
+	public int EffectVolume;
+	public int MusicVolume;
 
 	// Start is called before the first frame update
 	void Start()
@@ -25,27 +25,27 @@ public class ChangeVolume : MonoBehaviour
 
 	public void SetSpecificVolume(string whatValue)
 	{
-		float sliderValue = thisSlider.value;
+		int sliderValue = (int)thisSlider.value;
 
-		if (whatValue == "Master")
+		if (whatValue == "MasterVolume")
 		{
 			//Debug.Log("changed master volume to :" + thisSlider.value);
-			masterVolume = thisSlider.value;
-			AkSoundEngine.SetRTPCValue("MasterVolume", masterVolume);
+			MasterVolume = (int)thisSlider.value;
+			AkSoundEngine.SetRTPCValue("MasterVolume", MasterVolume);
 		}
 
-		if (whatValue == "Sounds")
+		if (whatValue == "EffectVolume")
 		{
 			//Debug.Log("changed master volume to :" + thisSlider.value);
-			sfxVolume = thisSlider.value;
-			AkSoundEngine.SetRTPCValue("SFXVolume", sfxVolume);
+			EffectVolume = (int)thisSlider.value;
+			AkSoundEngine.SetRTPCValue("SFXVolume", EffectVolume);
 		}
 
-		if (whatValue == "Music")
+		if (whatValue == "MusicVolume")
 		{
 			//Debug.Log("changed master volume to :" + thisSlider.value);
-			musicVolume = thisSlider.value;
-			AkSoundEngine.SetRTPCValue("MusicVolume", musicVolume);
+			MusicVolume = (int)thisSlider.value;
+			AkSoundEngine.SetRTPCValue("MusicVolume", MusicVolume);
 		}
 	}
 }
