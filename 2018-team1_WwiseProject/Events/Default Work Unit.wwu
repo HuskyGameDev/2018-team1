@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" SchemaVersion="97">
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{5FFD568A-A197-4434-9C49-39A64B2A1EB7}" PersistMode="Standalone">
 			<ChildrenList>
@@ -134,6 +134,104 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Movement" ID="{F9B1AA30-A77F-4134-A2FD-A517C5FD6EC2}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cannon" ID="{DC28F44F-4939-439A-891D-9C39390AB5AE}">
+					<ChildrenList>
+						<Action Name="" ID="{00556D3E-693D-4762-9D45-93183F72D138}" ShortID="367029805">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="32 Cannon Black Powder CannonSingle Blast" ID="{44DCFFFF-03C9-4ED5-A5C0-3F21661AE76B}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lava_Ambience" ID="{927DD0F9-8C14-48D7-9C8C-67C64FAACFF9}">
+					<ChildrenList>
+						<Action Name="" ID="{5CDE3FCC-FA04-44CF-9667-BA49702CC428}" ShortID="817778997">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lava Ambience" ID="{BEFC90E1-DFDB-4EF9-A2D0-7FEF3A602103}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Parrot" ID="{82E76C00-C2A9-4EDB-B511-C97D9ABEB850}">
+					<ChildrenList>
+						<Action Name="" ID="{7E56FD6E-F07A-4D76-95D0-3E7DACD9EAA6}" ShortID="846700716">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Parrot" ID="{98C2F837-3933-4F6D-94BA-FFD0FD26C328}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PirateKing_Laugh" ID="{B3D8C9C4-4814-46B8-97B1-86AB593585E7}">
+					<ChildrenList>
+						<Action Name="" ID="{2BA553FC-F425-493F-A46E-C915A4DAA4EC}" ShortID="667190963">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Laugh" ID="{52A8CF40-41CF-45FF-9F6B-B798F9CE94BC}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PirateKing_Hit" ID="{C1558AED-27F8-4485-8506-B78F7615340B}">
+					<ChildrenList>
+						<Action Name="" ID="{A39A65C3-C15E-4D2E-B38E-CBF8DA34B520}" ShortID="1044698486">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hit" ID="{EE06FD6F-7719-481A-88AF-AA0FBEBD2547}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lava_Ambience_Stop" ID="{A169D9A6-D8B5-4FD1-8AED-B4993A6A7160}">
+					<ChildrenList>
+						<Action Name="" ID="{FF2FCD42-3F3D-47D2-95A3-CE6133C661A9}" ShortID="519700055">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lava Ambience" ID="{BEFC90E1-DFDB-4EF9-A2D0-7FEF3A602103}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Beach_Ambience_Stop" ID="{00F197ED-1419-4D5B-A383-3B8BA8544483}">
+					<ChildrenList>
+						<Action Name="" ID="{1227E007-2CA7-4250-85FF-BD920CB5CF0A}" ShortID="883303275">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Beach_Ambience" ID="{1B37AC63-C6CC-4C91-BF06-DE856299408D}" WorkUnitID="{EE9B3224-B8C7-46E5-B2FC-FCBE71D88E3F}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

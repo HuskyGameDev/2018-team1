@@ -14,15 +14,29 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BEACH_AMBIENCE = 573402725U;
+        static const AkUniqueID BEACH_AMBIENCE_STOP = 1888526760U;
         static const AkUniqueID BOOSTER = 1228514695U;
+        static const AkUniqueID CANNON = 2393348022U;
         static const AkUniqueID CRAB_MOVEMENT = 1147494761U;
         static const AkUniqueID DAMAGE_GORE = 1119461076U;
         static const AkUniqueID ENEMY_HITVOX = 695964012U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID JUMP = 3833651337U;
+        static const AkUniqueID LAVA_AMBIENCE = 3497006378U;
+        static const AkUniqueID LAVA_AMBIENCE_STOP = 3791564697U;
+        static const AkUniqueID PARROT = 1042872425U;
+        static const AkUniqueID PIRATEKING_HIT = 857354513U;
+        static const AkUniqueID PIRATEKING_LAUGH = 785462313U;
         static const AkUniqueID SWORD_SWING = 476098351U;
         static const AkUniqueID UPGRADE_COIN = 2265996293U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID EFFECTVOLUME = 1087353892U;
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
@@ -34,6 +48,8 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

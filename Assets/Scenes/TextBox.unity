@@ -584,6 +584,8 @@ MonoBehaviour:
     - asdf
     - "1111lkaj;sldkj;\tj\t;j\t;lj\tqjklj;ladskj;las"
     - bugs
+  upgradeName: 
+  checkHasUpgrade: 0
 --- !u!114 &892164450
 MonoBehaviour:
   m_ObjectHideFlags: 0

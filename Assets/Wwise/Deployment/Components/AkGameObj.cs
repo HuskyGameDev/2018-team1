@@ -24,7 +24,7 @@ public class AkGameObj : UnityEngine.MonoBehaviour
 	public bool isEnvironmentAware = true;
 
 	/// Maintains and persists the Static setting of the gameobject, which is available only in the editor.
-	[UnityEngine.SerializeField] private bool isStaticObject;
+	[UnityEngine.SerializeField] private bool isStaticObject = false;
 
 	/// Cache the bounds to avoid calls to GetComponent()
 	private UnityEngine.Collider m_Collider;
@@ -48,13 +48,11 @@ public class AkGameObj : UnityEngine.MonoBehaviour
 
 	private bool isRegistered = false;
 
-	// If AkGameObj.AddListener() was used, consider using AkAudioListener.StartListeningToEmitter() instead.
 	internal void AddListener(AkAudioListener listener)
 	{
 		m_listeners.Add(listener);
 	}
 
-	// If AkGameObj.RemoveListener() was used, consider using AkAudioListener.StopListeningToEmitter() instead.
 	internal void RemoveListener(AkAudioListener listener)
 	{
 		m_listeners.Remove(listener);
@@ -67,6 +65,25 @@ public class AkGameObj : UnityEngine.MonoBehaviour
 
 		isRegistered = true;
 		return AkSoundEngine.RegisterGameObj(gameObject, gameObject.name);
+	}
+
+	private void SetPosition()
+	{
+		var position = GetPosition();
+		var forward = GetForward();
+		var up = GetUpward();
+
+		if (m_posData != null)
+		{
+			if (m_posData.position == position && m_posData.forward == forward && m_posData.up == up)
+				return;
+
+			m_posData.position = position;
+			m_posData.forward = forward;
+			m_posData.up = up;
+		}
+
+		AkSoundEngine.SetObjectPosition(gameObject, position, forward, up);
 	}
 
 	private void Awake()
@@ -89,9 +106,7 @@ public class AkGameObj : UnityEngine.MonoBehaviour
 		//Register a Game Object in the sound engine, with its name.
 		if (Register() == AKRESULT.AK_Success)
 		{
-			// Get position with offset or custom position and orientation.
-			//Set the original position
-			AkSoundEngine.SetObjectPosition(gameObject, GetPosition(), GetForward(), GetUpward());
+			SetPosition();
 
 			if (isEnvironmentAware)
 			{
@@ -113,10 +128,17 @@ public class AkGameObj : UnityEngine.MonoBehaviour
 		if (AkUtilities.IsMigrating)
 			return;
 
-		if (gameObject != null && isStaticObject != gameObject.isStatic)
+		try
 		{
-			isStaticObject = gameObject.isStatic;
-			UnityEditor.EditorUtility.SetDirty(this);
+			if (gameObject != null && isStaticObject != gameObject.isStatic)
+			{
+				isStaticObject = gameObject.isStatic;
+				UnityEditor.EditorUtility.SetDirty(this);
+			}
+		}
+		catch
+		{
+			UnityEditor.EditorApplication.update -= CheckStaticStatus;
 		}
 #endif
 	}
@@ -151,10 +173,10 @@ public class AkGameObj : UnityEngine.MonoBehaviour
 #endif
 
 		// We can't do the code in OnDestroy if the gameObj is unregistered, so do it now.
-		var eventHandlers = gameObject.GetComponents<AkUnityEventHandler>();
+		var eventHandlers = gameObject.GetComponents<AkTriggerHandler>();
 		foreach (var handler in eventHandlers)
 		{
-			if (handler.triggerList.Contains(AkUnityEventHandler.DESTROY_TRIGGER_ID))
+			if (handler.triggerList.Contains(AkTriggerHandler.DESTROY_TRIGGER_ID))
 				handler.DoDestroy();
 		}
 
@@ -178,24 +200,8 @@ public class AkGameObj : UnityEngine.MonoBehaviour
 		if (m_envData != null)
 			m_envData.UpdateAuxSend(gameObject, transform.position);
 
-		if (isStaticObject)
-			return;
-
-		// Get custom position and orientation.
-		var position = GetPosition();
-		var forward = GetForward();
-		var up = GetUpward();
-
-		//Didn't move.  Do nothing.
-		if (m_posData.position == position && m_posData.forward == forward && m_posData.up == up)
-			return;
-
-		m_posData.position = position;
-		m_posData.forward = forward;
-		m_posData.up = up;
-
-		//Update position
-		AkSoundEngine.SetObjectPosition(gameObject, position, forward, up);
+		if (!isStaticObject)
+			SetPosition();
 	}
 
 	/// Gets the position including the position offset, if applyPositionOffset is enabled. User can also override this method to calculate an arbitrary position.
@@ -260,11 +266,14 @@ public class AkGameObj : UnityEngine.MonoBehaviour
 
 #pragma warning disable 0414 // private field assigned but not used.
 
-	[UnityEngine.SerializeField] private AkGameObjPosOffsetData m_posOffsetData;
+	[UnityEngine.HideInInspector]
+	[UnityEngine.SerializeField]
+	private AkGameObjPosOffsetData m_posOffsetData;
 
 	// Wwise v2016.2 and below supported up to 8 listeners[0-7].
 	private const int AK_NUM_LISTENERS = 8;
 
+	[UnityEngine.HideInInspector]
 	[UnityEngine.SerializeField]
 	/// Listener 0 by default.
 	private int listenerMask = 1;
