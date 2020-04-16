@@ -15,14 +15,18 @@ public class PlayerHealth : Health
 
     // Couldn't find a better place to put this, it handles the player melee attack toggling/position
     void FaceReverse() {
-        Vector3 pos = meleeAttack.transform.localPosition;
-        pos.x = -.7f;
-        meleeAttack.transform.localPosition = pos;
+        if (meleeAttack != null) {
+            Vector3 pos = meleeAttack.transform.localPosition;
+            pos.x = -.7f;
+            meleeAttack.transform.localPosition = pos;
+        }
     }
     void FaceStandard() {
-        Vector3 pos = meleeAttack.transform.localPosition;
-        pos.x = .7f;
-        meleeAttack.transform.localPosition = pos;
+        if (meleeAttack != null) {
+            Vector3 pos = meleeAttack.transform.localPosition;
+            pos.x = .7f;
+            meleeAttack.transform.localPosition = pos;
+        }
     }
     void ToggleHurtBox() {
         meleeAttack.enabled = !meleeAttack.enabled;

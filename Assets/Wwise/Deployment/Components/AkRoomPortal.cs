@@ -4,45 +4,109 @@
 [UnityEngine.DisallowMultipleComponent]
 /// @brief An AkRoomPortal can connect two AkRoom components together.
 /// @details 
-public class AkRoomPortal : AkUnityEventHandler
+public class AkRoomPortal : AkTriggerHandler
 {
 	/// AkRoomPortals can only connect a maximum of 2 rooms.
 	public const int MAX_ROOMS_PER_PORTAL = 2;
+	public enum State
+	{
+		Closed,
+		Open
+	}
 
-	private readonly AkVector extent = new AkVector();
+	public State initialState = State.Closed;
 
-	private readonly AkTransform portalTransform = new AkTransform();
-
-	private ulong backRoomID = AkRoom.INVALID_ROOM_ID;
+	private bool active = true;
+	public bool portalActive
+	{
+		get
+		{
+			return active;
+		}
+		set
+		{
+			active = value;
+			AkRoomManager.RegisterPortalUpdate(this);
+		}
+	}
 
 	public System.Collections.Generic.List<int> closePortalTriggerList = new System.Collections.Generic.List<int>();
-	private ulong frontRoomID = AkRoom.INVALID_ROOM_ID;
+
+	private ulong frontRoomID { get { return IsRoomActive(frontRoom) ? frontRoom.GetID() : AkRoom.INVALID_ROOM_ID; } }
+	private ulong backRoomID { get { return IsRoomActive(backRoom) ? backRoom.GetID() : AkRoom.INVALID_ROOM_ID; } }
 
 	/// The front and back rooms connected by the portal.
 	/// The first room is on the negative side of the portal(opposite to the direction of the local Z axis)
 	/// The second room is on the positive side of the portal.
-	public AkRoom[] rooms = new AkRoom[MAX_ROOMS_PER_PORTAL];
+	[UnityEngine.SerializeField]
+	private AkRoom[] rooms = new AkRoom[MAX_ROOMS_PER_PORTAL];
+
+	/// The list of rooms sorted by priority in front and in the back of the portal
+	private AkRoom.PriorityList[] roomList = { new AkRoom.PriorityList(), new AkRoom.PriorityList() };
+
+	public AkRoom GetRoom(int index) { return rooms[index]; }
+
+	public AkRoom frontRoom { get { return rooms[1]; } }
+	public AkRoom backRoom { get { return rooms[0]; } }
+
+	private AkTransform portalTransform;
+	private UnityEngine.BoxCollider portalCollider;
+	private bool portalSet = false;
+
+	private void SetRoomPortal()
+	{
+		if (!enabled)
+			return;
+
+		if (IsValid)
+		{
+			portalTransform.Set(portalCollider.bounds.center, transform.forward, transform.up);
+			var extent = UnityEngine.Vector3.Scale(portalCollider.size, transform.localScale) / 2;
+			AkSoundEngine.SetRoomPortal(GetID(), portalTransform, extent, active, frontRoomID, backRoomID);
+			portalSet = true;
+		}
+		else
+		{
+			UnityEngine.Debug.LogError(name + " has identical front and back rooms. It will not be sent to Spatial Audio.");
+			if (portalSet)
+				AkSoundEngine.RemovePortal(GetID());
+			portalSet = false;
+		}
+	}
+
+	public void UpdateRoomPortal()
+	{
+		UpdateRooms();
+		SetRoomPortal();
+	}
+
+	public bool Overlaps(AkRoom room)
+	{
+		FindOverlappingRooms(roomList);
+
+		for (int i = 0; i < MAX_ROOMS_PER_PORTAL; ++i)
+		{
+			if (roomList[i].Contains(room))
+				return true;
+		}
+
+		return false;
+	}
+
+	public bool IsValid { get { return frontRoomID != backRoomID; } }
 
 	/// Access the portal's ID
-	public ulong GetID()
-	{
-		return (ulong) GetInstanceID();
-	}
+	public ulong GetID() { return (ulong)GetInstanceID(); }
 
 	protected override void Awake()
 	{
-		var collider = GetComponent<UnityEngine.BoxCollider>();
-		collider.isTrigger = true;
+		portalCollider = GetComponent<UnityEngine.BoxCollider>();
+		portalCollider.isTrigger = true;
 
-		portalTransform.Set(collider.bounds.center.x, collider.bounds.center.y, collider.bounds.center.z, transform.forward.x,
-			transform.forward.y, transform.forward.z, transform.up.x, transform.up.y, transform.up.z);
+		portalTransform = new AkTransform();
 
-		extent.X = collider.size.x * transform.localScale.x / 2;
-		extent.Y = collider.size.y * transform.localScale.y / 2;
-		extent.Z = collider.size.z * transform.localScale.z / 2;
-
-		frontRoomID = rooms[1] == null ? AkRoom.INVALID_ROOM_ID : rooms[1].GetID();
-		backRoomID = rooms[0] == null ? AkRoom.INVALID_ROOM_ID : rooms[0].GetID();
+		// set portal in it's initial state
+		portalActive = initialState != State.Closed;
 
 		RegisterTriggers(closePortalTriggerList, ClosePortal);
 
@@ -84,25 +148,33 @@ public class AkRoomPortal : AkUnityEventHandler
 			ClosePortal(null);
 	}
 
+	private void OnEnable()
+	{
+		UpdateRooms();
+		AkRoomManager.RegisterPortal(this);
+	}
+
+	private void OnDisable()
+	{
+		AkRoomManager.UnregisterPortal(this);
+		if (portalSet)
+			AkSoundEngine.RemovePortal(GetID());
+		portalSet = false;
+	}
+
+	private bool IsRoomActive(AkRoom in_room)
+	{
+		return in_room != null && in_room.isActiveAndEnabled;
+	}
+
 	public void Open()
 	{
-		ActivatePortal(true);
+		portalActive = true;
 	}
 
 	public void Close()
 	{
-		ActivatePortal(false);
-	}
-
-	private void ActivatePortal(bool active)
-	{
-		if (!enabled)
-			return;
-
-		if (frontRoomID != backRoomID)
-			AkSoundEngine.SetRoomPortal(GetID(), portalTransform, extent, active, frontRoomID, backRoomID);
-		else
-			UnityEngine.Debug.LogError(name + " is not placed/oriented correctly");
+		portalActive = false;
 	}
 
 	public void FindOverlappingRooms(AkRoom.PriorityList[] roomList)
@@ -112,23 +184,21 @@ public class AkRoomPortal : AkUnityEventHandler
 			return;
 
 		// compute halfExtents and divide the local z extent by 2
-		var halfExtents = new UnityEngine.Vector3(portalCollider.size.x * transform.localScale.x / 2,
-			portalCollider.size.y * transform.localScale.y / 2, portalCollider.size.z * transform.localScale.z / 4);
+		var halfExtentZ = portalCollider.size.z * transform.localScale.z / 2;
 
 		// move the center backward
-		FillRoomList(UnityEngine.Vector3.forward * -0.25f, halfExtents, roomList[0]);
+		FillRoomList(UnityEngine.Vector3.forward * -halfExtentZ, roomList[0]);
 
 		// move the center forward
-		FillRoomList(UnityEngine.Vector3.forward * 0.25f, halfExtents, roomList[1]);
+		FillRoomList(UnityEngine.Vector3.forward * halfExtentZ, roomList[1]);
 	}
 
-	private void FillRoomList(UnityEngine.Vector3 center, UnityEngine.Vector3 halfExtents, AkRoom.PriorityList list)
+	private void FillRoomList(UnityEngine.Vector3 position, AkRoom.PriorityList list)
 	{
-		list.rooms.Clear();
+		list.Clear();
 
-		center = transform.TransformPoint(center);
-
-        var colliders = UnityEngine.Physics.OverlapBox(center, halfExtents, transform.rotation, -1, UnityEngine.QueryTriggerInteraction.Collide);
+		position = transform.TransformPoint(position);
+		var colliders = UnityEngine.Physics.OverlapSphere(position, 0, -1, UnityEngine.QueryTriggerInteraction.Collide);
 
 		foreach (var collider in colliders)
 		{
@@ -138,31 +208,24 @@ public class AkRoomPortal : AkUnityEventHandler
 		}
 	}
 
-	public void SetFrontRoom(AkRoom room)
+	public void UpdateRooms()
 	{
-		rooms[1] = room;
-		frontRoomID = rooms[1] == null ? AkRoom.INVALID_ROOM_ID : rooms[1].GetID();
-	}
-
-	public void SetBackRoom(AkRoom room)
-	{
-		rooms[0] = room;
-		backRoomID = rooms[0] == null ? AkRoom.INVALID_ROOM_ID : rooms[0].GetID();
-	}
-
-	public void UpdateOverlappingRooms()
-	{
-		var roomList = new[] { new AkRoom.PriorityList(), new AkRoom.PriorityList() };
-
 		FindOverlappingRooms(roomList);
-		for (var i = 0; i < 2; i++)
+
+		bool wasUpdated = false;
+
+		for (var i = 0; i < MAX_ROOMS_PER_PORTAL; ++i)
 		{
-			if (!roomList[i].Contains(rooms[i]))
-				rooms[i] = roomList[i].GetHighestPriorityRoom();
+			var room = roomList[i].GetHighestPriorityActiveAndEnabledRoom();
+
+			if (room != rooms[i])
+				wasUpdated = true;
+
+			rooms[i] = room;
 		}
 
-		frontRoomID = rooms[1] == null ? AkRoom.INVALID_ROOM_ID : rooms[1].GetID();
-		backRoomID = rooms[0] == null ? AkRoom.INVALID_ROOM_ID : rooms[0].GetID();
+		if (wasUpdated)
+			AkRoomManager.RegisterPortalUpdate(this);
 	}
 
 #if UNITY_EDITOR
@@ -211,5 +274,37 @@ public class AkRoomPortal : AkUnityEventHandler
 			UnityEngine.Gizmos.DrawLine(CornerCenterPos[i] + centreOffset, CornerCenterPos[(i + 1) % 4] + centreOffset);
 	}
 #endif
+
+	#region Obsolete
+	[System.Obsolete(AkSoundEngine.Deprecation_2019_2_0)]
+	public void SetRoom(int in_roomIndex, AkRoom in_room)
+	{
+		UnityEngine.Debug.LogFormat("SetRoom is deprecated. Highest priority, active and enabled room will be automatically chosen. Make sure room priorities and game object placements are correct.");
+	}
+
+	[System.Obsolete(AkSoundEngine.Deprecation_2019_2_0)]
+	public void SetFrontRoom(AkRoom room)
+	{
+		UnityEngine.Debug.LogFormat("SetFrontRoom is deprecated. Highest priority, active and enabled room will be automatically chosen. Make sure room priorities and game object placements are correct.");
+	}
+
+	[System.Obsolete(AkSoundEngine.Deprecation_2019_2_0)]
+	public void SetBackRoom(AkRoom room)
+	{
+		UnityEngine.Debug.LogFormat("SetBackRoom is deprecated. Highest priority, active and enabled room will be automatically chosen. Make sure room priorities and game object placements are correct.");
+	}
+
+	[System.Obsolete(AkSoundEngine.Deprecation_2019_2_0)]
+	public void UpdateSoundEngineRoomIDs()
+	{
+		UpdateRoomPortal();
+	}
+
+	[System.Obsolete(AkSoundEngine.Deprecation_2019_2_0)]
+	public void UpdateOverlappingRooms()
+	{
+		UpdateRooms();
+	}
+	#endregion
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

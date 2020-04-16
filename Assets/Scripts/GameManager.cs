@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 			AddUpgrade(s);
 		}
 		if (!PersistentData.ordinary) {
-			PlayerState6();
+			PlayerState7();
 			PersistentData.animator = "Animations/female-protag/PistolAndDagger/Player-DaggerAndPistol";
 		}
 		player.GetComponent<Animator>().runtimeAnimatorController = 
@@ -63,14 +63,15 @@ public class GameManager : MonoBehaviour {
 
 		Hit hit = attack.AddComponent<Hit>() as Hit;
 		hit.damage = 35;
-		hit.knockback = 1000;
+		hit.knockback = 1300;
 
 		SpriteRenderer sr = attack.AddComponent<SpriteRenderer>() as SpriteRenderer;
 		sr.sprite = Resources.Load<Sprite>("Square") as Sprite;
 		sr.color = Color.red;
 		sr.sortingLayerName = "Entities";
-
-		PlayerMelee pm = player.AddComponent<PlayerMelee>();
+		sr.enabled = false;
+		
+		player.AddComponent<PlayerMelee>();
 		player.GetComponent<PlayerHealth>().meleeAttack = hitbox;
 	}
 	private void AddCrouch() {
@@ -80,8 +81,7 @@ public class GameManager : MonoBehaviour {
 		player.GetComponent<Jump>().addDoubleJump();
 	}
 	private void AddSlide() {
-		// TODO: give the player the sliding ability
-		//player.AddComponent<Crouch>();
+		player.AddComponent<Slide>();
 	}
 	private void RemoveUpgrades() {
 		if (player.GetComponent<MoveRight>() != null)
@@ -99,6 +99,8 @@ public class GameManager : MonoBehaviour {
 		}
 		if (player.GetComponent<Crouch>() != null)
 			Destroy(player.GetComponent<Crouch>());
+		if (player.GetComponent<Slide>() != null)
+			Destroy(player.GetComponent<Slide>());
 		PersistentData.upgrades = new HashSet<string>();
 		AddRightMovement();
 	}

@@ -4,137 +4,205 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43e49a98d3ef0f94fabe2534c6b5239d, type: 3}
+  m_Script: {fileID: 11500000, guid: cb4b7d7d8ef3e4b2eb9676536f35482d, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - Guid: '{FCD89ED6-2205-49A2-B489-5B21593B72AE}'
-    m_lastTimePart2: -1999202416
-    m_lastTimePsrt1: -958560348
-    ParentPhysicalPath: 
-    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586148166784775808
     List: []
-  autoPopulateEnabled: 1
   AuxBusWwu:
-  - Guid: '{0FF478A2-7865-4A4C-A1DE-749E6BBB5721}'
-    m_lastTimePart2: -1999202416
-    m_lastTimePsrt1: -959253991
-    ParentPhysicalPath: 
-    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
-    List: []
-  BankWwu:
-  - Guid: '{1511F883-671D-4380-871E-95B5BCDE684A}'
-    m_lastTimePart2: -1999202416
-    m_lastTimePsrt1: -958609614
-    ParentPhysicalPath: 
-    PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586148166794775808
     List:
-    - Guid: 63666598d388324c8939f8f617b5454f
-      ID: -1414229400
-      Name: MainBank
-      Path: Default Work Unit\MainBank
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit/Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586148166784775808
+    List:
+    - name: Beach_amb
+      guid: 859de664112a8f428165e1864c5ba7a0
+      id: 4123907443
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Beach_amb
+        ObjectType: 7
+      Path: Default Work Unit/Beach_amb
+    - name: MainBank
+      guid: 63666598d388324c8939f8f617b5454f
+      id: 2880737896
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: MainBank
         ObjectType: 7
-  basePath: Audio\GeneratedSoundBanks
-  callbackManagerBufferSize: 4
-  CurrentPluginConfig: 
-  defaultPoolSize: 4096
+      Path: Default Work Unit/MainBank
   EventWwu:
-  - Guid: '{5FFD568A-A197-4434-9C49-39A64B2A1EB7}'
-    m_lastTimePart2: -1999202416
-    m_lastTimePsrt1: -959426714
-    ParentPhysicalPath: 
-    PhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586148166804775808
     List:
-    - Guid: 92f1c7808a9ff748bbd0847d90c1ea58
-      ID: 1228514695
-      Name: Booster
-      Path: Default Work Unit\Booster
+    - name: Beach_Ambience
+      guid: 27d2ec8671adb6448125d23683fdc07e
+      id: 573402725
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Beach_Ambience
+        ObjectType: 3
+      Path: Default Work Unit/Beach_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Booster
+      guid: 92f1c7808a9ff748bbd0847d90c1ea58
+      id: 1228514695
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Booster
         ObjectType: 3
+      Path: Default Work Unit/Booster
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - Guid: 5a709b4104812a4dae885519a0826227
-      ID: 1866025847
-      Name: FootStep
-      Path: Default Work Unit\FootStep
+      maxDuration: -1
+      minDuration: -1
+    - name: Crab_Movement
+      guid: 60a8e595ac525b4393a0ff76262eea8d
+      id: 1147494761
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crab_Movement
+        ObjectType: 3
+      Path: Default Work Unit/Crab_Movement
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Damage_Gore
+      guid: 7715a3309059d14ebfe2e647bc09a43d
+      id: 1119461076
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Damage_Gore
+        ObjectType: 3
+      Path: Default Work Unit/Damage_Gore
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Enemy_HitVox
+      guid: 5d19cb4ab484bc4f82c3687f5e8164e0
+      id: 695964012
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy_HitVox
+        ObjectType: 3
+      Path: Default Work Unit/Enemy_HitVox
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: FootStep
+      guid: 5a709b4104812a4dae885519a0826227
+      id: 1866025847
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: FootStep
         ObjectType: 3
+      Path: Default Work Unit/FootStep
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - Guid: 3a04eda20af7d9459528ecc62e023e64
-      ID: -461315959
-      Name: Jump
-      Path: Default Work Unit\Jump
+      maxDuration: -1
+      minDuration: -1
+    - name: Jump
+      guid: 3a04eda20af7d9459528ecc62e023e64
+      id: 3833651337
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Jump
         ObjectType: 3
+      Path: Default Work Unit/Jump
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - Guid: 494952326e979f43b1f6d02d1fd9d540
-      ID: 476098351
-      Name: Sword_Swing
-      Path: Default Work Unit\Sword_Swing
+      maxDuration: -1
+      minDuration: -1
+    - name: Sword_Swing
+      guid: 494952326e979f43b1f6d02d1fd9d540
+      id: 476098351
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Sword_Swing
         ObjectType: 3
+      Path: Default Work Unit/Sword_Swing
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-  ExpandedItems:
-  - /2018-team1_WwiseProject
-  language: English(US)
-  lowerPoolSize: 2048
-  m_lastPopulateTimePart2: 0
-  m_lastPopulateTimePsrt1: 0
-  memoryCutoffThreshold: 0.95
-  preparePoolSize: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Upgrade_Coin
+      guid: 8d64b3c8a8b6ec4d88a0cae79aeb0af9
+      id: 2265996293
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Upgrade_Coin
+        ObjectType: 3
+      Path: Default Work Unit/Upgrade_Coin
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
-  - Guid: '{3029D1AA-EE7D-4E1F-819C-04F1BD4BAE33}'
-    m_lastTimePart2: -1999202416
-    m_lastTimePsrt1: -959416723
-    ParentPhysicalPath: 
-    PhysicalPath: Game Parameters\Default Work Unit.wwu
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586148166804775808
     List: []
   StateWwu:
-  - Guid: '{8019C068-71CE-450E-B4D0-EEBC15BBC5D3}'
-    m_lastTimePart2: -1999202416
-    m_lastTimePsrt1: -958589588
-    ParentPhysicalPath: 
-    PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586148166784775808
     List: []
-  streamingPoolSize: 1024
   SwitchWwu:
-  - Guid: '{D09DFF6E-82F1-4A19-ACB4-AAE85F6C0229}'
-    m_lastTimePart2: -1999202416
-    m_lastTimePsrt1: -958579582
-    ParentPhysicalPath: 
-    PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586148166784775808
     List: []
   TriggerWwu:
-  - Guid: '{5738C060-1EA2-4C6F-AC61-388D8446B4F2}'
-    m_lastTimePart2: -1999202416
-    m_lastTimePsrt1: -958570363
-    ParentPhysicalPath: 
-    PhysicalPath: Triggers\Default Work Unit.wwu
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586148166784775808
     List: []
+  ExpandedItems: []
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

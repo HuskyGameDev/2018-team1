@@ -10,22 +10,25 @@ public abstract class Controller : MonoBehaviour {
     public float minJumpForce;
     public float maxJumpForce;
     public Animator animator;
-
+    public bool stop;
     protected void MoveLeft(float speed) {
         animator.SetBool("WalkingRight", false);
         animator.SetBool("WalkingLeft", true);
         Vector3 movement = new Vector3(-1, 0, 0);
-        transform.position += (10 * movement * speed * Time.deltaTime);
+        if (!stop)
+            transform.position += (10 * movement * speed * Time.deltaTime);
     }
     protected void MoveRight(float speed) {
         animator.SetBool("WalkingLeft", false);
         animator.SetBool("WalkingRight", true);
         Vector3 movement = new Vector3(1, 0, 0);
-        transform.position += (10 * movement * speed * Time.deltaTime);
+        if (!stop)
+            transform.position += (10 * movement * speed * Time.deltaTime);
     }
     //The character jumps
     protected void Jump() {
-        rb2d.AddForce(300 * transform.up * Random.Range(minJumpForce, maxJumpForce) * Time.deltaTime, ForceMode2D.Impulse);
+        if (!stop)
+            rb2d.AddForce(300 * transform.up * Random.Range(minJumpForce, maxJumpForce) * Time.deltaTime, ForceMode2D.Impulse);
     }
     // Raycasting method to check if on the ground (or close enough that the difference is negligible)
     protected bool isGrounded() {

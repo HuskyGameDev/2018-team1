@@ -53,6 +53,14 @@ public class AkPlatformInitSettings : global::System.IDisposable {
     } 
   }
 
+  public AkThreadProperties threadOutputMgr { set { AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_threadOutputMgr_set(swigCPtr, AkThreadProperties.getCPtr(value)); } 
+    get {
+      global::System.IntPtr cPtr = AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_threadOutputMgr_get(swigCPtr);
+      AkThreadProperties ret = (cPtr == global::System.IntPtr.Zero) ? null : new AkThreadProperties(cPtr, false);
+      return ret;
+    } 
+  }
+
   public AkThreadProperties threadBankManager { set { AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_threadBankManager_set(swigCPtr, AkThreadProperties.getCPtr(value)); } 
     get {
       global::System.IntPtr cPtr = AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_threadBankManager_get(swigCPtr);
@@ -69,19 +77,13 @@ public class AkPlatformInitSettings : global::System.IDisposable {
     } 
   }
 
-  public float fLEngineDefaultPoolRatioThreshold { set { AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_fLEngineDefaultPoolRatioThreshold_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_fLEngineDefaultPoolRatioThreshold_get(swigCPtr); } 
-  }
-
-  public uint uLEngineDefaultPoolSize { set { AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_uLEngineDefaultPoolSize_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_uLEngineDefaultPoolSize_get(swigCPtr); } 
-  }
-
   public uint uSampleRate { set { AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_uSampleRate_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_uSampleRate_get(swigCPtr); } 
   }
 
   public ushort uNumRefillsInVoice { set { AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_uNumRefillsInVoice_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_uNumRefillsInVoice_get(swigCPtr); } 
   }
 
-  public AkPlatformInitSettings() : this(AkSoundEnginePINVOKE.CSharp_new_AkPlatformInitSettings(), true) {
+  public AkAudioAPI eAudioAPI { set { AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_eAudioAPI_set(swigCPtr, (int)value); }  get { return (AkAudioAPI)AkSoundEnginePINVOKE.CSharp_AkPlatformInitSettings_eAudioAPI_get(swigCPtr); } 
   }
 
 }

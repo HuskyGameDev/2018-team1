@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 // Handles HP manipulation
 public class Health : MonoBehaviour {
     
@@ -30,14 +31,49 @@ public class Health : MonoBehaviour {
             return -1;
         iFrameCounter = iFrames;
         health -= damage;
-        if (health <= 0)
-            if (gameObject.CompareTag("Player"))
+        if (health <= 0) {
+            StartCoroutine(DeathCoroutine());
+        }
+        return health;
+    }
+    private IEnumerator DeathCoroutine() {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.color = Color.red;
+        GetComponent<Animator>().enabled = false;
+        foreach (Collider2D col in GetComponentsInChildren<Collider2D>()) {
+                col.enabled = false;
+            }
+        foreach (Collider2D col in GetComponents<Collider2D>()) {
+            col.enabled = false;
+        }
+        Destroy(GetComponent<Rigidbody2D>());
+        if (!CompareTag("Player"))
+            GetComponent<Controller>().stop = true;
+        else {
+            if (GetComponent<MoveRight>() != null)
+			    Destroy(GetComponent<MoveRight>());
+		    if (GetComponent<MoveLeft>() != null)
+			    Destroy(GetComponent<MoveLeft>());
+		    if (GetComponent<Jump>() != null)
+			    Destroy(GetComponent<Jump>());
+		    if (GetComponent<PlayerMelee>() != null) {
+			    PlayerMelee pm = GetComponent<PlayerMelee>();
+			    foreach (Transform child in pm.transform)
+				    if (child.name != "Canvas") 
+					    Destroy(child.gameObject);
+			    Destroy(pm);
+		    }
+		    if (GetComponent<Crouch>() != null)
+			    Destroy(GetComponent<Crouch>());
+		    if (GetComponent<Slide>() != null)
+			    Destroy(GetComponent<Slide>());
+        }
+        yield return new WaitForSeconds(1);
+        if (gameObject.CompareTag("Player")) 
                 PlayerDied();
             else 
                 gameObject.GetComponent<Controller>().Die();
-        return health;
     }
-
     //Increase character's health by a value, returns current health
     public int IncreaseHealth(int heal) {
         health += heal;
@@ -47,7 +83,7 @@ public class Health : MonoBehaviour {
     }
 
     private void PlayerDied() {
-        PersistentData.changeScene(SceneManager.GetActiveScene().name, "StartMenu");
+        PersistentData.changeScene(SceneManager.GetActiveScene().name, "Overworld");
     }
 
     void Update() {
