@@ -29,8 +29,8 @@ public class LavaRockSpawner : MonoBehaviour
         rb.mass=3*scale;
         rb.AddForce(sideForce,ForceMode2D.Impulse);
         rb.AddTorque(Random.Range(-10,10),ForceMode2D.Impulse);
-        rb.gravityScale=scale/5;
-        rb.drag=scale;
+        rb.gravityScale=scale/7;
+        rb.drag=scale/2.3f;
     }
 
     IEnumerator spawnRoutine(){
