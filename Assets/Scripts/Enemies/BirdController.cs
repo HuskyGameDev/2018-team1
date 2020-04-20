@@ -33,14 +33,12 @@ public class BirdController :  Controller {
     // called once per physics step
     private void FixedUpdate() {
         if (seenPlayer) {
-            if ((player.position - transform.position).magnitude < sightRange) {
-                float angle = Mathf.Atan2(player.position.y - transform.position.y, player.position.x - transform.position.x) * Mathf.Rad2Deg;
-                // magnitude < 90 means on right, > 90 means on left
-                if (angle < 90 && angle >= 0 || angle > -90 && angle <= 0)
-                    MoveRight(speed);
-                else
-                    MoveLeft(speed);
-            }
+            float angle = Mathf.Atan2(player.position.y - transform.position.y, player.position.x - transform.position.x) * Mathf.Rad2Deg;
+            // magnitude < 90 means on right, > 90 means on left
+            if (angle < 90 && angle >= 0 || angle > -90 && angle <= 0)
+                MoveRight(speed);
+            else
+                MoveLeft(speed);
         }
     }
     
@@ -58,9 +56,10 @@ public class BirdController :  Controller {
         GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
     }
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("Player") && !seenPlayer) {
              player = other.GetComponent<Transform>();
              seenPlayer = true;
+             transform.position = new Vector3(transform.position.x, transform.position.y + 5);
         }
     }
     void FaceReverse() {
