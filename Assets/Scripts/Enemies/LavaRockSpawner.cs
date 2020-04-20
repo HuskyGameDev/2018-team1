@@ -21,7 +21,7 @@ public class LavaRockSpawner : MonoBehaviour
         GameObject lr=Instantiate(lavaRockPrefab);
         rb=lr.GetComponent<Rigidbody2D>();
         lr.transform.position=new Vector2(Random.Range(camTransform.position.x-30,camTransform.position.x+30),camTransform.position.y+30);
-        Vector2 sideForce=new Vector2(Random.Range(-50,50),0);
+        Vector2 sideForce=new Vector2(Random.Range(-100,100),0);
         float scale=Random.Range(1f,3f);
         lr.transform.localScale*=scale;
         lr.GetComponentInChildren<HitLavaRock>().damage=(int)(5*scale);
@@ -29,8 +29,8 @@ public class LavaRockSpawner : MonoBehaviour
         rb.mass=3*scale;
         rb.AddForce(sideForce,ForceMode2D.Impulse);
         rb.AddTorque(Random.Range(-10,10),ForceMode2D.Impulse);
-        rb.gravityScale=1;
-        rb.drag=2.5f*scale;
+        rb.gravityScale=scale/7;
+        rb.drag=scale/2.3f;
     }
 
     IEnumerator spawnRoutine(){
