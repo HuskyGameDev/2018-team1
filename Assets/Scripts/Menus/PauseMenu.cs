@@ -19,7 +19,6 @@ public class PauseMenu : MonoBehaviour {
 	[Header("Positions")]
 	public Transform player;
 	public Transform cam;
-	private Vector3 playerStart;
 
 	[Header("Additional Info")]
 	public saveLoad saveLoad;
@@ -30,7 +29,6 @@ public class PauseMenu : MonoBehaviour {
 
 	void Start() {
 		Cursor.visible = false;
-		playerStart = player.position;
 		if (overworldCharacter == null)
 		{
 			Vector3 resumePosition = ResumeButton.transform.position;

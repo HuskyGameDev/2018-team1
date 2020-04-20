@@ -24,7 +24,6 @@ public class PirateKingController :  Controller {
 
     // for deciding where to jump (back to start)
     private float startPosX;
-    private Scale scalar;
     private SpriteRenderer spriteRenderer;
     // The range at which the pirate king will jump towards the player to get closer
     public float jumpRange;
@@ -41,7 +40,6 @@ public class PirateKingController :  Controller {
         animator = GetComponent<Animator>();
         rb2d.freezeRotation = true;
         startPosX = transform.position.x;
-        scalar = GetComponent<Scale>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
