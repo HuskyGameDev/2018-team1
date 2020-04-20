@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>/Users/andrewstockero/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/2020s-team9/2018-team1_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/andrewstockero/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/2020s-team9/2018-team1_WwiseProject/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/andrewstockero/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/2020s-team9/2018-team1_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>D:\workspace\2019f-team9\2018-team1_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\workspace\2019f-team9\2018-team1_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\workspace\2019f-team9\2018-team1_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/andrewstockero/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/2020s-team9/2018-team1_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\workspace\2019f-team9\2018-team1_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -26,204 +26,204 @@
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1228514695" Name="Booster" ObjectPath="\Events\Default Work Unit\Booster" DurationType="OneShot" DurationMin="0.648859" DurationMax="0.772966">
+				<Event Id="1228514695" Name="Booster" ObjectPath="\Events\Default Work Unit\Booster">
 					<IncludedMemoryFiles>
 						<File Id="799564673" Language="SFX">
 							<ShortName>Booster.wav</ShortName>
-							<Path>SFX/Booster_7544BA96.wem</Path>
+							<Path>SFX\Booster_7544BA96.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2393348022" Name="Cannon" ObjectPath="\Events\Default Work Unit\Cannon" DurationType="OneShot" DurationMin="2.835999" DurationMax="2.835999">
+				<Event Id="2393348022" Name="Cannon" ObjectPath="\Events\Default Work Unit\Cannon">
 					<IncludedMemoryFiles>
 						<File Id="910317994" Language="SFX">
 							<ShortName>32 Cannon Black Powder CannonSingle Blast.wav</ShortName>
-							<Path>SFX/32 Cannon Black Powder CannonSingle Blast_010B4235.wem</Path>
+							<Path>SFX\32 Cannon Black Powder CannonSingle Blast_C519E38C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1147494761" Name="Crab_Movement" ObjectPath="\Events\Default Work Unit\Crab_Movement" DurationType="OneShot" DurationMin="1.243295" DurationMax="1.889237">
+				<Event Id="1147494761" Name="Crab_Movement" ObjectPath="\Events\Default Work Unit\Crab_Movement">
 					<IncludedMemoryFiles>
 						<File Id="260992621" Language="SFX">
 							<ShortName>Crab movement.wav</ShortName>
-							<Path>SFX/Crab movement_FC85CBFB.wem</Path>
+							<Path>SFX\Crab movement_FC85CBFB.wem</Path>
 						</File>
 						<File Id="394612318" Language="SFX">
 							<ShortName>Crab movement.wav</ShortName>
-							<Path>SFX/Crab movement_DA25E6E5.wem</Path>
+							<Path>SFX\Crab movement_DA25E6E5.wem</Path>
 						</File>
 						<File Id="528344221" Language="SFX">
 							<ShortName>Crab movement.wav</ShortName>
-							<Path>SFX/Crab movement_7B0B1A65.wem</Path>
+							<Path>SFX\Crab movement_7B0B1A65.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1119461076" Name="Damage_Gore" ObjectPath="\Events\Default Work Unit\Damage_Gore" DurationType="OneShot" DurationMin="0.346871" DurationMax="0.346871">
+				<Event Id="1119461076" Name="Damage_Gore" ObjectPath="\Events\Default Work Unit\Damage_Gore">
 					<IncludedMemoryFiles>
 						<File Id="1019705529" Language="SFX">
 							<ShortName>Hit_Gore.wav</ShortName>
-							<Path>SFX/Hit_Gore_7544BA96.wem</Path>
+							<Path>SFX\Hit_Gore_7544BA96.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="695964012" Name="Enemy_HitVox" ObjectPath="\Events\Default Work Unit\Enemy_HitVox" DurationType="OneShot" DurationMin="0.424138" DurationMax="0.711984">
+				<Event Id="695964012" Name="Enemy_HitVox" ObjectPath="\Events\Default Work Unit\Enemy_HitVox">
 					<IncludedMemoryFiles>
 						<File Id="656437654" Language="SFX">
 							<ShortName>Hurt_3.wav</ShortName>
-							<Path>SFX/Hurt_3_7544BA96.wem</Path>
+							<Path>SFX\Hurt_3_7544BA96.wem</Path>
 						</File>
 						<File Id="697895135" Language="SFX">
 							<ShortName>Hurt_2.wav</ShortName>
-							<Path>SFX/Hurt_2_7544BA96.wem</Path>
+							<Path>SFX\Hurt_2_7544BA96.wem</Path>
 						</File>
 						<File Id="823793172" Language="SFX">
 							<ShortName>Hurt_1.wav</ShortName>
-							<Path>SFX/Hurt_1_7544BA96.wem</Path>
+							<Path>SFX\Hurt_1_7544BA96.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep" DurationType="OneShot" DurationMin="0.176358" DurationMax="0.339304">
+				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep">
 					<IncludedMemoryFiles>
 						<File Id="68733773" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_07DE3E52.wem</Path>
+							<Path>SFX\Grass Footsteps#01_07DE3E52.wem</Path>
 						</File>
 						<File Id="354552467" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_BFF95742.wem</Path>
+							<Path>SFX\Grass Footsteps#01_BFF95742.wem</Path>
 						</File>
 						<File Id="572718178" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_E2E2E1B8.wem</Path>
+							<Path>SFX\Grass Footsteps#01_E2E2E1B8.wem</Path>
 						</File>
 						<File Id="807304314" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_7FF26168.wem</Path>
+							<Path>SFX\Grass Footsteps#01_7FF26168.wem</Path>
 						</File>
 						<File Id="937844091" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_B7042CDB.wem</Path>
+							<Path>SFX\Grass Footsteps#01_B7042CDB.wem</Path>
 						</File>
 						<File Id="1013950220" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_84A2BD7E.wem</Path>
+							<Path>SFX\Grass Footsteps#01_84A2BD7E.wem</Path>
 						</File>
 						<File Id="1032810323" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_50609207.wem</Path>
+							<Path>SFX\Grass Footsteps#01_50609207.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\Jump" DurationType="OneShot" DurationMin="0.410301" DurationMax="0.410301">
+				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\Jump">
 					<IncludedMemoryFiles>
 						<File Id="68733773" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_07DE3E52.wem</Path>
+							<Path>SFX\Grass Footsteps#01_07DE3E52.wem</Path>
 						</File>
 						<File Id="354552467" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_BFF95742.wem</Path>
+							<Path>SFX\Grass Footsteps#01_BFF95742.wem</Path>
 						</File>
 						<File Id="572718178" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_E2E2E1B8.wem</Path>
+							<Path>SFX\Grass Footsteps#01_E2E2E1B8.wem</Path>
 						</File>
 						<File Id="807304314" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_7FF26168.wem</Path>
+							<Path>SFX\Grass Footsteps#01_7FF26168.wem</Path>
 						</File>
 						<File Id="909150698" Language="SFX">
 							<ShortName>StickSwooshTake02.wav</ShortName>
-							<Path>SFX/StickSwooshTake02_B29B4989.wem</Path>
+							<Path>SFX\StickSwooshTake02_B29B4989.wem</Path>
 						</File>
 						<File Id="937844091" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_B7042CDB.wem</Path>
+							<Path>SFX\Grass Footsteps#01_B7042CDB.wem</Path>
 						</File>
 						<File Id="1013950220" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_84A2BD7E.wem</Path>
+							<Path>SFX\Grass Footsteps#01_84A2BD7E.wem</Path>
 						</File>
 						<File Id="1032810323" Language="SFX">
 							<ShortName>Grass Footsteps#01.wav</ShortName>
-							<Path>SFX/Grass Footsteps#01_50609207.wem</Path>
+							<Path>SFX\Grass Footsteps#01_50609207.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3497006378" Name="Lava_Ambience" ObjectPath="\Events\Default Work Unit\Lava_Ambience" DurationType="Infinite">
+				<Event Id="3497006378" Name="Lava_Ambience" ObjectPath="\Events\Default Work Unit\Lava_Ambience">
 					<IncludedMemoryFiles>
 						<File Id="668625458" Language="SFX">
 							<ShortName>Lava Ambience.wav</ShortName>
-							<Path>SFX/Lava Ambience_7DC5A711.wem</Path>
+							<Path>SFX\Lava Ambience_7DC5A711.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3791564697" Name="Lava_Ambience_Stop" ObjectPath="\Events\Default Work Unit\Lava_Ambience_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1042872425" Name="Parrot" ObjectPath="\Events\Default Work Unit\Parrot" DurationType="OneShot" DurationMin="1.078009" DurationMax="1.430012">
+				<Event Id="3791564697" Name="Lava_Ambience_Stop" ObjectPath="\Events\Default Work Unit\Lava_Ambience_Stop"/>
+				<Event Id="1042872425" Name="Parrot" ObjectPath="\Events\Default Work Unit\Parrot">
 					<IncludedMemoryFiles>
 						<File Id="518327291" Language="SFX">
 							<ShortName>media.io_22 Bird,Parrot Small Single Call X 3.wav</ShortName>
-							<Path>SFX/media.io_22 Bird,Parrot Small Single Call X 3_E2B9653A.wem</Path>
+							<Path>SFX\media.io_22 Bird,Parrot Small Single Call X 3_9926B10F.wem</Path>
 						</File>
 						<File Id="883150111" Language="SFX">
 							<ShortName>media.io_22 Bird,Parrot Small Single Call X 3.wav</ShortName>
-							<Path>SFX/media.io_22 Bird,Parrot Small Single Call X 3_AB3C77A7.wem</Path>
+							<Path>SFX\media.io_22 Bird,Parrot Small Single Call X 3_22915FF9.wem</Path>
 						</File>
 						<File Id="956448574" Language="SFX">
 							<ShortName>media.io_22 Bird,Parrot Small Single Call X 3.wav</ShortName>
-							<Path>SFX/media.io_22 Bird,Parrot Small Single Call X 3_C8F91E3F.wem</Path>
+							<Path>SFX\media.io_22 Bird,Parrot Small Single Call X 3_37C4BE4A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="857354513" Name="PirateKing_Hit" ObjectPath="\Events\Default Work Unit\PirateKing_Hit" DurationType="OneShot" DurationMin="0.784184" DurationMax="1.074622">
+				<Event Id="857354513" Name="PirateKing_Hit" ObjectPath="\Events\Default Work Unit\PirateKing_Hit">
 					<IncludedMemoryFiles>
 						<File Id="253519919" Language="SFX">
 							<ShortName>Pirate King#02.wav</ShortName>
-							<Path>SFX/Pirate King#02_BA474AA2.wem</Path>
+							<Path>SFX\Pirate King#02_B4C3D6A1.wem</Path>
 						</File>
 						<File Id="866978119" Language="SFX">
 							<ShortName>Pirate King#02.wav</ShortName>
-							<Path>SFX/Pirate King#02_CBCA606B.wem</Path>
+							<Path>SFX\Pirate King#02_3D01CA4E.wem</Path>
 						</File>
 						<File Id="976158392" Language="SFX">
 							<ShortName>Pirate King#02.wav</ShortName>
-							<Path>SFX/Pirate King#02_62F7F7F9.wem</Path>
+							<Path>SFX\Pirate King#02_299E2CE5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="785462313" Name="PirateKing_Laugh" ObjectPath="\Events\Default Work Unit\PirateKing_Laugh" DurationType="OneShot" DurationMin="1.082428" DurationMax="1.763956">
+				<Event Id="785462313" Name="PirateKing_Laugh" ObjectPath="\Events\Default Work Unit\PirateKing_Laugh">
 					<IncludedMemoryFiles>
 						<File Id="183175262" Language="SFX">
 							<ShortName>Pirate King#01.wav</ShortName>
-							<Path>SFX/Pirate King#01_65E9BB7A.wem</Path>
+							<Path>SFX\Pirate King#01_43F775BA.wem</Path>
 						</File>
 						<File Id="551734869" Language="SFX">
 							<ShortName>Pirate King#01.wav</ShortName>
-							<Path>SFX/Pirate King#01_3DF1701E.wem</Path>
+							<Path>SFX\Pirate King#01_279F9CF7.wem</Path>
 						</File>
 						<File Id="1016563783" Language="SFX">
 							<ShortName>Pirate King#01.wav</ShortName>
-							<Path>SFX/Pirate King#01_5BF196C2.wem</Path>
+							<Path>SFX\Pirate King#01_D492112D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="476098351" Name="Sword_Swing" ObjectPath="\Events\Default Work Unit\Sword_Swing" DurationType="OneShot" DurationMin="0.163582" DurationMax="0.356374">
+				<Event Id="476098351" Name="Sword_Swing" ObjectPath="\Events\Default Work Unit\Sword_Swing">
 					<IncludedMemoryFiles>
 						<File Id="541555683" Language="SFX">
 							<ShortName>StickSwooshTake01.wav</ShortName>
-							<Path>SFX/StickSwooshTake01_3A208CB8.wem</Path>
+							<Path>SFX\StickSwooshTake01_3A208CB8.wem</Path>
 						</File>
 						<File Id="909150698" Language="SFX">
 							<ShortName>StickSwooshTake02.wav</ShortName>
-							<Path>SFX/StickSwooshTake02_B29B4989.wem</Path>
+							<Path>SFX\StickSwooshTake02_B29B4989.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2265996293" Name="Upgrade_Coin" ObjectPath="\Events\Default Work Unit\Upgrade_Coin" DurationType="OneShot" DurationMin="1.250000" DurationMax="1.250000">
+				<Event Id="2265996293" Name="Upgrade_Coin" ObjectPath="\Events\Default Work Unit\Upgrade_Coin">
 					<IncludedMemoryFiles>
 						<File Id="740179424" Language="SFX">
 							<ShortName>Upgrade Coin.wav</ShortName>
-							<Path>SFX/Upgrade Coin_7544BA96.wem</Path>
+							<Path>SFX\Upgrade Coin_7544BA96.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -234,15 +234,15 @@
 			<ShortName>Beach_amb</ShortName>
 			<Path>Beach_amb.bnk</Path>
 			<IncludedEvents>
-				<Event Id="573402725" Name="Beach_Ambience" ObjectPath="\Events\Default Work Unit\Beach_Ambience" DurationType="OneShot" DurationMin="472.000000" DurationMax="472.000000">
+				<Event Id="573402725" Name="Beach_Ambience" ObjectPath="\Events\Default Work Unit\Beach_Ambience">
 					<IncludedMemoryFiles>
 						<File Id="681607637" Language="SFX">
 							<ShortName>Beach Ambience Compressed.wav</ShortName>
-							<Path>SFX/Beach Ambience Compressed_7544BA96.wem</Path>
+							<Path>SFX\Beach Ambience Compressed_7544BA96.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1888526760" Name="Beach_Ambience_Stop" ObjectPath="\Events\Default Work Unit\Beach_Ambience_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1888526760" Name="Beach_Ambience_Stop" ObjectPath="\Events\Default Work Unit\Beach_Ambience_Stop"/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
