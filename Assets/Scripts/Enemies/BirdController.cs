@@ -5,7 +5,6 @@ public class BirdController :  Controller {
     public int startingHealth;
     public int damage;
     public float speed;
-    private int timeUntilJump;
     public int minJumpTime;
 	public int maxJumpTime;
     public float sightRange;
@@ -20,7 +19,6 @@ public class BirdController :  Controller {
 
 	// Use this for initialization
 	void Start () {
-        timeUntilJump = Random.Range(minJumpTime, maxJumpTime);
         health = GetComponent<Health>();
         health.Set(startingHealth);
         transform = GetComponent<Transform>();
