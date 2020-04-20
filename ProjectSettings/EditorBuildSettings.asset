@@ -45,6 +45,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Worlds/World_2/W2-4.unity
     guid: de120c161cf7c474cb16c063f64065cf
   - enabled: 1
+    path: Assets/Scenes/Worlds/World_2/W2-F.unity
+    guid: 82871a7fee11f5144a75627ba88c88ee
+  - enabled: 1
     path: Assets/Scenes/Worlds/World_3/W3-1.unity
     guid: 97b8cb0d5b26e0f43a190c788a457a04
   - enabled: 1
@@ -54,9 +57,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Worlds/World_3/W3-3.unity
     guid: 08bf56531c383154a962d5054a874433
   - enabled: 1
+    path: Assets/Scenes/Worlds/World_3/W3-F.unity
+    guid: 13858472d1b76ae4a8d9de187fe0d18a
+  - enabled: 1
     path: Assets/Scenes/Worlds/World_4/W4-1.unity
     guid: 94ed806f28537d443a6b84075e6713ca
   - enabled: 1
     path: Assets/Scenes/Worlds/World_4/W4-2.unity
     guid: e7a34ef06024fad478aefb797c78339c
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_4/W4-F.unity
+    guid: bf0d3e9497c3e814181015a2a1258337
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_4/W4-King.unity
+    guid: d081151bd40020d45b122b76de2f5332
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World_4/W4-Parrot.unity
+    guid: 4695766ecb0409b4d8e2e8ac1419b10b
   m_configObjects: {}

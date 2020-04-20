@@ -16,6 +16,12 @@ public class Credits : MonoBehaviour
         PersistentData.changeScene(SceneManager.GetActiveScene().name, "Credits");
     }
 
+    public void RunCreditsFromLevel()
+    {
+        PersistentData.UnlockData |= 32;
+        PersistentData.changeScene(SceneManager.GetActiveScene().name, "Credits");
+    }
+
     void Start()
     {
         if ( continueText != null )
@@ -28,7 +34,7 @@ public class Credits : MonoBehaviour
     {
         if ( continueText != null )
         {
-            if (Time.timeSinceLevelLoad > 5)
+            if (Time.timeSinceLevelLoad > 1f)
             {
                 if (continueText.isActiveAndEnabled == false)
                 {
@@ -36,7 +42,7 @@ public class Credits : MonoBehaviour
                     FadeIn();
                 }
             }
-            if (Time.timeSinceLevelLoad > 6)
+            if (Time.timeSinceLevelLoad > 2f)
             {
                 if (Input.anyKey)
                 {
@@ -46,7 +52,6 @@ public class Credits : MonoBehaviour
                     }
                     else
                     {
-                        PersistentData.UnlockData ^= 16;
                         PersistentData.changeScene("Credits", "Overworld");
                     }
                 }
@@ -59,7 +64,7 @@ public class Credits : MonoBehaviour
         StartCoroutine(FadeCanvasGroup(uiElement, 0, 1));
     }
 
-    public IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end, float lerpTime = 1.5f)
+    public IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end, float lerpTime = 1f)
     {
         float timeStartedLerping = Time.time;
         float timeSinceStarted = Time.time - timeStartedLerping;

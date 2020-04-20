@@ -28,7 +28,7 @@ public class LoadScene : MonoBehaviour {
     }
 
     public void LoadLevel() {
-        PersistentData.UnlockData ^= unlock;
+        PersistentData.UnlockData |= unlock;
         if (level == "Overworld")
         {
             int lev = convertToLevelID(SceneManager.GetActiveScene().name.Substring(3));
