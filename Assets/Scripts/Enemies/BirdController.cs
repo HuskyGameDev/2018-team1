@@ -11,6 +11,7 @@ public class BirdController :  Controller {
     public float sightRange;
     public float attackReach;
     public Health health;
+    public Transform flagTransform;
 
     // Character Components
 
@@ -40,6 +41,8 @@ public class BirdController :  Controller {
             else
                 MoveLeft(speed);
         }
+        if(transform.position.x>150 || transform.position.x<100 || transform.position.y>96)
+            Die();
     }
     
     private void AttemptJump() {
@@ -50,6 +53,8 @@ public class BirdController :  Controller {
         }
     }
     public override void Die() {
+        FlagMover f=new FlagMover(flagTransform);
+        f.move();
         GameObject.Destroy(gameObject);
     }
     private void FlipX() {
