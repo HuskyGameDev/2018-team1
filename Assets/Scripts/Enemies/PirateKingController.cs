@@ -11,6 +11,7 @@ public class PirateKingController :  Controller {
     public float sightRange;
     public float attackReach;
     public Health health;
+    public Transform flagTransform;
 
     // Character Components
 
@@ -97,6 +98,8 @@ public class PirateKingController :  Controller {
         }
     }
     public override void Die() {
+        FlagMover f=new FlagMover(flagTransform);
+        f.move();
         GameObject.Destroy(gameObject);
     }
     private void FlipX() {
