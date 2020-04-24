@@ -67,11 +67,11 @@ public class Jump : MonoBehaviour {
             // Jump!
             if(canDoubleJump()){
                 jump();
-                AkSoundEngine.PostEvent("Jump", gameObject);
+                //Do Jump Sound
                 GetComponent<Animator>().SetTrigger("Jump");
             }else if (canJump()&&rb2d.velocity.y <= 0.001f){
                 jump();
-                AkSoundEngine.PostEvent("Jump", gameObject);
+                //Do Jump Sound
                 GetComponent<Animator>().SetTrigger("Jump");
             }
         }

@@ -47,7 +47,7 @@ public class MoveLeft : MonoBehaviour {
     void Footstep() {
         counter++;
         if ((counter % interval) == 0) {
-            AkSoundEngine.PostEvent("FootStep", gameObject);
+            //Do footstep sound here
         }
     }
 }
