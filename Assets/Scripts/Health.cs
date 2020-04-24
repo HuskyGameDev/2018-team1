@@ -11,6 +11,10 @@ public class Health : MonoBehaviour {
     //Should be modified through Reduce/IncreaseHealth()
     protected int health;
 
+    private float timeA;
+    private int fps;
+    private int lastFPS;
+
     public void Set(int health) {
         this.health = health;
         maxHealth = health;
@@ -23,13 +27,14 @@ public class Health : MonoBehaviour {
     void Start() {
         health = maxHealth;
         iFrameCounter = 0;
+        timeA = Time.timeSinceLevelLoad;
     }
 
     //Reduce character's health by a value, returns current health, 0 if dead, negative if immune or dead
     public int ReduceHealth(int damage) {
         if (iFrameCounter > 0) 
             return -1;
-        iFrameCounter = iFrames;
+        iFrameCounter = iFrames*(int)Mathf.Ceil((60.0f/lastFPS));
         health -= damage;
         if (health <= 0) {
             StartCoroutine(DeathCoroutine());
@@ -87,6 +92,18 @@ public class Health : MonoBehaviour {
     }
 
     void Update() {
+
+        if(Time.timeSinceLevelLoad  - timeA <= 1)
+        {
+            fps++;
+        }
+        else
+        {
+            lastFPS = fps + 1;
+            timeA = Time.timeSinceLevelLoad;
+            fps = 0;
+        }
+
         if (iFrameCounter > 0) {
             Color c = GetComponent<SpriteRenderer>().color;
             if (iFrameCounter % 2 == 0)
