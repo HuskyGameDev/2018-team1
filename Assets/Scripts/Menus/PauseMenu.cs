@@ -83,7 +83,6 @@ public class PauseMenu : MonoBehaviour {
 	public void reloadLevel()
 	{
 		resume();
-		AkSoundEngine.StopAll();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name,LoadSceneMode.Single);
 	}
 
@@ -95,7 +94,6 @@ public class PauseMenu : MonoBehaviour {
 		PersistentData.lvlToLoad = saveLoad.saveGame.levelName;
 		PersistentData.lastScene = saveLoad.saveGame.lastScene;
 		resume();
-		AkSoundEngine.StopAll();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name,LoadSceneMode.Single);
 
 		Debug.Log("Loading Save...");
